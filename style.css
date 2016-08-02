@@ -500,9 +500,6 @@ textarea {
 }
 
 /*--------------------------------------------------------------
-# Navigation
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 ## Links
 --------------------------------------------------------------*/
 a {
@@ -529,6 +526,35 @@ a:active {
 }
 
 /*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+.site-branding {
+  text-align: center;
+  padding: 42px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.site-title {
+  margin: 0;
+  line-height: 1;
+  font-size: 1em;
+}
+
+.site-title a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #333;
+  font-size: 2.5em;
+  font-weight: normal;
+}
+
+.site-description {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+/*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
@@ -536,6 +562,9 @@ a:active {
 	display: block;
 	float: left;
 	width: 100%;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+  text-align: center;
 }
 
 .main-navigation ul {
@@ -546,13 +575,23 @@ a:active {
 }
 
 .main-navigation li {
-	float: left;
+	display: inline-block;
 	position: relative;
+  padding: 7px 0;
 }
 
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 8px 25px;
+  font-size: .95em;
+  color: #333;
+}
+
+.main-navigation a:hover {
+  color: hotpink;
 }
 
 .main-navigation ul ul {
