@@ -12,7 +12,7 @@
 <section class="no-results not-found">
 	<header class="page-header">
 		<h1 class="page-title"><?php esc_html_e( 'Nothing Found', 'harper' ); ?></h1>
-	</header><!-- .page-header -->
+	</header>
 
 	<div class="page-content">
 		<?php
@@ -33,5 +33,5 @@
 				get_search_form();
 
 		endif; ?>
-	</div><!-- .page-content -->
-</section><!-- .no-results -->
+	</div>
+</section>
