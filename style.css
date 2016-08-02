@@ -266,7 +266,7 @@ input,
 select,
 textarea {
 	color: #404040;
-	font-family: sans-serif;
+	font-family: 'Work Sans', sans-serif;
 	font-size: 16px;
 	font-size: 1rem;
 	line-height: 1.5;
@@ -545,8 +545,8 @@ a:active {
   text-transform: uppercase;
   text-decoration: none;
   color: #333;
-  font-size: 2.5em;
-  font-weight: normal;
+  font-size: 3.5em;
+  font-weight: 600;
 }
 
 .site-description {
@@ -585,13 +585,14 @@ a:active {
 	text-decoration: none;
   text-transform: uppercase;
   line-height: 1;
-  padding: 8px 25px;
-  font-size: .95em;
+  padding: 8px 20px 7px;
+  font-size: 1em;
   color: #333;
+  font-weight: 500;
 }
 
 .main-navigation a:hover {
-  color: hotpink;
+  color: rgb(255, 127, 130);
 }
 
 .main-navigation ul ul {
