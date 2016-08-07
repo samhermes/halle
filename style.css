@@ -1,4 +1,4 @@
-/*!
+/*
 Theme Name: Harper
 Theme URI: http://underscores.me/
 Author: Sam Hermes
@@ -375,7 +375,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 0;
 }
 
 ul {
@@ -503,17 +503,17 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-	color: royalblue;
+	color: #404040;
 }
 
 a:visited {
-	color: purple;
+	color: #404040;
 }
 
 a:hover,
 a:focus,
 a:active {
-	color: midnightblue;
+	color: rgb(255, 54, 83);
 }
 
 a:focus {
@@ -537,16 +537,17 @@ a:active {
 
 .site-title {
   margin: 0;
-  line-height: 1;
+	font-family: 'Cormorant Garamond', serif;
   font-size: 1em;
+	line-height: 1;
 }
 
 .site-title a {
-  text-transform: uppercase;
-  text-decoration: none;
-  color: #333;
   font-size: 3.5em;
   font-weight: 600;
+	color: #333;
+	text-transform: uppercase;
+  text-decoration: none;
 }
 
 .site-description {
@@ -586,13 +587,13 @@ a:active {
   text-transform: uppercase;
   line-height: 1;
   padding: 8px 20px 7px;
-  font-size: 1em;
+  font-size: 0.95em;
   color: #333;
   font-weight: 500;
 }
 
 .main-navigation a:hover {
-  color: rgb(255, 127, 130);
+  color: rgb(255, 54, 83);
 }
 
 .main-navigation ul ul {
@@ -776,12 +777,12 @@ a:active {
 .site-content {
 	max-width: 75em;
 	margin: 0 auto;
-	padding: 1em 1.2em;
+	padding: 2em 1.2em;
 }
 
 @media screen and (min-width: 600px) {
 	.site-content {
-		padding: 1em 2em;
+		padding: 3.5em 2em;
 	}
 }
 
@@ -809,27 +810,70 @@ a:active {
 
 .hentry {
 	margin: 0 0 1.5em;
+	font-family: 'Cormorant Garamond', serif;
+	font-weight: 500;
 }
 
-.byline,
+.entry-header {
+	margin-bottom: 1em;
+}
+
+.entry-title {
+	margin: 0 0 0.3em;
+	font-size: 3em;
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+.entry-meta {
+	font-family: 'Work Sans', sans-serif;
+	font-size: 0.9em;
+	font-weight: 400;
+	color: #808080;
+}
+
+.entry-meta a {
+	color: #808080;
+	text-decoration: none;
+}
+
+.posted-on {
+	display: block;
+	text-transform: uppercase;
+}
+
+.entry-meta .author {
+	text-transform: uppercase;
+}
+
 .updated:not(.published) {
 	display: none;
-}
-
-.single .byline,
-.group-blog .byline {
-	display: inline;
 }
 
 .page-content,
 .entry-content,
 .entry-summary {
-	margin: 1.5em 0 0;
+	font-size: 1.4em
 }
 
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+@media screen and (min-width: 600px) {
+	.single .content-area {
+		float: left;
+		width: 65%;
+	}
+
+	.single .widget-area {
+		float: right;
+		width: 25%;
+	}
 }
 
 /*--------------------------------------------------------------
