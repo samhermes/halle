@@ -528,11 +528,15 @@ a:active {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+.site-header {
+	border-bottom: 1px solid #eee;
+}
+
 .site-branding {
-  text-align: center;
-  padding: 42px 0;
-  width: 90%;
-  margin: 0 auto;
+	text-align: center;
+	padding: 52px 0;
+	width: 90%;
+	margin: 0 auto;
 }
 
 .site-title {
@@ -559,13 +563,18 @@ a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-	clear: both;
-	display: block;
-	float: left;
+	position: relative;
+	height: 46px;
 	width: 100%;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-  text-align: center;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+	text-align: center;
+}
+
+.stick {
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
 }
 
 .main-navigation ul {
@@ -646,7 +655,26 @@ a:active {
 .main-navigation .current-menu-ancestor > a {
 }
 
-/* Small menu. */
+.menu-toggle {
+	/* Remove default button styles */
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+	background: transparent;
+
+	width: 100%;
+	padding: 15px 0 14px;
+	font-size: 0.95em;
+	font-weight: 500;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.menu-toggle:hover {
+	box-shadow: none;
+}
+
 .menu-toggle,
 .main-navigation.toggled ul {
 	display: block;
