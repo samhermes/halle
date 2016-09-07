@@ -830,18 +830,6 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Widgets
---------------------------------------------------------------*/
-.widget {
-	margin: 0 0 1.5em;
-}
-
-/* Make sure select elements fit in widgets. */
-.widget select {
-	max-width: 100%;
-}
-
-/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -886,6 +874,10 @@ a:active {
 	text-decoration: none;
 }
 
+.entry-meta a:hover {
+	text-decoration: underline;
+}
+
 .posted-on {
 	display: block;
 	text-transform: uppercase;
@@ -919,7 +911,7 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-## Comments
+## Layout
 --------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
 	.single .content-area {
@@ -1047,4 +1039,42 @@ object {
 
 .gallery-caption {
 	display: block;
+}
+
+/*--------------------------------------------------------------
+## Sidebar
+--------------------------------------------------------------*/
+.latest-posts h2 {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 1.2em;
+}
+
+.latest-posts ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.latest-posts li {
+	margin-bottom: 2.5em;
+}
+
+.latest-posts li img {
+	margin-bottom: 0.4em;
+}
+
+.latest-posts a {
+	text-decoration: none;
+}
+
+.latest-posts a:hover {
+	text-decoration: underline;
+}
+
+.latest-posts h3 {
+	font-family: 'Poly', serif;
+	font-weight: normal;
+	line-height: 1.3;
+	margin: 0 0 0.4em;
 }

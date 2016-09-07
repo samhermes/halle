@@ -21,6 +21,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php harper_posted_on(); ?>
+			<?php harper_byline(); ?>
 		</div>
 		<?php
 		endif; ?>

@@ -34,7 +34,22 @@ function harper_posted_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
+
+}
+endif;
+
+if ( ! function_exists( 'harper_byline' ) ) :
+/**
+ * Prints HTML with meta information for the current author.
+ */
+function harper_byline() {
+	$byline = sprintf(
+		esc_html_x( 'by %s', 'post author', 'harper' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
 endif;
