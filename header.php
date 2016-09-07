@@ -42,7 +42,14 @@
 		</div>
 	</header>
 
-	<nav id="site-navigation" class="main-navigation stick" role="navigation">
+	<?php
+		$sticky_header_class = '';
+		if ( ! is_admin_bar_showing() ) {
+			$sticky_header_class = ' stick';
+		}
+	?>
+
+	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'harper' ); ?></button>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 	</nav>
