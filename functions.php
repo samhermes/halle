@@ -102,7 +102,7 @@ add_action( 'widgets_init', 'harper_widgets_init' );
  * Enqueue scripts and styles.
  */
 function harper_scripts() {
-	wp_enqueue_style( 'harper-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Cormorant+Garamond:500,600' );
+	wp_enqueue_style( 'harper-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly' );
 	wp_enqueue_style( 'harper-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'harper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
