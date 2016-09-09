@@ -928,12 +928,109 @@ a:active {
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
+.comment-toggle {
+	border: 1px solid #808080;
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+	width: 100%;
+	text-transform: uppercase;
+	font-size: 1rem;
+	padding: 0.65em 1em 0.6em;
+	transition: background 0.2s;
+}
+
+.comment-toggle:hover {
+	border-color: #808080;
+	box-shadow: none;
+	background: #f5f5f5;
+}
+
+.comment-toggle:focus {
+	border: 1px solid #808080;
+	box-shadow: none;
+	outline: none;
+}
+
+.comments-hidden ol {
+	display: none;
+}
+
+.comment-list {
+	list-style: none;
+	padding: 2.5em 0;
+}
+
+.comment-list .comment {
+	margin-bottom: 3em;
+}
+
+.comment-author img {
+	vertical-align: top;
+	margin-right: 0.5em;
+}
+
+.comment-metadata a {
+	text-decoration: none;
+	color: #808080;
+	font-size: 0.9rem;
+	line-height: 1.5rem;
+}
+
+@media screen and (min-width: 600px) {
+	.comment-author {
+		float: left;
+		width: 50%;
+	}
+
+	.comment-metadata {
+		float: right;
+		width: 50%;
+		text-align: right;
+	}
+}
+
+.comment-content {
+	clear: both;
+}
+
+.comment-content p {
+	margin: 1.2em 0;
+}
+
 .comment-content a {
 	word-wrap: break-word;
 }
 
+.comment-reply-link {
+	text-decoration: none;
+	border: 1px solid #c5c5c5;
+	padding: 0.25em 0.75em;
+	color: #808080;
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	transition: border-color 0.1s;
+}
+
+.comment-reply-link:hover {
+	color: #808080;
+	border-color: #808080;
+}
+
 .bypostauthor {
 	display: block;
+}
+
+.comment-respond {
+	padding: 3em 0;
+}
+
+.comment-reply-title {
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 1.2em;
+	margin: 0;
 }
 
 /*--------------------------------------------------------------

@@ -87,7 +87,7 @@ function harper_scripts() {
 	wp_enqueue_style( 'harper-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly' );
 	wp_enqueue_style( 'harper-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'harper-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'harper-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20160908', true );
 
 	wp_enqueue_script( 'harper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 

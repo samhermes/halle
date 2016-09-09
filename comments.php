@@ -37,6 +37,7 @@ if ( post_password_required() ) {
 		</nav>
 		<?php endif; ?>
 
+		<div id="comment-list">
 		<ol class="comment-list">
 			<?php
 				wp_list_comments( array(
@@ -45,6 +46,7 @@ if ( post_password_required() ) {
 				) );
 			?>
 		</ol>
+		</div>
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // Are there comments to navigate through? ?>
 		<nav id="comment-nav-below" class="navigation comment-navigation" role="navigation">
