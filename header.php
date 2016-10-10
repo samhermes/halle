@@ -52,6 +52,9 @@
 	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'harper' ); ?></button>
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		<button class="search-toggle">
+			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><path d="M32.1 26.8c1.7-2.7 2.7-5.9 2.7-9.4C34.9 7.8 27.1 0 17.4 0 7.8 0 0 7.8 0 17.5S7.8 35 17.4 35c3.5 0 6.7-1 9.5-2.8l.8-.5L40.1 44l3.9-3.9-12.4-12.5.5-.8zM27.2 7.7c2.6 2.6 4 6.1 4 9.7s-1.4 7.1-4 9.7-6.1 4-9.7 4-7.1-1.4-9.7-4-4-6.1-4-9.7 1.4-7.1 4-9.7 6.1-4 9.7-4 7.1 1.4 9.7 4z"/></svg>
+		</button>
 	</nav>
 
 
