@@ -15,9 +15,19 @@ get_header(); ?>
 		<?php
 		if ( have_posts() ) :
 
+			$first = true;
+
 			while ( have_posts() ) : the_post();
 
-				get_template_part( 'template-parts/content', get_post_format() );
+				if ( ! false == $first ) {
+
+					get_template_part( 'template-parts/content-featured' );
+
+				} else {
+
+					get_template_part( 'template-parts/content-home' );
+
+				}
 
 			endwhile;
 
@@ -28,7 +38,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif; ?>
-		
+
 		</main>
 	</div>
 
