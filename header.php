@@ -51,9 +51,11 @@
 
 	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
 		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'harper' ); ?></button>
+		
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
+		
 		<button class="search-toggle">
-			<svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 44 44"><path d="M32.1 26.8c1.7-2.7 2.7-5.9 2.7-9.4C34.9 7.8 27.1 0 17.4 0 7.8 0 0 7.8 0 17.5S7.8 35 17.4 35c3.5 0 6.7-1 9.5-2.8l.8-.5L40.1 44l3.9-3.9-12.4-12.5.5-.8zM27.2 7.7c2.6 2.6 4 6.1 4 9.7s-1.4 7.1-4 9.7-6.1 4-9.7 4-7.1-1.4-9.7-4-4-6.1-4-9.7 1.4-7.1 4-9.7 6.1-4 9.7-4 7.1 1.4 9.7 4z"/></svg>
+			<svg xmlns="http://www.w3.org/2000/svg" width="42.8" height="42.8" viewBox="0 0 42.8 42.8"><path fill="#FFF" d="M16.7 32C8.3 32 1.5 25.1 1.5 16.7S8.3 1.5 16.7 1.5C25.1 1.5 32 8.3 32 16.7 32 25.1 25.1 32 16.7 32z"/><path d="M16.7 3c7.6 0 13.7 6.2 13.7 13.7s-6.2 13.7-13.7 13.7S3 24.3 3 16.7 9.2 3 16.7 3m0-3C7.5 0 0 7.5 0 16.7s7.5 16.7 16.7 16.7S33.5 26 33.5 16.7 26 0 16.7 0z"/><path fill="none" stroke="#000" stroke-width="3" stroke-miterlimit="10" d="M27.9 27.9l13.8 13.8"/></svg>
 		</button>
 	</nav>
 
