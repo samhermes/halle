@@ -11,8 +11,13 @@
 <aside id="secondary" class="widget-area" role="complementary">
 	<div class="latest-posts">
 		<?php
+			if ( is_single() ) {
+				$exclude = array( get_the_ID() );
+			}
+
 			$args = array(
-				'posts_per_page' => 4
+				'posts_per_page' => 4,
+				'post__not_in' => $exclude,
 			);
 			$the_query = new WP_Query( $args );
 
