@@ -840,8 +840,13 @@ a:active {
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
-.home .entry-title a {
+.home .post a {
 	text-decoration: none;
+}
+
+.home .post a:hover {
+	color: #404040;
+	text-decoration: underline;
 }
 
 .home-featured .wp-post-image {
@@ -1242,7 +1247,8 @@ object {
 }
 
 .latest-posts li img {
-	margin-bottom: 0.4em;
+	display: block;
+	margin-bottom: 0.6em;
 }
 
 .latest-posts a {
@@ -1251,6 +1257,7 @@ object {
 
 .latest-posts a:hover {
 	text-decoration: underline;
+	color: #404040;
 }
 
 .latest-posts h3 {

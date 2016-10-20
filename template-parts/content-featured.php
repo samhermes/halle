@@ -15,10 +15,11 @@
 		if ( get_the_post_thumbnail() ) {
 			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 			the_post_thumbnail( 'full' );
-			echo '</a>';
+		} else {
+			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 		}
 
-		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+		the_title( '<h2 class="entry-title">', '</h2></a>' );
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
