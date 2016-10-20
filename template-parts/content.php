@@ -27,6 +27,14 @@
 		endif; ?>
 	</header>
 
+	<div class="featured-image">
+		<?php
+			if ( get_the_post_thumbnail() ) {
+				the_post_thumbnail( 'full' );
+			}
+		?>
+	</div>
+
 	<div class="entry-content">
 		<?php
 			the_content( sprintf(

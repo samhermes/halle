@@ -9,11 +9,13 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('home-small'); ?>>
 	<header class="entry-header">
 		<?php
 		if ( get_the_post_thumbnail() ) {
-			the_post_thumbnail( 'medium' );
+			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+			the_post_thumbnail( 'large' );
+			echo '</a>';
 		}
 		
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );

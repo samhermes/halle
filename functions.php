@@ -123,3 +123,22 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Filter the except length.
+ */
+function harper_custom_excerpt_length( $length ) {
+    return 35;
+}
+add_filter( 'excerpt_length', 'harper_custom_excerpt_length', 999 );
+
+/**
+ * Filter the "read more" excerpt string to link to the post.
+ */
+function harper_excerpt_more( $more ) {
+    return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read more', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'harper_excerpt_more' );

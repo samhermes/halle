@@ -115,27 +115,28 @@
 	 */
 	var commentList = document.getElementById('comment-list');
 
-	// Add hidden class to comment list
-	commentList.classList.toggle('comments-hidden');
-
-	// Create toggle button
-	var commentToggle = document.createElement('button');
-	commentToggle.className = 'comment-toggle';
-	var toggleText = 'Show Comments';
-	commentToggle.innerHTML = toggleText;
-
-	// Insert button immediately before comment list
-	commentList.insertBefore(commentToggle, commentList.firstChild);
-
-	// Use button to toggle class 'hidden' on parent element
-	commentToggle.onclick = function () {
+	if ( commentList ) {
+		// Add hidden class to comment list
 		commentList.classList.toggle('comments-hidden');
-		if(this.innerHTML == toggleText) {
-			commentToggle.innerHTML = "Hide Comments";
-		}
-		else {
-			commentToggle.innerHTML = toggleText;
-		};
-	};
 
+		// Create toggle button
+		var commentToggle = document.createElement('button');
+		commentToggle.className = 'comment-toggle';
+		var toggleText = 'Show Comments';
+		commentToggle.innerHTML = toggleText;
+
+		// Insert button immediately before comment list
+		commentList.insertBefore(commentToggle, commentList.firstChild);
+
+		// Use button to toggle class 'hidden' on parent element
+		commentToggle.onclick = function () {
+			commentList.classList.toggle('comments-hidden');
+			if(this.innerHTML == toggleText) {
+				commentToggle.innerHTML = "Hide Comments";
+			}
+			else {
+				commentToggle.innerHTML = toggleText;
+			};
+		};
+	}
 } )();

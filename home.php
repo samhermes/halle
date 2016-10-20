@@ -13,6 +13,8 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 		<?php
+		query_posts('showposts=6');
+
 		if ( have_posts() ) :
 
 			$first = true;
@@ -22,6 +24,8 @@ get_header(); ?>
 				if ( ! false == $first ) {
 
 					get_template_part( 'template-parts/content-featured' );
+
+					$first = false;
 
 				} else {
 
@@ -37,7 +41,8 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', 'none' );
 
-		endif; ?>
+		endif;
+		wp_reset_query(); ?>
 
 		</main>
 	</div>

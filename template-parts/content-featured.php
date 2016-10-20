@@ -13,7 +13,9 @@
 	<header class="entry-header">
 		<?php
 		if ( get_the_post_thumbnail() ) {
-			the_post_thumbnail( 'large' );
+			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+			the_post_thumbnail( 'full' );
+			echo '</a>';
 		}
 
 		the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
@@ -24,6 +26,8 @@
 			<?php harper_byline(); ?>
 		</div>
 		<?php
-		endif; ?>
+		endif;
+
+		the_excerpt(); ?>
 	</header>
 </article>

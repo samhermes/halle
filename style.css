@@ -835,10 +835,48 @@ a:active {
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
+.home .entry-title a {
+	text-decoration: none;
+}
+
+.home-featured .wp-post-image {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.home-featured .entry-title {
+	font-size: 2em;
+}
+
+.home-small .wp-post-image {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+.home-small .entry-title {
+	font-size: 1.5em;
+}
+
+.home-small .entry-meta {
+	font-size: 0.8em;
+}
+
 @media screen and (min-width: 800px) {
 	.home-featured {
 		float: left;
-		width: 60%;
+		width: 62%;
+	}
+
+	.home-small {
+		clear: both;
+		width: 33%;
+		float: left;
+	}
+
+	.home-small:nth-of-type(2),
+	.home-small:nth-of-type(3) {
+		float: right;
+		clear: none;
 	}
 }
 
@@ -888,6 +926,11 @@ a:active {
 	.entry-title {
 		font-size: 3em;
 	}
+}
+
+.entry-title a:hover {
+	color: #404040;
+	text-decoration: underline;
 }
 
 .entry-meta {
