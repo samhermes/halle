@@ -1230,10 +1230,15 @@ object {
 /*--------------------------------------------------------------
 ## Sidebar
 --------------------------------------------------------------*/
+.latest-posts {
+	padding-top: 2em;
+}
+
 .latest-posts h2 {
 	font-weight: normal;
 	text-transform: uppercase;
 	font-size: 1.2em;
+	margin: 0 0 1.2em;
 }
 
 .latest-posts ul {
