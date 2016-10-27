@@ -129,7 +129,7 @@
 		commentList.insertBefore(commentToggle, commentList.firstChild);
 
 		// Use button to toggle class 'hidden' on parent element
-		commentToggle.onclick = function () {
+		commentToggle.onclick = function() {
 			commentList.classList.toggle('comments-hidden');
 			if(this.innerHTML == toggleText) {
 				commentToggle.innerHTML = "Hide Comments";
@@ -138,5 +138,26 @@
 				commentToggle.innerHTML = toggleText;
 			};
 		};
+	}
+
+	var searchToggle = document.getElementsByClassName('search-toggle'),
+		searchOverlay = document.getElementsByClassName('search-overlay'),
+		searchForm = document.getElementsByClassName('search-form'),
+		searchField = document.getElementsByClassName('search-field');
+
+	if ( searchToggle ) {
+		// Use button to toggle class 'toggled' on search overlay element
+		searchToggle[0].onclick = function() {
+			searchOverlay[0].classList.toggle('toggled');
+			searchField[0].focus();
+		};
+
+		searchOverlay[0].onclick = function() {
+			searchOverlay[0].classList.toggle('toggled');
+		}
+
+		searchForm[0].onclick = function(e) {
+			e.stopPropagation();
+		}
 	}
 } )();

@@ -59,5 +59,8 @@
 		</button>
 	</nav>
 
+	<div class="search-overlay">
+		<?php get_search_form(); ?>
+	</div>
 
 	<div id="content" class="site-content">
