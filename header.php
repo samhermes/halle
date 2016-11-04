@@ -24,7 +24,12 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'harper' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
+	<?php if ( get_header_image() ) :
+		$header_background = get_header_image();
+		$header_style = ' style="background-image:url(' . $header_background . ');"';
+	endif; ?>
+
+	<header id="masthead" class="site-header" role="banner"<?php echo $header_style; ?>>
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>

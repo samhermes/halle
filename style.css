@@ -418,7 +418,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"] {
 	border: 1px solid #c5c5c5;
-	background: none;
+	background: #fff;
 	box-shadow: none;
 	color: #7e7e7e;
 	font-size: 13px;
@@ -537,25 +537,36 @@ a:active {
 	border-bottom: 1px solid #eee;
 }
 
+.site-header[style] {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
 .site-branding {
 	text-align: center;
 	padding: 2.5em 0;
 	width: 90%;
 	margin: 0 auto;
+	color: #404040;
+}
+
+.site-header[style] .site-branding {
+	color: #fff;
 }
 
 .site-title {
-  margin: 0;
-  font-size: 1em;
+	margin: 0;
+	font-size: 1em;
 	line-height: 1;
 }
 
 .site-title a {
-  font-size: 2.5em;
-  font-weight: 500;
-	color: #333;
+	font-size: 2.5em;
+	font-weight: 500;
+	color: inherit;
 	text-transform: uppercase;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 @media screen and (min-width: 600px) {
