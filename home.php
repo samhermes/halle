@@ -21,15 +21,19 @@ get_header(); ?>
 
 			while ( have_posts() ) : the_post();
 
-				if ( ! false == $first ) {
+				if ( has_post_thumbnail() ) {
 
-					get_template_part( 'template-parts/content-featured' );
+					if ( ! false == $first ) {
 
-					$first = false;
+						get_template_part( 'template-parts/content-featured' );
 
-				} else {
+						$first = false;
 
-					get_template_part( 'template-parts/content-home' );
+					} else {
+
+						get_template_part( 'template-parts/content-home' );
+
+					}
 
 				}
 

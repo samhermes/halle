@@ -1031,10 +1031,24 @@ a:active {
 	display: none;
 }
 
+.featured-image {
+	margin-bottom: 2em;
+}
+
+.featured-image img {
+	display: block;
+}
+
 .page-content,
 .entry-content,
 .entry-summary {
 	font-size: 1.1em;
+}
+
+.page-content p:first-child,
+.entry-content p:first-child,
+.entry-summary p:first-child {
+	margin-top: 0;
 }
 
 @media screen and (min-width: 600px) {
