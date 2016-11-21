@@ -149,6 +149,7 @@
 		// Use button to toggle class 'toggled' on search overlay element
 		searchToggle[0].onclick = function() {
 			searchOverlay[0].classList.toggle('toggled');
+			searchField[0].value = '';
 			searchField[0].focus();
 		};
 
