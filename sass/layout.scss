@@ -1,0 +1,58 @@
+/*--------------------------------------------------------------
+## Layout
+--------------------------------------------------------------*/
+@media screen and (min-width: 600px) {
+	.page .content-area,
+	.single .content-area {
+		float: left;
+		width: 65%;
+	}
+
+	.page .widget-area,
+	.single .widget-area {
+		float: right;
+		width: 25%;
+	}
+}
+
+/*--------------------------------------------------------------
+# Post Layouts
+--------------------------------------------------------------*/
+.archive .hentry {
+	clear: both;
+}
+
+.archive .entry-header {
+	margin-bottom: 1em;
+}
+
+.archive .entry-title {
+	font-size: 2em;
+	line-height: 1.125;
+	margin-bottom: 0.4em;
+}
+
+.archive .entry-title a {
+	text-decoration: none;
+}
+
+.archive .entry-title a:hover {
+	text-decoration: underline;
+}
+
+.archive .entry-content {
+	font-size: 1.2em;
+}
+ 
+@media screen and (min-width: 600px) {
+	.archive .featured-image {
+		float: left;
+		width: 33.3333%;
+	}
+
+	.archive .entry-header,
+	.archive .entry-content {
+		float: right;
+		width: 63%;
+	}
+}
