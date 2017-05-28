@@ -20,6 +20,7 @@
 --------------------------------------------------------------*/
 .archive .hentry {
 	clear: both;
+	@extend .clear;
 }
 
 .archive .entry-header {
@@ -47,12 +48,12 @@
 @media screen and (min-width: 600px) {
 	.archive .featured-image {
 		float: left;
-		width: 33.3333%;
+		width: 27%;
 	}
 
 	.archive .entry-header,
 	.archive .entry-content {
 		float: right;
-		width: 63%;
+		width: 70%;
 	}
 }
