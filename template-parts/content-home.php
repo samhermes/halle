@@ -14,7 +14,7 @@
 		<?php
 		if ( get_the_post_thumbnail() ) {
 			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
-			the_post_thumbnail( 'large' );
+			the_post_thumbnail( 'post-3x2' );
 		} else {
 			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 		}
