@@ -1016,7 +1016,7 @@ a:active {
 # Home
 --------------------------------------------------------------*/
 .home .site-content {
-	max-width: 100em;
+	max-width: 85em;
 }
 
 @media screen and (min-width: 600px) {
