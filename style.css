@@ -571,11 +571,11 @@ a:active {
 
 @media screen and (min-width: 600px) {
 	.site-branding {
-		padding: 3.25em 0;
+		padding: 2.75em 0;
 	}
 
 	.site-title a {
-		font-size: 3.5em;
+		font-size: 3em;
 	}
 }
 
@@ -898,62 +898,6 @@ a:active {
 }
 
 /*--------------------------------------------------------------
-# Home
---------------------------------------------------------------*/
-.home .post a {
-	text-decoration: none;
-}
-
-.home .post a:hover {
-	color: #404040;
-	text-decoration: underline;
-}
-
-.home-featured .wp-post-image {
-	display: block;
-	margin-bottom: 0.8em;
-}
-
-.home-featured .entry-title {
-	font-size: 2em;
-	line-height: 1.2;
-	margin-bottom: 0.4em;
-}
-
-.home-small .wp-post-image {
-	display: block;
-	margin-bottom: 0.8em;
-}
-
-.home-small .entry-title {
-	font-size: 1.5em;
-	line-height: 1.3;
-}
-
-.home-small .entry-meta {
-	font-size: 0.8em;
-}
-
-@media screen and (min-width: 800px) {
-	.home-featured {
-		float: left;
-		width: 62%;
-	}
-
-	.home-small {
-		clear: both;
-		width: 33%;
-		float: left;
-	}
-
-	.home-small:nth-of-type(2),
-	.home-small:nth-of-type(3) {
-		float: right;
-		clear: none;
-	}
-}
-
-/*--------------------------------------------------------------
 # Site Content
 --------------------------------------------------------------*/
 .site-content {
@@ -984,7 +928,7 @@ a:active {
 	font-weight: 400;
 }
 
-.entry-header {
+.single .entry-header {
 	margin-bottom: 2em;
 }
 
@@ -1066,6 +1010,77 @@ a:active {
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+.home .site-content {
+	max-width: 100em;
+}
+
+@media screen and (min-width: 600px) {
+	.home .site-content {
+		padding: 2em 2.3em;
+	}
+}
+
+.home .post a {
+	text-decoration: none;
+}
+
+.home .post a:hover {
+	color: #404040;
+	text-decoration: underline;
+}
+
+.home-featured .wp-post-image {
+	display: block;
+	margin-bottom: 1em;
+}
+
+.home-featured .entry-title {
+	font-size: 2em;
+	line-height: 1.125;
+	margin-bottom: 0.4em;
+}
+
+.home-small .wp-post-image {
+	display: block;
+	margin-bottom: 0.8em;
+}
+
+.home-small .entry-title {
+	font-size: 1.3em;
+	line-height: 1.3;
+}
+
+.home-small .entry-meta {
+	font-size: 0.8em;
+}
+
+@media screen and (min-width: 800px) {
+	.intro-posts {
+		display: grid;
+		grid-gap: 3%;
+		grid-template-columns: 53% 20.5% 20.5%;
+		grid-auto-rows: 350px;
+	}
+
+	.home-featured {
+		grid-column: 1 / 2;
+		margin-right: 5%;
+	}
+
+	.home-small:nth-child(2),
+	.home-small:nth-child(4) {
+		grid-column: 2;
+	}
+
+	.home-small:nth-child(3),
+	.home-small:nth-child(5) {
+		grid-column: 3;
+	}
 }
 
 /*--------------------------------------------------------------

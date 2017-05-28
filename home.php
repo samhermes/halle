@@ -12,8 +12,9 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
+		<div class="intro-posts">
 		<?php
-		query_posts('showposts=6');
+		query_posts('showposts=5');
 
 		if ( have_posts() ) :
 
@@ -47,6 +48,7 @@ get_header(); ?>
 
 		endif;
 		wp_reset_query(); ?>
+		</div>
 
 		</main>
 	</div>
