@@ -12,17 +12,18 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'home-featured' ); ?>>
 	<header class="entry-header">
 		<?php
-		if ( get_the_post_thumbnail() ) {
-			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><div class="image-wrap">';
-			the_post_thumbnail( 'post-3x2' );
-			echo '</div>';
-		} else {
-			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
-		}
+		echo '<div class="image-wrap"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+		the_post_thumbnail( 'post-3x2' );
+		echo '</a></div>';
 
-		the_title( '<h2 class="entry-title">', '</h2></a>' );
+		if ( 'post' === get_post_type() ) :
 
-		if ( 'post' === get_post_type() ) : ?>
+		echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+		the_title( '<h2 class="entry-title">', '</h2>' );
+		
+		echo '</a>'; ?>
+
 		<div class="entry-meta">
 			<?php harper_posted_on(); ?>
 			<?php harper_byline(); ?>

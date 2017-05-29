@@ -20,6 +20,15 @@
 	text-decoration: underline;
 }
 
+.intro-posts {
+	margin-bottom: 2.5em;
+	@extend .clear;
+}
+
+.home-featured {
+	@extend .clear;
+}
+
 .home-featured .wp-post-image {
 	display: block;
 	margin-bottom: 1em;
@@ -29,6 +38,7 @@
 	font-size: 2em;
 	line-height: 1.125;
 	margin-bottom: 0.4em;
+	clear: none;
 }
 
 .home-small .wp-post-image {
@@ -46,25 +56,32 @@
 }
 
 @media screen and (min-width: 800px) {
-	.intro-posts {
-		display: grid;
-		grid-gap: 3%;
-		grid-template-columns: 53% 20.5% 20.5%;
-		grid-auto-rows: 350px;
-	}
-
 	.home-featured {
-		grid-column: 1 / 2;
 		margin-right: 5%;
+
+		.image-wrap {
+			float: left;
+			width: 55%;
+			margin-right: 3%;
+		}
+
+		.entry-title {
+			padding-top: 3%;
+		}
 	}
 
-	.home-small:nth-child(2),
-	.home-small:nth-child(4) {
-		grid-column: 2;
-	}
+	.home-small {
+		width: 31.3333%;
+		float: left;
+		margin-right: 3%;
 
-	.home-small:nth-child(3),
-	.home-small:nth-child(5) {
-		grid-column: 3;
+		&:last-child {
+			margin-right: 0;
+		}
 	}
+}
+
+.home .archive {
+	max-width: 65.3em;
+	margin: 0 auto;
 }

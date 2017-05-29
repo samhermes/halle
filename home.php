@@ -14,7 +14,7 @@ get_header(); ?>
 
 		<div class="intro-posts">
 		<?php
-		query_posts('showposts=5');
+		query_posts('showposts=4');
 
 		if ( have_posts() ) :
 
@@ -40,14 +40,32 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
 
 		endif;
 		wp_reset_query(); ?>
+		</div>
+
+		<div class="latest-feed archive">
+			<?php
+			$args = array(
+				'offset' => 4,
+			);
+
+			$the_query = new WP_Query( $args );
+
+			if ( $the_query->have_posts() ) {
+				while ( $the_query->have_posts() ) {
+					$the_query->the_post();
+
+					get_template_part( 'template-parts/content', 'archive' );
+				}
+			
+			wp_reset_postdata();
+			
+			} ?>
 		</div>
 
 		</main>
