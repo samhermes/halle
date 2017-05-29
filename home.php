@@ -49,6 +49,8 @@ get_header(); ?>
 		</div>
 
 		<div class="latest-feed archive">
+			<h3>Latest</h3>
+
 			<?php
 			$args = array(
 				'offset' => 4,

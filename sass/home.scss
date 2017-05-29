@@ -1,13 +1,10 @@
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
-.home .site-content {
-	max-width: 85em;
-}
-
 @media screen and (min-width: 600px) {
 	.home .site-content {
-		padding: 2em 2.3em;
+		max-width: 100%;
+		padding: 0;
 	}
 }
 
@@ -21,8 +18,14 @@
 }
 
 .intro-posts {
-	margin-bottom: 2.5em;
+	padding-bottom: 1.5em;
+	border-bottom: 1px solid #eee;
+	margin-bottom: 3em;
 	@extend .clear;
+
+	@media screen and (min-width: 800px) {
+		padding: 2em 2.3em;
+	}
 }
 
 .home-featured {
@@ -57,11 +60,11 @@
 
 @media screen and (min-width: 800px) {
 	.home-featured {
-		margin-right: 5%;
+		margin: 0 5% 2em 0;
 
 		.image-wrap {
 			float: left;
-			width: 55%;
+			width: 60%;
 			margin-right: 3%;
 		}
 
@@ -71,9 +74,9 @@
 	}
 
 	.home-small {
-		width: 31.3333%;
+		width: 30.6666%;
 		float: left;
-		margin-right: 3%;
+		margin-right: 4%;
 
 		&:last-child {
 			margin-right: 0;
@@ -82,6 +85,25 @@
 }
 
 .home .archive {
-	max-width: 65.3em;
+	max-width: 65em;
 	margin: 0 auto;
+
+	@media screen and (min-width: 800px) {
+		.featured-image {
+			width: 29.34%
+		}
+
+		.entry-header,
+		.entry-content {
+			width: 67.66%;
+		}
+	}
+}
+
+.latest-feed h3 {
+	margin: 0 0 2.2em;
+	font-size: 1.3em;
+	font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
 }

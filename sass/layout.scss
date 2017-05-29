@@ -22,13 +22,14 @@
 	margin-bottom: 2em;
 
 	@media screen and (min-width: 600px) {
-		margin-bottom: 3.5em;
+		margin-bottom: 2.5em;
 	}
 
 	.page-title {
 		margin: 0;
-		font-size: 1.5em;
-		font-weight: 500;
+		font-size: 1.3em;
+		font-weight: normal;
+		text-transform: uppercase;
 	}
 }
 
