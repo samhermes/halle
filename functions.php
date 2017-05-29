@@ -70,6 +70,16 @@ function harper_setup() {
 		'default-color' => 'ffffff',
 		'default-image' => '',
 	) ) );
+
+	register_sidebar( array(
+		'name' => __( 'Footer', 'harper' ),
+		'id' => 'footer',
+		'description' => __( 'Widgets in this area will be shown in the site footer.', 'harper' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
+	) );
 }
 endif;
 add_action( 'after_setup_theme', 'harper_setup' );

@@ -1,0 +1,17 @@
+.site-footer {
+	border-top: 1px solid #eee;
+
+	.widget-area {
+		max-width: 75em;
+		margin: 0 auto;
+		padding: 2em 0 3em;
+		@extend .clear;
+	}
+
+	.widget {
+		@media screen and (min-width: 800px) {
+			width: 33.3333%;
+			float: left;
+		}
+	}
+}
