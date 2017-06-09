@@ -19,12 +19,12 @@
 
 .intro-posts {
 	padding-bottom: 1.5em;
-	border-bottom: 1px solid #eee;
-	margin-bottom: 3em;
+	margin: 0 auto 3em;
+	max-width: 80em;
 	@extend .clear;
 
 	@media screen and (min-width: 800px) {
-		padding: 2em 2.3em;
+		padding: 2.2em 2.3em;
 	}
 }
 
@@ -35,6 +35,10 @@
 .home-featured .wp-post-image {
 	display: block;
 	margin-bottom: 1em;
+
+	@media screen and (min-width: 800px) {
+		margin-bottom: 0;
+	}
 }
 
 .home-featured .entry-title {
@@ -60,7 +64,7 @@
 
 @media screen and (min-width: 800px) {
 	.home-featured {
-		margin: 0 5% 2em 0;
+		margin: 0 0 3.125em -2.3em;
 
 		.image-wrap {
 			float: left;
@@ -74,19 +78,19 @@
 	}
 
 	.home-small {
-		width: 30.6666%;
+		width: 30.3333%;
 		float: left;
-		margin-right: 4%;
-
-		&:last-child {
-			margin-right: 0;
-		}
+		margin: 0 1.5%;
 	}
 }
 
 .home .archive {
-	max-width: 65em;
+	max-width: 60em;
 	margin: 0 auto;
+
+	.entry-title {
+		font-size: 1.7em;
+	}
 
 	@media screen and (min-width: 800px) {
 		.featured-image {
@@ -104,6 +108,6 @@
 	margin: 0 0 2.2em;
 	font-size: 1.3em;
 	font-weight: normal;
-    text-transform: uppercase;
-    text-align: center;
+	text-transform: uppercase;
+	text-align: center;
 }
