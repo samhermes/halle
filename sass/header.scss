@@ -57,7 +57,7 @@
 --------------------------------------------------------------*/
 .main-navigation {
 	position: relative;
-	height: 2.79em;
+	height: 2.88em;
 	width: 100%;
 	background: #fff;
 	border-bottom: 1px solid #eee;
@@ -162,7 +162,7 @@
 	background: transparent;
 
 	width: 100%;
-	padding: 15px 0 14px;
+	padding: 16px 0 15px;
 	font-size: 0.95em;
 	font-weight: 500;
 	color: #404040;
@@ -263,6 +263,7 @@
 	width: calc(100% - 3em);
 	height: 3em;
 	padding: 0 1em;
+	-webkit-appearance: none;
 }
 
 .search-overlay .search-submit {

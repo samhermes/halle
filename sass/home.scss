@@ -8,15 +8,6 @@
 	}
 }
 
-.home .post a {
-	text-decoration: none;
-}
-
-.home .post a:hover {
-	color: #404040;
-	text-decoration: underline;
-}
-
 .intro-posts {
 	padding-bottom: 1.5em;
 	margin: 0 auto 3em;
@@ -25,6 +16,15 @@
 
 	@media screen and (min-width: 800px) {
 		padding: 2.2em 2.3em;
+	}
+
+	a {
+		text-decoration: none;
+
+		&:hover {
+			color: #404040;
+			text-decoration: underline;
+		}
 	}
 }
 
@@ -46,6 +46,10 @@
 	line-height: 1.125;
 	margin-bottom: 0.4em;
 	clear: none;
+}
+
+.home-featured .read-more {
+	text-decoration: underline;
 }
 
 .home-small .wp-post-image {

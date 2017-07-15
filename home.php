@@ -49,8 +49,6 @@ get_header(); ?>
 		</div>
 
 		<div class="latest-feed archive">
-			<h3>Latest</h3>
-
 			<?php
 			$args = array(
 				'posts_per_page' => -1,
@@ -62,7 +60,7 @@ get_header(); ?>
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 
-					get_template_part( 'template-parts/content', 'home-feed' );
+					get_template_part( 'template-parts/content', 'archive' );
 				}
 			
 			wp_reset_postdata();
