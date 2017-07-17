@@ -65,12 +65,6 @@ function harper_setup() {
 		'caption',
 	) );
 
-	// Set up the WordPress core custom background feature.
-	add_theme_support( 'custom-background', apply_filters( 'harper_custom_background_args', array(
-		'default-color' => 'ffffff',
-		'default-image' => '',
-	) ) );
-
 	register_sidebar( array(
 		'name' => __( 'Footer', 'harper' ),
 		'id' => 'footer',
