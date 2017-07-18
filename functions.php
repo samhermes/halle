@@ -148,7 +148,7 @@ add_filter( 'excerpt_length', 'harper_custom_excerpt_length', 999 );
 function harper_excerpt_more( $more ) {
     return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
         get_permalink( get_the_ID() ),
-        __( 'Read more', 'textdomain' )
+        __( 'Read more', 'harper' )
     );
 }
 add_filter( 'excerpt_more', 'harper_excerpt_more' );
