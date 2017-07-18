@@ -93,6 +93,16 @@ function harper_entry_footer() {
 }
 endif;
 
+function harper_pagination() {
+	global $wp_query;
+
+	$paginate_links = paginate_links();
+
+	if ( $paginate_links ) {
+		echo '<nav class="pagination">' . $paginate_links . '</nav>';
+	}
+}
+
 /**
  * Returns true if a blog has more than 1 category.
  *

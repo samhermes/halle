@@ -34,7 +34,7 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+			harper_pagination();
 
 		else :
 
