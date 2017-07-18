@@ -64,7 +64,14 @@ function harper_setup() {
 		'gallery',
 		'caption',
 	) );
+}
+endif;
+add_action( 'after_setup_theme', 'harper_setup' );
 
+/*
+ * Register sidebar for the site footer.
+ */
+function harper_footer_widget_area() {
 	register_sidebar( array(
 		'name' => __( 'Footer', 'harper' ),
 		'id' => 'footer',
@@ -75,8 +82,7 @@ function harper_setup() {
 		'after_title'   => '</h4>',
 	) );
 }
-endif;
-add_action( 'after_setup_theme', 'harper_setup' );
+add_action( 'widgets_init', 'harper_footer_widget_area' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
