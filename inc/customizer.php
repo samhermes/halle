@@ -14,6 +14,24 @@ function harper_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
+
+	$wp_customize->remove_control( 'display_header_text' );
+
+	// Add field that accepts an image file to replace the site title in header
+	$wp_customize->add_setting( 'harper_logo' );
+
+	$wp_customize->add_control(
+		new WP_Customize_Image_Control(
+		$wp_customize,
+			'harper_logo',
+			array(
+				'label'      => __( 'Site Logo', 'harper' ),
+				'description' => 'Replaces the site title in the header with an image.',
+				'section'    => 'title_tagline',
+				'settings'   => 'harper_logo',
+			)
+		)
+	);
 }
 add_action( 'customize_register', 'harper_customize_register' );
 
