@@ -116,6 +116,16 @@ function harper_scripts() {
 add_action( 'wp_enqueue_scripts', 'harper_scripts' );
 
 /**
+ * Add editor styles.
+ */
+function harper_editor_styles() {
+    $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Work+Sans:400,500,700|Poly:400,400i' );
+    add_editor_style( $font_url );
+    add_editor_style();
+}
+add_action( 'after_setup_theme', 'harper_editor_styles' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';

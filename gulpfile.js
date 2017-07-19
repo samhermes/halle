@@ -3,15 +3,23 @@
 var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	sourcemaps = require('gulp-sourcemaps'),
-	livereload = require('gulp-livereload');
+	livereload = require('gulp-livereload'),
+  merge = require('merge-stream');
  
 gulp.task('sass', function () {
-  return gulp.src('./sass/style.scss')
+  var styleSass = gulp.src('./sass/style.scss')
   	.pipe(sourcemaps.init())
     .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
+  var editorSass = gulp.src('./sass/editor-style.scss')
+    .pipe(sourcemaps.init())
+    .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest('./'))
+    .pipe(livereload());
+  return merge(styleSass, editorSass);
 });
  
 gulp.task('watch', function () {
