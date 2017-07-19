@@ -96,7 +96,10 @@ endif;
 function harper_pagination() {
 	global $wp_query;
 
-	$paginate_links = paginate_links();
+	$paginate_links = paginate_links( array(
+		'prev_text' => __('&larr; Previous'),
+		'next_text' => __('Next &rarr;'),
+	) );
 
 	if ( $paginate_links ) {
 		echo '<nav class="pagination">' . $paginate_links . '</nav>';
