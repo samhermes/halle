@@ -112,3 +112,31 @@
 	clear: both;
 	margin: 0 0 1.5em;
 }
+
+.search .page-content {
+	min-height: 10em;
+
+	.search-form {
+		position: relative;
+		max-width: 40rem;
+	}
+
+	.search-field {
+		width: calc(100% - 3em);
+		height: 3em;
+		padding: 0 1em;
+		-webkit-appearance: none;
+	}
+
+	.search-submit {
+		position: absolute;
+		top: .3em;
+		right: 0;
+		width: 3em;
+		height: 3em;
+		text-indent: -9999px;
+		background: url(img/search.svg) no-repeat center;
+		background-size: 1.4rem;
+		border: none;
+	}
+}

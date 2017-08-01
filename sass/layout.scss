@@ -93,6 +93,19 @@
 		transition: 0.1s;
 		text-transform: uppercase;
 		text-decoration: none;
+		border-radius: 3px;
+
+		&.prev,
+		&.next {
+			background: #333;
+			border-color: #333;
+			color: #fff;
+
+			&:hover {
+				color: #fff;
+				border-color: #333;
+			}
+		}
 
 		&:hover,
 		&.current {

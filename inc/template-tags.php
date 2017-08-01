@@ -97,8 +97,8 @@ function harper_pagination() {
 	global $wp_query;
 
 	$paginate_links = paginate_links( array(
-		'prev_text' => __('&larr; Previous'),
-		'next_text' => __('Next &rarr;'),
+		'prev_text' => __('&larr;<span class="screen-reader-text"> Previous</span>'),
+		'next_text' => __('<span class="screen-reader-text">Next </span>&rarr;'),
 	) );
 
 	if ( $paginate_links ) {
