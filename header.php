@@ -32,7 +32,7 @@
 	<header id="masthead" class="site-header" role="banner"<?php echo $header_style; ?>>
 		<div class="site-branding">
 			<?php
-			if ( has_custom_logo() ) :
+			if ( function_exists( 'the_custom_logo' ) && has_custom_logo() ) :
 				the_custom_logo();
 			else :
 				if ( is_front_page() && is_home() ) : ?>
