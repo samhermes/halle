@@ -45,14 +45,22 @@
 		@extend .clear;
 	}
 
+	.featured-image {
+		margin-bottom: 0.8em;
+	}
+
 	.entry-header {
 		margin-bottom: 1em;
 	}
 
 	.entry-title {
-		font-size: 1.7em;
+		font-size: 1.3em;
 		line-height: 1.125;
 		margin-bottom: 0.4em;
+
+		@media screen and (min-width: 800px) {
+			font-size: 1.7em;
+		}
 	}
 
 	.entry-title a {

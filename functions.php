@@ -168,3 +168,11 @@ function harper_excerpt_more( $more ) {
     );
 }
 add_filter( 'excerpt_more', 'harper_excerpt_more' );
+
+/**
+ * Add class to the_excerpt.
+ */
+function harper_excerpt_class( $excerpt ) {
+		return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
+}
+add_action( 'the_excerpt', 'harper_excerpt_class' );
