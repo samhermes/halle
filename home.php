@@ -50,8 +50,10 @@ get_header(); ?>
 
 		<div class="latest-feed archive">
 			<?php
+			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
 			$args = array(
-				'posts_per_page' => -1,
+				'posts_per_page' => 10,
+				'paged' => $paged,
 			);
 
 			$the_query = new WP_Query( $args );
@@ -62,6 +64,8 @@ get_header(); ?>
 
 					get_template_part( 'template-parts/content', 'archive' );
 				}
+
+				harper_pagination();
 			
 			wp_reset_postdata();
 			
