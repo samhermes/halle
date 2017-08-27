@@ -34,7 +34,7 @@
 					
 					if ( get_the_post_thumbnail() ) {
 						echo '<a href="' . get_the_permalink() . '">';
-						the_post_thumbnail( 'post-3x2' );
+						the_post_thumbnail( 'post-3x2-small' );
 					} else {
 						echo '<a href="' . get_the_permalink() . '">';
 					}

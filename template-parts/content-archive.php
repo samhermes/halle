@@ -13,7 +13,7 @@
 	<?php
 		if ( get_the_post_thumbnail() ) {
 			echo '<div class="featured-image">';
-			the_post_thumbnail( 'post-3x2' );
+			the_post_thumbnail( 'post-3x2-small' );
 			echo '</div>';
 		}
 	?>
