@@ -14,32 +14,27 @@ get_header(); ?>
 
 		<div class="intro-posts">
 		<?php
+		global $featured_posts;
 		query_posts('showposts=4');
 
 		if ( have_posts() ) :
-
 			$first = true;
-
 			while ( have_posts() ) : the_post();
-
 				if ( has_post_thumbnail() ) {
-
 					if ( ! false == $first ) {
 
 						get_template_part( 'template-parts/content-featured' );
-
+						$featured_posts[] = $post->ID;
 						$first = false;
 
 					} else {
 
 						get_template_part( 'template-parts/content-home' );
+						$featured_posts[] = $post->ID;
 
 					}
-
 				}
-
 			endwhile;
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -50,26 +45,21 @@ get_header(); ?>
 
 		<div class="latest-feed archive">
 			<?php
-			$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-			$args = array(
-				'posts_per_page' => 10,
-				'paged' => $paged,
-			);
-
-			$the_query = new WP_Query( $args );
-
-			if ( $the_query->have_posts() ) {
-				while ( $the_query->have_posts() ) {
-					$the_query->the_post();
-
+			if ( have_posts() ) :
+				while ( have_posts() ) : the_post();
+					
 					get_template_part( 'template-parts/content', 'archive' );
-				}
+				
+				endwhile;
+			
+			harper_pagination();
 
-				harper_pagination();
-			
-			wp_reset_postdata();
-			
-			} ?>
+			else :
+
+				get_template_part( 'template-parts/content', 'none' );
+
+			endif;
+			?>
 		</div>
 
 		</main>
