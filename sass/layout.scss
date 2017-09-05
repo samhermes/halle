@@ -2,13 +2,11 @@
 ## Layout
 --------------------------------------------------------------*/
 @media screen and (min-width: 600px) {
-	.page .content-area,
 	.single .content-area {
 		float: left;
 		width: 65%;
 	}
 
-	.page .site-content .widget-area,
 	.single .site-content .widget-area {
 		float: right;
 		width: 25%;
