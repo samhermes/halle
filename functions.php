@@ -154,7 +154,7 @@ require get_template_directory() . '/inc/jetpack.php';
  * Filter the except length.
  */
 function harper_custom_excerpt_length( $length ) {
-    return 35;
+  return 35;
 }
 add_filter( 'excerpt_length', 'harper_custom_excerpt_length', 999 );
 
@@ -162,10 +162,10 @@ add_filter( 'excerpt_length', 'harper_custom_excerpt_length', 999 );
  * Filter the "read more" excerpt string to link to the post.
  */
 function harper_excerpt_more( $more ) {
-    return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
-        get_permalink( get_the_ID() ),
-        __( 'Read more', 'harper' )
-    );
+  return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
+    get_permalink( get_the_ID() ),
+    __( 'Read more', 'harper' )
+  );
 }
 add_filter( 'excerpt_more', 'harper_excerpt_more' );
 
@@ -173,6 +173,6 @@ add_filter( 'excerpt_more', 'harper_excerpt_more' );
  * Add class to the_excerpt.
  */
 function harper_excerpt_class( $excerpt ) {
-		return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
+	return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
 }
 add_action( 'the_excerpt', 'harper_excerpt_class' );

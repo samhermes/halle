@@ -13,8 +13,6 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		
 		<?php
-		global $featured_posts;
-
 		$args = array(
 			'posts_per_page' => 4,
 			'meta_query' => array(
@@ -23,7 +21,6 @@ get_header(); ?>
 				)
 			),
 		);
-
 		$the_query = new WP_Query( $args );
 
 		if ( $the_query->have_posts() && !is_paged() ) :
@@ -33,19 +30,16 @@ get_header(); ?>
 				if ( ! false == $first ) {
 
 					get_template_part( 'template-parts/content-featured' );
-					$featured_posts[] = $post->ID;
 					$first = false;
 
 				} else {
 
 					get_template_part( 'template-parts/content-home' );
-					$featured_posts[] = $post->ID;
 
 				}
 			endwhile;
 			echo '</div>';
-		endif;
-		wp_reset_query(); ?>
+		endif; ?>
 
 		<div class="latest-feed archive">
 			<h3 class="latest-heading">Latest</h3>
