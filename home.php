@@ -48,6 +48,7 @@ get_header(); ?>
 		wp_reset_query(); ?>
 
 		<div class="latest-feed archive">
+			<h3 class="latest-heading">Latest</h3>
 			<?php
 			if ( have_posts() ) :
 				while ( have_posts() ) : the_post();
