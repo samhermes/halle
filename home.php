@@ -11,37 +11,41 @@ get_header(); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
-
-		<div class="intro-posts">
+		
 		<?php
 		global $featured_posts;
-		query_posts('showposts=4');
 
-		if ( have_posts() ) :
+		$args = array(
+			'posts_per_page' => 4,
+			'meta_query' => array(
+				array(
+					'key' => '_thumbnail_id'
+				)
+			),
+		);
+
+		$the_query = new WP_Query( $args );
+
+		if ( $the_query->have_posts() && !is_paged() ) :
+			echo '<div class="intro-posts">';
 			$first = true;
-			while ( have_posts() ) : the_post();
-				if ( has_post_thumbnail() ) {
-					if ( ! false == $first ) {
+			while ( $the_query->have_posts() ) : $the_query->the_post();
+				if ( ! false == $first ) {
 
-						get_template_part( 'template-parts/content-featured' );
-						$featured_posts[] = $post->ID;
-						$first = false;
+					get_template_part( 'template-parts/content-featured' );
+					$featured_posts[] = $post->ID;
+					$first = false;
 
-					} else {
+				} else {
 
-						get_template_part( 'template-parts/content-home' );
-						$featured_posts[] = $post->ID;
+					get_template_part( 'template-parts/content-home' );
+					$featured_posts[] = $post->ID;
 
-					}
 				}
 			endwhile;
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
+			echo '</div>';
 		endif;
 		wp_reset_query(); ?>
-		</div>
 
 		<div class="latest-feed archive">
 			<?php

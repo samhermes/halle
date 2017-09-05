@@ -9,7 +9,7 @@
 	}
 
 	@media screen and (min-width: 800px) {
-		padding: 0 2em;
+		padding: 2.2em 2em 0;
 	}
 }
 
@@ -18,7 +18,7 @@
 	@extend .clear;
 
 	@media screen and (min-width: 800px) {
-		padding: 2.2em 2.3em;
+		padding: 0 2.3em 2.2em;
 		margin: 0 auto 3em;
 	}
 
@@ -117,7 +117,7 @@
 
 .home .archive {
 	max-width: 60em;
-	margin: 0 auto;
+	margin: 1em auto 0;
 	padding-bottom: 3.5em;
 
 	@media screen and (min-width: 800px) {
