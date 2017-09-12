@@ -176,3 +176,43 @@ function harper_excerpt_class( $excerpt ) {
 	return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
 }
 add_action( 'the_excerpt', 'harper_excerpt_class' );
+
+/**
+ * Determine which stories to feature on homepage.
+ */
+function get_featured_stories() {
+	global $post;
+	$featured_stories = array();
+
+	$args = array(
+		'posts_per_page' => 4,
+		'meta_query' => array(
+			array(
+				'key' => '_thumbnail_id'
+			)
+		),
+	);
+	$featured_query = new WP_Query($args);
+	while ( $featured_query->have_posts() ) : $featured_query->the_post();
+        $featured_stories[] = $post->ID;
+    endwhile;
+
+    return $featured_stories;
+}
+
+/**
+ * Set global variable with IDs of featured posts
+ */
+global $posts_to_exclude;
+$posts_to_exclude = get_featured_stories();
+
+/**
+ * Remove featured stories from homepage query.
+ */
+function remove_featured_from_query( $query ) {
+	global $posts_to_exclude;
+	if ( $query->is_home() && $query->is_main_query() ) {
+		$query->set( 'post__not_in', $posts_to_exclude );
+	}
+}
+add_action('pre_get_posts', 'remove_featured_from_query');

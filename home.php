@@ -21,12 +21,12 @@ get_header(); ?>
 				)
 			),
 		);
-		$the_query = new WP_Query( $args );
+		$intro_query = new WP_Query( $args );
 
-		if ( $the_query->have_posts() && !is_paged() ) :
+		if ( $intro_query->have_posts() && !is_paged() ) :
 			echo '<div class="intro-posts">';
 			$first = true;
-			while ( $the_query->have_posts() ) : $the_query->the_post();
+			while ( $intro_query->have_posts() ) : $intro_query->the_post();
 				if ( ! false == $first ) {
 
 					get_template_part( 'template-parts/content-featured' );
