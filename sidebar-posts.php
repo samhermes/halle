@@ -18,6 +18,7 @@
 			$args = array(
 				'posts_per_page' => 4,
 				'post__not_in' => $exclude,
+				'ignore_sticky_posts' => 1,
 			);
 			$the_query = new WP_Query( $args );
 
