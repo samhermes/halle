@@ -203,16 +203,16 @@ function get_featured_stories() {
 /**
  * Set global variable with IDs of featured posts
  */
-global $posts_to_exclude;
-$posts_to_exclude = get_featured_stories();
+global $harper_featured_ids;
+$harper_featured_ids = get_featured_stories();
 
 /**
  * Remove featured stories from homepage query.
  */
 function remove_featured_from_query( $query ) {
-	global $posts_to_exclude;
+	global $harper_featured_ids;
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'post__not_in', $posts_to_exclude );
+		$query->set( 'post__not_in', $harper_featured_ids );
 	}
 }
 add_action('pre_get_posts', 'remove_featured_from_query');
