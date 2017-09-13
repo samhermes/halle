@@ -20,6 +20,7 @@ get_header(); ?>
 					'key' => '_thumbnail_id'
 				)
 			),
+			'ignore_sticky_posts' => 1,
 		);
 		$intro_query = new WP_Query( $args );
 
