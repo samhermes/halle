@@ -13,16 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		
 		<?php
-		$args = array(
-			'posts_per_page' => 4,
-			'meta_query' => array(
-				array(
-					'key' => '_thumbnail_id'
-				)
-			),
-			'ignore_sticky_posts' => 1,
-		);
-		$intro_query = new WP_Query( $args );
+		$intro_query = new WP_Query( harper_get_featured_args() );
 
 		if ( $intro_query->have_posts() && !is_paged() ) :
 			echo '<div class="intro-posts">';

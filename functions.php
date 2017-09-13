@@ -178,21 +178,44 @@ function harper_excerpt_class( $excerpt ) {
 add_action( 'the_excerpt', 'harper_excerpt_class' );
 
 /**
+ * Set up arguments for featured stories.
+ */
+function harper_get_featured_args() {
+	$featured_category_id = get_cat_ID('Featured');
+
+	if ( get_category( $featured_category_id )->category_count > 3 ) {
+		$args = array(
+			'posts_per_page' => 4,
+			'meta_query' => array(
+				array(
+					'key' => '_thumbnail_id'
+				)
+			),
+			'ignore_sticky_posts' => 1,
+			'cat' => $featured_category_id,
+		);
+	} else {
+		$args = array(
+			'posts_per_page' => 4,
+			'meta_query' => array(
+				array(
+					'key' => '_thumbnail_id'
+				)
+			),
+			'ignore_sticky_posts' => 1,
+		);
+	}
+
+	return $args;
+}
+
+/**
  * Determine which stories to feature on homepage.
  */
-function get_featured_stories() {
+function harper_get_featured_stories() {
 	global $post;
-	$featured_stories = array();
 
-	$args = array(
-		'posts_per_page' => 4,
-		'meta_query' => array(
-			array(
-				'key' => '_thumbnail_id'
-			)
-		),
-	);
-	$featured_query = new WP_Query($args);
+	$featured_query = new WP_Query( harper_get_featured_args() );
 	while ( $featured_query->have_posts() ) : $featured_query->the_post();
         $featured_stories[] = $post->ID;
     endwhile;
@@ -204,15 +227,15 @@ function get_featured_stories() {
  * Set global variable with IDs of featured posts
  */
 global $harper_featured_ids;
-$harper_featured_ids = get_featured_stories();
+$harper_featured_ids = harper_get_featured_stories();
 
 /**
  * Remove featured stories from homepage query.
  */
-function remove_featured_from_query( $query ) {
+function harper_remove_featured_from_query( $query ) {
 	global $harper_featured_ids;
 	if ( $query->is_home() && $query->is_main_query() ) {
 		$query->set( 'post__not_in', $harper_featured_ids );
 	}
 }
-add_action('pre_get_posts', 'remove_featured_from_query');
+add_action('pre_get_posts', 'harper_remove_featured_from_query');
