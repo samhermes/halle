@@ -111,3 +111,18 @@
 	margin-bottom: 0.5em;
 	display: inline-block;
 }
+
+.comment-form-author,
+.comment-form-email,
+.comment-form-url {
+	label {
+		margin-bottom: 0.5em;
+		display: block;
+
+		@media screen and (min-width: 450px) {
+			width: 5em;
+			display: inline-block;
+		}
+	}
+}
+
