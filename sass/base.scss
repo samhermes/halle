@@ -26,6 +26,7 @@ h6 {
 }
 
 p {
+	margin-top: 0;
 	margin-bottom: 1.5em;
 }
 
@@ -314,16 +315,26 @@ a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
-	display: inline;
-	float: left;
-	margin-right: 1.5em;
+.alignleft,
+.alignright {
+		display: block;
+		margin: 0 0 1.5em;
 }
 
-.alignright {
-	display: inline;
-	float: right;
-	margin-left: 1.5em;
+@media screen and (min-width: 600px) {
+	.alignleft {
+		display: inline;
+		float: left;
+		margin: 0.4em 1.5em 1em 0;
+		max-width: 40%;
+	}
+
+	.alignright {
+		display: inline;
+		float: right;
+		margin: 0.4em 0 1em 1.5em;
+		max-width: 40%;
+	}
 }
 
 .aligncenter {
