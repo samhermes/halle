@@ -15,14 +15,18 @@
 		echo '<div class="image-wrap"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 		the_post_thumbnail( 'post-3x2' );
 		echo '</a></div>';
+		?>
 
+		<div class="detail-wrap">
+		<?php
 		if ( 'post' === get_post_type() ) :
 
 		echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 
 		the_title( '<h2 class="entry-title">', '</h2>' );
 		
-		echo '</a>'; ?>
+		echo '</a>';
+		?>
 
 		<div class="entry-meta">
 			<?php harper_posted_on(); ?>
@@ -32,5 +36,6 @@
 		endif;
 
 		the_excerpt(); ?>
+		</div>
 	</header>
 </article>

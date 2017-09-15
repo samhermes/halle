@@ -99,12 +99,13 @@
 
 		.image-wrap {
 			float: left;
-			width: 60%;
+			width: 55%;
 			margin-right: 3%;
 		}
 
-		.entry-title {
-			padding-top: 3%;
+		.detail-wrap {
+			float: left;
+			width: 42%;
 		}
 	}
 
@@ -112,6 +113,25 @@
 		width: 30.3333%;
 		float: left;
 		margin: 0 1.5%;
+	}
+}
+
+@media screen and (min-width: 1000px) {
+	.home-featured {
+		.image-wrap {
+			float: left;
+			width: 60%;
+			margin-right: 3%;
+		}
+
+		.detail-wrap {
+			float: left;
+			width: 37%;
+		}
+
+		.entry-title {
+			padding-top: 8%;
+		}
 	}
 }
 
