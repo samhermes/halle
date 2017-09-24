@@ -19,6 +19,11 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
+// Define common breakpoints
+$break-28: 28.125em;
+$break-37: 37.5em;
+$break-50: 50em;
+
 @import 'normalize';
 @import 'base';
 @import 'header';

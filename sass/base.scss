@@ -321,7 +321,7 @@ a:active {
 		margin: 0 0 1.5em;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: $break-37) {
 	.alignleft {
 		display: inline;
 		float: left;

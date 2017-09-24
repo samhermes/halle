@@ -4,11 +4,11 @@
 .home .site-content {
 	padding: 0;
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: $break-37) {
 		max-width: 100%;
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $break-50) {
 		padding: 2.2em 2em 0;
 	}
 }
@@ -17,12 +17,12 @@
 	max-width: 80em;
 	@extend .clear;
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $break-50) {
 		padding: 0 0 2.2em;
 		margin: 0 auto 3em;
 	}
 
-	@media screen and (min-width: 950px) {
+	@media screen and (min-width: 59.375em) {
 		padding: 0 2.3em 2.2em;
 	}
 
@@ -41,12 +41,12 @@
 		margin-left: 1.2rem;
 		margin-right: 1.2rem;
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: $break-37) {
 			margin-left: 2rem;
 			margin-right: 2rem;
 		}
 
-		@media screen and (min-width: 800px) {
+		@media screen and (min-width: $break-50) {
 			margin-left: 0;
 			margin-right: 0;
 		}
@@ -60,7 +60,7 @@
 		display: block;
 		margin-bottom: 1em;
 
-		@media screen and (min-width: 800px) {
+		@media screen and (min-width: $break-50) {
 			margin-bottom: 0;
 		}
 	}
@@ -71,7 +71,7 @@
 		margin-bottom: 0.4em;
 		clear: none;
 
-		@media screen and (min-width: 800px) {
+		@media screen and (min-width: $break-50) {
 			font-size: 2em;
 		}
 	}
@@ -100,7 +100,7 @@
 	}
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: $break-50) {
 	.home-featured {
 		margin: 0 0 3.125em -2.3em;
 
@@ -123,7 +123,7 @@
 	}
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 62.5em) {
 	.home-featured {
 		.image-wrap {
 			float: left;
@@ -147,12 +147,12 @@
 	margin: 1em auto 0;
 	padding: 0 1.2em 3.5em;
 
-	@media screen and (min-width: 600px) {
+	@media screen and (min-width: $break-37) {
 		padding-left: 2em;
 		padding-right: 2em;
 	}
 
-	@media screen and (min-width: 800px) {
+	@media screen and (min-width: $break-50) {
 		padding: 0 0 3.5em;
 
 		.featured-image {
@@ -172,7 +172,7 @@
 		text-transform: uppercase;
 		text-align: center;
 
-		@media screen and (min-width: 600px) {
+		@media screen and (min-width: $break-37) {
 			margin-bottom: 2.5em;
 		}
 	}
