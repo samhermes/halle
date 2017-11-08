@@ -193,7 +193,6 @@ input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
 	border-color: #808080;
-	outline: none;
 }
 
 input[type="text"],
@@ -265,10 +264,6 @@ a:hover,
 a:focus,
 a:active {
 	color: rgb(255, 54, 83);
-}
-
-a:focus {
-	outline: thin dotted;
 }
 
 a:hover,
