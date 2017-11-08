@@ -15,7 +15,7 @@
 	.widget-area {
 		max-width: 82em;
 		margin: 0 auto;
-		padding: 2.5em 0 4em;
+		padding: 2.5em 0 1em;
 		@extend .clear;
 		
 		@media screen and (min-width: $break-50) {
@@ -45,7 +45,11 @@
 			-webkit-flex: 1;
 			-ms-flex: 1;
 			flex: 1;
-			margin: 0 1em;
+			margin: 0 1em 3em;
+
+			&:last-child {
+				margin-bottom: 3em;
+			}
 		}
 	}
 }
