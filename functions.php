@@ -100,8 +100,10 @@ add_action( 'after_setup_theme', 'harper_content_width', 0 );
  * Enqueue scripts and styles.
  */
 function harper_scripts() {
+	$theme_version = wp_get_theme()->get( 'Version' );
+
 	wp_enqueue_style( 'harper-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly:400,400i' );
-	wp_enqueue_style( 'harper-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'harper-style', get_stylesheet_uri(), array(), $theme_version );
 
 	wp_enqueue_script( 'harper-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20160908', true );
 
