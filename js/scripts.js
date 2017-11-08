@@ -89,11 +89,11 @@
 			parentLink = container.querySelectorAll( '.menu-item-has-children > a, .page_item_has_children > a' );
 
 		if ( 'ontouchstart' in window ) {
-			touchStartFn = function( e ) {
+			touchStartFn = function( event ) {
 				var menuItem = this.parentNode, i;
 
 				if ( ! menuItem.classList.contains( 'focus' ) ) {
-					e.preventDefault();
+					event.preventDefault();
 					for ( i = 0; i < menuItem.parentNode.children.length; ++i ) {
 						if ( menuItem === menuItem.parentNode.children[i] ) {
 							continue;
@@ -142,25 +142,64 @@
 		};
 	}
 
+	function whichTransitionEvent() {
+		var t,
+		el = document.createElement("fakeelement");
+
+		var transitions = {
+			"transition": "transitionend",
+			"OTransition": "oTransitionEnd",
+			"MozTransition": "transitionend",
+			"WebkitTransition": "webkitTransitionEnd"
+		}
+
+		for (t in transitions){
+			if (el.style[t] !== undefined){
+				return transitions[t];
+			}
+		}
+	}
+
 	var searchToggle = document.getElementsByClassName('search-toggle'),
 		searchOverlay = document.getElementsByClassName('search-overlay'),
 		searchForm = document.getElementsByClassName('search-form'),
-		searchField = document.getElementsByClassName('search-field');
+		searchField = document.getElementsByClassName('search-field'),
+		transitionEvent = whichTransitionEvent();
 
 	if ( searchToggle ) {
 		// Use button to toggle class 'toggled' on search overlay element
 		searchToggle[0].onclick = function() {
 			searchOverlay[0].classList.toggle('toggled');
 			searchField[0].value = '';
-			searchField[0].focus();
+			searchOverlay[0].addEventListener(transitionEvent, focusFunction);
 		};
+
+		function focusFunction(event) {
+			searchOverlay[0].removeEventListener(transitionEvent, focusFunction);
+			searchField[0].focus();
+		}
 
 		searchOverlay[0].onclick = function() {
 			searchOverlay[0].classList.toggle('toggled');
 		}
 
-		searchForm[0].onclick = function(e) {
-			e.stopPropagation();
+		searchForm[0].onclick = function(event) {
+			event.stopPropagation();
 		}
+
+		document.onkeydown = function(event) {
+			event = event || window.event;
+			var isEscape = false;
+
+			if ("key" in event) {
+				isEscape = (event.key == "Escape" || event.key == "Esc");
+			} else {
+				isEscape = (event.keyCode == 27);
+			}
+
+			if (isEscape) {
+				searchOverlay[0].classList.remove('toggled');
+			}
+		};
 	}
 } )();

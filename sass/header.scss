@@ -256,13 +256,19 @@
 	opacity: 0;
 	width: 100%;
 	background: transparent;
-	transition: background 0.2s, opacity 0.2s;
+	visibility: hidden;
+	transition: visibility 0s 0.2s,
+				background 0.2s,
+				opacity 0.2s,
+				height 0s 0.2s;
 }
 
 .search-overlay.toggled {
 	height: 100%;
 	opacity: 1;
+	visibility: visible;
 	background: rgba(255, 255, 255, 0.95);
+	transition-delay: 0s;
 }
 
 .search-overlay .search-form {
