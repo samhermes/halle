@@ -24,7 +24,9 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'harper' ); ?></a>
 
-	<?php if ( get_header_image() ) :
+	<?php
+	$header_style = '';
+	if ( get_header_image() ) :
 		$header_background = get_header_image();
 		$header_style = ' style="background-image:url(' . $header_background . ');"';
 	endif; ?>
