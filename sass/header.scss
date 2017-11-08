@@ -70,7 +70,6 @@
 --------------------------------------------------------------*/
 .main-navigation {
 	position: relative;
-	height: 2.88em;
 	width: 100%;
 	background: #fff;
 	border-bottom: 1px solid #eee;
@@ -87,11 +86,10 @@
 	display: none;
 	list-style: none;
 	margin: 0;
-	padding-left: 0;
+	padding: 0.43em 4em;
 }
 
 .main-navigation li {
-	padding: 7px 0;
 	background: #fff;
 }
 
@@ -230,13 +228,15 @@
 
 .search-toggle {
 	position: absolute;
-	top: 0;
+	top: 50%;
 	right: 0.5rem;
 	width: 2.75rem;
 	height: 2.75rem;
 	padding: 0;
 	border: none;
 	background: none;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
 }
 
 .search-toggle img {
