@@ -1,16 +1,16 @@
 === Harper ===
 
-Contributors: automattic
-Tags: translation-ready, custom-background, theme-options, custom-menu, post-formats, threaded-comments
+Contributors: samhermes
+Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 
 Requires at least: 4.0
-Tested up to: 4.5.3
+Tested up to: 4.8.3
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-
+Harper is a stylish way to share your content with the world.
 
 == Installation ==
 
@@ -26,7 +26,7 @@ Harper includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
-= 1.0 - May 12 2015 =
+= 1.0.0 - November 8 2017 =
 * Initial release
 
 == Credits ==
