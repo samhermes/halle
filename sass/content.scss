@@ -10,7 +10,8 @@
 		padding: 3.5em 2em;
 	}
 
-	.page & {
+	.page &,
+	.error404 & {
 		max-width: 60em;
 	}
 }
