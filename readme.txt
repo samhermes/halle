@@ -10,7 +10,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Harper is a stylish way to share your content with the world.
+Harper is a stylish way to share your story with the world.
 
 == Installation ==
 
