@@ -33,25 +33,21 @@ get_header(); ?>
 			echo '</div>';
 		endif; ?>
 
+		<?php if ( have_posts() ) : ?>
 		<div class="latest-feed archive">
 			<h3 class="latest-heading">Latest</h3>
 			<?php
-			if ( have_posts() ) :
+			
 				while ( have_posts() ) : the_post();
 					
 					get_template_part( 'template-parts/content', 'archive' );
 				
 				endwhile;
 			
-			harper_pagination();
+			harper_pagination(); ?>
 
-			else :
-
-				get_template_part( 'template-parts/content', 'none' );
-
-			endif;
-			?>
 		</div>
+		<?php endif; ?>
 
 		</main>
 	</div>
