@@ -43,11 +43,13 @@ object {
 ## Galleries
 --------------------------------------------------------------*/
 .gallery {
-	margin-bottom: 1.5em;
+	margin: 0 -2% 0.5em;
 }
 
 .gallery-item {
 	display: inline-block;
+	padding: 0 2% 1em;
+	margin: 0;
 	text-align: center;
 	vertical-align: top;
 	width: 100%;
@@ -85,6 +87,15 @@ object {
 	max-width: 11.11%;
 }
 
+.gallery-icon img {
+	width: 100%;
+}
+
 .gallery-caption {
 	display: block;
+	font-size: 0.75rem;
+
+	@media screen and (min-width: $break-37) {
+		font-size: 1rem;
+	}
 }

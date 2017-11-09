@@ -41,6 +41,8 @@
 	font-size: 1.8em;
 	font-weight: 400;
 	line-height: 1.1;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
 
 	@media screen and (min-width: $break-37) {
 		font-size: 3em;
