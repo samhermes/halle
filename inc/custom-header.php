@@ -12,33 +12,33 @@
  *
  * @link https://developer.wordpress.org/themes/functionality/custom-headers/
  *
- * @package Harper
+ * @package Halle
  */
 
 /**
  * Set up the WordPress core custom header feature.
  *
- * @uses harper_header_style()
+ * @uses halle_header_style()
  */
-function harper_custom_header_setup() {
-	add_theme_support( 'custom-header', apply_filters( 'harper_custom_header_args', array(
+function halle_custom_header_setup() {
+	add_theme_support( 'custom-header', apply_filters( 'halle_custom_header_args', array(
 		'default-image'          => '',
 		'default-text-color'     => '000000',
 		'width'                  => 1400,
 		'height'                 => 200,
 		'flex-height'            => true,
-		'wp-head-callback'       => 'harper_header_style',
+		'wp-head-callback'       => 'halle_header_style',
 	) ) );
 }
-add_action( 'after_setup_theme', 'harper_custom_header_setup' );
+add_action( 'after_setup_theme', 'halle_custom_header_setup' );
 
-if ( ! function_exists( 'harper_header_style' ) ) :
+if ( ! function_exists( 'halle_header_style' ) ) :
 /**
  * Styles the header image and text displayed on the blog.
  *
- * @see harper_custom_header_setup().
+ * @see halle_custom_header_setup().
  */
-function harper_header_style() {
+function halle_header_style() {
 	$header_text_color = get_header_textcolor();
 
 	/*

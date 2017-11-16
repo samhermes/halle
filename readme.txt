@@ -1,4 +1,4 @@
-=== Harper ===
+=== Halle ===
 
 Contributors: samhermes
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
@@ -10,7 +10,7 @@ License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Harper is a stylish way to share your story with the world.
+Halle is a stylish way to share your story with the world.
 
 == Installation ==
 
@@ -22,7 +22,7 @@ Harper is a stylish way to share your story with the world.
 
 = Does this theme support any plugins? =
 
-Harper includes support for Infinite Scroll in Jetpack.
+Halle includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 

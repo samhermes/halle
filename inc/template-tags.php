@@ -4,14 +4,14 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Harper
+ * @package Halle
  */
 
-if ( ! function_exists( 'harper_posted_on' ) ) :
+if ( ! function_exists( 'halle_posted_on' ) ) :
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
-function harper_posted_on() {
+function halle_posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -25,12 +25,12 @@ function harper_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( '%s', 'post date', 'harper' ),
+		esc_html_x( '%s', 'post date', 'halle' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'harper' ),
+		esc_html_x( 'by %s', 'post author', 'halle' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -39,13 +39,13 @@ function harper_posted_on() {
 }
 endif;
 
-if ( ! function_exists( 'harper_byline' ) ) :
+if ( ! function_exists( 'halle_byline' ) ) :
 /**
  * Prints HTML with meta information for the current author.
  */
-function harper_byline() {
+function halle_byline() {
 	$byline = sprintf(
-		esc_html_x( 'by %s', 'post author', 'harper' ),
+		esc_html_x( 'by %s', 'post author', 'halle' ),
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
@@ -54,37 +54,37 @@ function harper_byline() {
 }
 endif;
 
-if ( ! function_exists( 'harper_entry_footer' ) ) :
+if ( ! function_exists( 'halle_entry_footer' ) ) :
 /**
  * Prints HTML with meta information for the categories, tags and comments.
  */
-function harper_entry_footer() {
+function halle_entry_footer() {
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'harper' ) );
-		if ( $categories_list && harper_categorized_blog() ) {
-			printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'harper' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+		$categories_list = get_the_category_list( esc_html__( ', ', 'halle' ) );
+		if ( $categories_list && halle_categorized_blog() ) {
+			printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'halle' ) . '</div>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
-		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'harper' ) );
+		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'halle' ) );
 		if ( $tags_list ) {
-			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'harper' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+			printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'halle' ) . '</div>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<div class="comments-link">';
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'harper' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'halle' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</div>';
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'harper' ),
+			esc_html__( 'Edit %s', 'halle' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
 		'<div class="edit-link">',
@@ -93,12 +93,12 @@ function harper_entry_footer() {
 }
 endif;
 
-function harper_pagination() {
+function halle_pagination() {
 	global $wp_query;
 
 	$paginate_links = paginate_links( array(
-		'prev_text' => __('&larr;<span class="screen-reader-text"> Previous</span>', 'harper'),
-		'next_text' => __('<span class="screen-reader-text">Next </span>&rarr;', 'harper'),
+		'prev_text' => __('&larr;<span class="screen-reader-text"> Previous</span>', 'halle'),
+		'next_text' => __('<span class="screen-reader-text">Next </span>&rarr;', 'halle'),
 	) );
 
 	if ( $paginate_links ) {
@@ -111,8 +111,8 @@ function harper_pagination() {
  *
  * @return bool
  */
-function harper_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'harper_categories' ) ) ) {
+function halle_categorized_blog() {
+	if ( false === ( $all_the_cool_cats = get_transient( 'halle_categories' ) ) ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories( array(
 			'fields'     => 'ids',
@@ -124,27 +124,27 @@ function harper_categorized_blog() {
 		// Count the number of categories that are attached to the posts.
 		$all_the_cool_cats = count( $all_the_cool_cats );
 
-		set_transient( 'harper_categories', $all_the_cool_cats );
+		set_transient( 'halle_categories', $all_the_cool_cats );
 	}
 
 	if ( $all_the_cool_cats > 1 ) {
-		// This blog has more than 1 category so harper_categorized_blog should return true.
+		// This blog has more than 1 category so halle_categorized_blog should return true.
 		return true;
 	} else {
-		// This blog has only 1 category so harper_categorized_blog should return false.
+		// This blog has only 1 category so halle_categorized_blog should return false.
 		return false;
 	}
 }
 
 /**
- * Flush out the transients used in harper_categorized_blog.
+ * Flush out the transients used in halle_categorized_blog.
  */
-function harper_category_transient_flusher() {
+function halle_category_transient_flusher() {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
 	}
 	// Like, beat it. Dig?
-	delete_transient( 'harper_categories' );
+	delete_transient( 'halle_categories' );
 }
-add_action( 'edit_category', 'harper_category_transient_flusher' );
-add_action( 'save_post',     'harper_category_transient_flusher' );
+add_action( 'edit_category', 'halle_category_transient_flusher' );
+add_action( 'save_post',     'halle_category_transient_flusher' );

@@ -1,13 +1,13 @@
 <?php
 /**
- * Harper functions and definitions.
+ * Halle functions and definitions.
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Harper
+ * @package Halle
  */
 
-if ( ! function_exists( 'harper_setup' ) ) :
+if ( ! function_exists( 'halle_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,14 +15,14 @@ if ( ! function_exists( 'harper_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function harper_setup() {
+function halle_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Harper, use a find and replace
-	 * to change 'harper' to the name of your theme in all the template files.
+	 * If you're building a theme based on Halle, use a find and replace
+	 * to change 'halle' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'harper', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'halle', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -50,7 +50,7 @@ function harper_setup() {
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'harper' ),
+		'primary' => esc_html__( 'Primary', 'halle' ),
 	) );
 
 	/*
@@ -66,23 +66,23 @@ function harper_setup() {
 	) );
 }
 endif;
-add_action( 'after_setup_theme', 'harper_setup' );
+add_action( 'after_setup_theme', 'halle_setup' );
 
 /*
  * Register sidebar for the site footer.
  */
-function harper_footer_widget_area() {
+function halle_footer_widget_area() {
 	register_sidebar( array(
-		'name' => __( 'Footer', 'harper' ),
+		'name' => __( 'Footer', 'halle' ),
 		'id' => 'footer',
-		'description' => __( 'Widgets in this area will be shown in the site footer.', 'harper' ),
+		'description' => __( 'Widgets in this area will be shown in the site footer.', 'halle' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h4 class="widget-title">',
 		'after_title'   => '</h4>',
 	) );
 }
-add_action( 'widgets_init', 'harper_footer_widget_area' );
+add_action( 'widgets_init', 'halle_footer_widget_area' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -91,41 +91,41 @@ add_action( 'widgets_init', 'harper_footer_widget_area' );
  *
  * @global int $content_width
  */
-function harper_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'harper_content_width', 640 );
+function halle_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'halle_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'harper_content_width', 0 );
+add_action( 'after_setup_theme', 'halle_content_width', 0 );
 
 /**
  * Enqueue scripts and styles.
  */
-function harper_scripts() {
+function halle_scripts() {
 	$theme_version = wp_get_theme()->get( 'Version' );
 
-	wp_enqueue_style( 'harper-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly:400,400i' );
-	wp_enqueue_style( 'harper-style', get_stylesheet_uri(), array(), $theme_version );
+	wp_enqueue_style( 'halle-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly:400,400i' );
+	wp_enqueue_style( 'halle-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_script( 'harper-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20160908', true );
+	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20160908', true );
 
-	wp_enqueue_script( 'harper-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'halle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'harper-stickyfill', get_template_directory_uri() . '/js/stickyfill.min.js', array( 'jquery' ), '1.1.4', true );
+	wp_enqueue_script( 'halle-stickyfill', get_template_directory_uri() . '/js/stickyfill.min.js', array( 'jquery' ), '1.1.4', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'harper_scripts' );
+add_action( 'wp_enqueue_scripts', 'halle_scripts' );
 
 /**
  * Add editor styles.
  */
-function harper_editor_styles() {
+function halle_editor_styles() {
     $font_url = str_replace( ',', '%2C', '//fonts.googleapis.com/css?family=Work+Sans:400,500,700|Poly:400,400i' );
     add_editor_style( $font_url );
     add_editor_style();
 }
-add_action( 'after_setup_theme', 'harper_editor_styles' );
+add_action( 'after_setup_theme', 'halle_editor_styles' );
 
 /**
  * Implement the Custom Header feature.
@@ -155,34 +155,34 @@ require get_template_directory() . '/inc/jetpack.php';
 /**
  * Filter the except length.
  */
-function harper_custom_excerpt_length( $length ) {
+function halle_custom_excerpt_length( $length ) {
   return 35;
 }
-add_filter( 'excerpt_length', 'harper_custom_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'halle_custom_excerpt_length', 999 );
 
 /**
  * Filter the "read more" excerpt string to link to the post.
  */
-function harper_excerpt_more( $more ) {
+function halle_excerpt_more( $more ) {
   return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
     get_permalink( get_the_ID() ),
-    __( 'Read more', 'harper' )
+    __( 'Read more', 'halle' )
   );
 }
-add_filter( 'excerpt_more', 'harper_excerpt_more' );
+add_filter( 'excerpt_more', 'halle_excerpt_more' );
 
 /**
  * Add class to the_excerpt.
  */
-function harper_excerpt_class( $excerpt ) {
+function halle_excerpt_class( $excerpt ) {
 	return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
 }
-add_action( 'the_excerpt', 'harper_excerpt_class' );
+add_action( 'the_excerpt', 'halle_excerpt_class' );
 
 /**
  * Set up arguments for featured stories.
  */
-function harper_get_featured_args() {
+function halle_get_featured_args() {
 	$featured_category_id = get_cat_ID('Featured');
 
 	if ( get_category( $featured_category_id )->category_count > 3 ) {
@@ -214,10 +214,10 @@ function harper_get_featured_args() {
 /**
  * Determine which stories to feature on homepage.
  */
-function harper_get_featured_stories() {
+function halle_get_featured_stories() {
 	global $post;
 
-	$featured_query = new WP_Query( harper_get_featured_args() );
+	$featured_query = new WP_Query( halle_get_featured_args() );
 	while ( $featured_query->have_posts() ) : $featured_query->the_post();
         $featured_stories[] = $post->ID;
     endwhile;
@@ -228,16 +228,16 @@ function harper_get_featured_stories() {
 /**
  * Set global variable with IDs of featured posts
  */
-global $harper_featured_ids;
-$harper_featured_ids = harper_get_featured_stories();
+global $halle_featured_ids;
+$halle_featured_ids = halle_get_featured_stories();
 
 /**
  * Remove featured stories from homepage query.
  */
-function harper_remove_featured_from_query( $query ) {
-	global $harper_featured_ids;
+function halle_remove_featured_from_query( $query ) {
+	global $halle_featured_ids;
 	if ( $query->is_home() && $query->is_main_query() ) {
-		$query->set( 'post__not_in', $harper_featured_ids );
+		$query->set( 'post__not_in', $halle_featured_ids );
 	}
 }
-add_action('pre_get_posts', 'harper_remove_featured_from_query');
+add_action('pre_get_posts', 'halle_remove_featured_from_query');

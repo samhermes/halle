@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Harper
+ * @package Halle
  */
 
 get_header(); ?>
@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 		
 		<?php
-		$intro_query = new WP_Query( harper_get_featured_args() );
+		$intro_query = new WP_Query( halle_get_featured_args() );
 
 		if ( $intro_query->have_posts() && !is_paged() ) :
 			echo '<div class="intro-posts">';
@@ -44,7 +44,7 @@ get_header(); ?>
 				
 				endwhile;
 			
-			harper_pagination(); ?>
+			halle_pagination(); ?>
 
 		</div>
 		<?php endif; ?>

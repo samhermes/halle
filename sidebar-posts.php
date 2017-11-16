@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Harper
+ * @package Halle
  */
 ?>
 
@@ -43,7 +43,7 @@
 					echo '<h3>' . get_the_title() . '</h3></a>';
 
 					echo '<div class="entry-meta">';
-						harper_posted_on();
+						halle_posted_on();
 					echo '</div>';
 					
 					echo '</li>';

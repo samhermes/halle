@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Harper
+ * @package Halle
  */
 
 ?>
@@ -24,8 +24,8 @@
 
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
-			<?php harper_posted_on(); ?>
-			<?php harper_byline(); ?>
+			<?php halle_posted_on(); ?>
+			<?php halle_byline(); ?>
 		</div>
 		<?php
 		endif; ?>

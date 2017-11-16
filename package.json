@@ -1,5 +1,5 @@
 {
-  "name": "harper",
+  "name": "halle",
   "version": "1.0.0",
   "description": "",
   "main": "index.php",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/samhermes/harper.git"
+    "url": "git+https://github.com/samhermes/halle.git"
   },
   "author": "Sam Hermes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/samhermes/harper/issues"
+    "url": "https://github.com/samhermes/halle/issues"
   },
-  "homepage": "https://github.com/samhermes/harper#readme",
+  "homepage": "https://github.com/samhermes/halle#readme",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-livereload": "^3.8.1",
