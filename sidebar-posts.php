@@ -34,10 +34,10 @@
 					echo '<li>';
 					
 					if ( has_post_thumbnail() ) {
-						echo '<a href="' . get_the_permalink() . '">';
+						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 						the_post_thumbnail( 'halle-post-3x2-small' );
 					} else {
-						echo '<a href="' . get_the_permalink() . '">';
+						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 					}
 
 					echo '<h3>' . get_the_title() . '</h3></a>';
