@@ -12,9 +12,9 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class('home-small'); ?>>
 	<header class="entry-header">
 		<?php
-		if ( get_the_post_thumbnail() ) {
+		if ( has_post_thumbnail() ) {
 			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
-			the_post_thumbnail( 'post-3x2' );
+			the_post_thumbnail( 'halle-post-3x2' );
 		} else {
 			echo '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
 		}

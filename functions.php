@@ -45,8 +45,8 @@ function halle_setup() {
 	/*
 	 * Add custom image size for posts on homepage and archive pages.
 	 */
-	add_image_size( 'post-3x2', 1500, 1000, true );
-	add_image_size( 'post-3x2-small', 750, 500, true );
+	add_image_size( 'halle-post-3x2', 1500, 1000, true );
+	add_image_size( 'halle-post-3x2-small', 750, 500, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
