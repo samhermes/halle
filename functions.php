@@ -185,7 +185,7 @@ add_action( 'the_excerpt', 'halle_excerpt_class' );
 function halle_get_featured_args() {
 	$featured_category_id = get_cat_ID( 'Featured' );
 
-	if ( get_category( $featured_category_id )->category_count > 3 ) {
+	if ( $featured_category_id && get_category( $featured_category_id )->category_count > 3 ) {
 		$args = array(
 			'posts_per_page' => 4,
 			'meta_query' => array(
