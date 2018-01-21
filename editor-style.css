@@ -1,3 +1,33 @@
-body{font-family:'Poly', serif;font-weight:400;font-size:1.4em;color:#404040;max-width:46.125rem;margin:1.1em 1.2em;-webkit-font-smoothing:subpixel-antialiased !important}a{color:#404040}a:visited{color:#404040}a:hover,a:focus,a:active{color:#ff3653}a:focus{outline:thin dotted}a:hover,a:active{outline:0}p{margin-bottom:1.5em}p:first-child{margin-top:0}
+body {
+  font-family: 'Poly', serif;
+  font-weight: 400;
+  font-size: 1.4em;
+  color: #404040;
+  max-width: 46.125rem;
+  margin: 1.1em 1.2em;
+  -webkit-font-smoothing: subpixel-antialiased !important; }
+
+a {
+  color: #404040; }
+
+a:visited {
+  color: #404040; }
+
+a:hover,
+a:focus,
+a:active {
+  color: #ff3653; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:hover,
+a:active {
+  outline: 0; }
+
+p {
+  margin-bottom: 1.5em; }
+  p:first-child {
+    margin-top: 0; }
 
 /*# sourceMappingURL=editor-style.css.map */
