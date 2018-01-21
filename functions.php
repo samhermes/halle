@@ -183,7 +183,7 @@ add_action( 'the_excerpt', 'halle_excerpt_class' );
  * Set up arguments for featured stories.
  */
 function halle_get_featured_args() {
-	$featured_category_id = get_cat_ID('Featured');
+	$featured_category_id = get_cat_ID( 'Featured' );
 
 	if ( get_category( $featured_category_id )->category_count > 3 ) {
 		$args = array(
