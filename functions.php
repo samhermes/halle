@@ -133,6 +133,16 @@ function halle_editor_styles() {
 add_action( 'after_setup_theme', 'halle_editor_styles' );
 
 /**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function halle_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+	}
+}
+add_action( 'wp_head', 'halle_pingback_header' );
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
