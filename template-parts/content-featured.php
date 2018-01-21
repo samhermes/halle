@@ -13,7 +13,11 @@
 	<header class="entry-header">
 		<?php
 		echo '<div class="image-wrap"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
-		the_post_thumbnail( 'halle-post-3x2' );
+		
+		if ( has_post_thumbnail() ) {
+			the_post_thumbnail( 'halle-post-3x2' );
+		}
+		
 		echo '</a></div>';
 		?>
 
