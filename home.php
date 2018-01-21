@@ -35,7 +35,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 		<div class="latest-feed archive">
-			<h3 class="latest-heading">Latest</h3>
+			<h3 class="latest-heading"><?php esc_html_e( 'Latest', 'halle' ); ?></h3>
 			<?php
 			
 				while ( have_posts() ) : the_post();

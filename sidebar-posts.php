@@ -24,7 +24,7 @@
 
 			if ( $the_query->have_posts() ) {
 				
-				echo '<h2>Latest Posts</h2>';
+				echo '<h2>' . esc_html__( 'Latest Posts', 'halle' ) . '</h2>';
 
 				echo '<ul>';
 
