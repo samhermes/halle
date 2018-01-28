@@ -172,6 +172,7 @@
 			searchOverlay[0].classList.toggle('toggled');
 			searchField[0].value = '';
 			searchOverlay[0].addEventListener(transitionEvent, focusFunction);
+			bindTabKeydown();
 		};
 
 		function focusFunction(event) {
@@ -181,6 +182,7 @@
 
 		searchOverlay[0].onclick = function() {
 			searchOverlay[0].classList.toggle('toggled');
+			unbindTabKeydown();
 		}
 
 		searchForm[0].onclick = function(event) {
@@ -199,7 +201,47 @@
 
 			if (isEscape) {
 				searchOverlay[0].classList.remove('toggled');
+				unbindTabKeydown();
 			}
 		};
+
+		function bindTabKeydown() {
+			document.addEventListener('keydown', handleTabEvent);
+		}
+
+		function unbindTabKeydown() {
+			document.removeEventListener('keydown', handleTabEvent);
+		}
+
+		// Set up variables for use in handleTabEvent() function.
+		var focusableSelectors = ['input', 'button'];
+
+		function handleTabEvent (e) {
+			// Only perform function if tab key initiated
+			if (e.keyCode === 9) {
+				// Take list of possible focusable elements and return those that match within context
+				function getFocusableElements(elements, context) {
+					return [].slice.call(context.querySelectorAll(elements));
+				}
+
+				// Create up to date list of all focusable elements within search container
+				var focusableElements = getFocusableElements(focusableSelectors.join(), searchOverlay[0]);
+
+				// Get the index of the current active element within search
+				var focusedIndex = focusableElements.indexOf(document.activeElement);
+
+				// If shift key is not in use and last element has focus
+				if (!e.shiftKey && focusedIndex === focusableElements.length - 1) {
+					// Set focus to first item within search
+					focusableElements[0].focus();
+					e.preventDefault();
+				// If shift key is in use and first element has focus
+				} else if (e.shiftKey && (focusedIndex === 0 || focusedIndex === -1)) {
+					// Set focus to last item within search
+					focusableElements[focusableElements.length - 1].focus();
+					e.preventDefault();
+				}
+			}
+		}
 	}
 } )();
