@@ -60,17 +60,21 @@
 	?>
 
 	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
-		<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'halle' ); ?></button>
+		<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'halle' ); ?></button>
 		
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
 		
-		<button class="search-toggle">
-			<img src="<?php echo get_template_directory_uri() . '/img/search.svg'; ?>" alt="Search">
+		<button type="button" class="search-toggle">
+			<img src="<?php echo get_template_directory_uri() . '/img/search.svg'; ?>" alt="">
+			<span class="screen-reader-text"><?php esc_html_e( 'Search', 'halle' ); ?></span>
 		</button>
 	</nav>
 
 	<div class="search-overlay">
 		<?php get_search_form(); ?>
+		<button type="button" class="search-close">
+			<span class="screen-reader-text"><?php esc_html_e( 'Close search', 'halle' ); ?></span>
+		</button>
 	</div>
 
 	<div id="content" class="site-content">

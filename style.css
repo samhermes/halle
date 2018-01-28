@@ -724,12 +724,35 @@ a:active {
   visibility: hidden;
   transition: visibility 0s 0.2s, background 0.2s, opacity 0.2s, height 0s 0.2s; }
 
+.admin-bar .search-overlay {
+  top: 32px; }
+
+@media screen and (max-width: 782px) {
+  .admin-bar .search-overlay {
+    top: 46px; } }
+
 .search-overlay.toggled {
   height: 100%;
   opacity: 1;
   visibility: visible;
   background: rgba(255, 255, 255, 0.95);
   transition-delay: 0s; }
+
+.search-overlay .search-close {
+  position: absolute;
+  top: 1em;
+  right: 1.2em;
+  width: 3em;
+  height: 3em;
+  background: url(img/search-close.svg) no-repeat center;
+  background-size: 1.4rem;
+  border: none;
+  padding: 0;
+  -webkit-appearance: none; }
+
+@media screen and (min-width: 28.125em) {
+  .search-overlay .search-close {
+    right: 2em; } }
 
 .search-overlay .search-form {
   position: absolute;
@@ -744,7 +767,8 @@ a:active {
   width: calc(100% - 3em);
   height: 3em;
   padding: 0 1em;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;
+  border-radius: 0; }
 
 .search-overlay .search-submit {
   position: absolute;
@@ -756,7 +780,8 @@ a:active {
   background: url(img/search.svg) no-repeat center;
   background-size: 1.4rem;
   padding: 0;
-  border: none; }
+  border: none;
+  -webkit-appearance: none; }
 
 .site-footer {
   border-top: 1px solid #eee;
