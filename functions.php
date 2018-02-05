@@ -110,6 +110,8 @@ function halle_scripts() {
 	wp_localize_script( 'halle-scripts', 'halleL10n', array(
 		'menu'  => esc_html__( 'Menu', 'halle' ),
 		'close' => esc_html__( 'Close', 'halle' ),
+		'comments_show' => esc_html__( 'Show Comments', 'halle' ),
+		'comments_hide' => esc_html__( 'Hide Comments', 'halle' ),
 	) );
 
 	wp_enqueue_script( 'halle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );

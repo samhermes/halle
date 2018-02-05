@@ -124,7 +124,7 @@
 		// Create toggle button
 		var commentToggle = document.createElement('button');
 		commentToggle.className = 'comment-toggle';
-		var toggleText = 'Show Comments';
+		var toggleText = halleL10n.comments_show;
 		commentToggle.innerHTML = toggleText;
 
 		// Insert button immediately before comment list
@@ -134,7 +134,7 @@
 		commentToggle.onclick = function() {
 			commentList.classList.toggle('comments-hidden');
 			if(this.innerHTML == toggleText) {
-				commentToggle.innerHTML = "Hide Comments";
+				commentToggle.innerHTML = halleL10n.comments_hide;
 			}
 			else {
 				commentToggle.innerHTML = toggleText;
