@@ -1,10 +1,8 @@
-/**
- * File navigation.js.
- *
- * Handles toggling the navigation menu for small screens and enables TAB key
- * navigation support for dropdown menus.
- */
 ( function() {
+	/**
+	 * Handles toggling the navigation menu for small screens and enables TAB key
+	 * navigation support for dropdown menus.
+	 */
 	var container, button, menu, links, subMenus, i, len;
 
 	container = document.getElementById( 'site-navigation' );
@@ -245,9 +243,11 @@
 		}
 	}
 
-	// Apply Stickyfill to any element with class 'stick'.
+	/**
+	 * Applies Stickyfill to any element with class 'stick'
+	 */
 	var stickyElements = document.getElementsByClassName('stick');
-
+	
 	for (var i = stickyElements.length - 1; i >= 0; i--) {
 		Stickyfill.add(stickyElements[i]);
 	}
