@@ -233,6 +233,7 @@ function halle_get_featured_args() {
  */
 function halle_get_featured_stories() {
 	global $post;
+	$featured_stories = array();
 
 	$featured_query = new WP_Query( halle_get_featured_args() );
 	while ( $featured_query->have_posts() ) : $featured_query->the_post();
