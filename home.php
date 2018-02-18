@@ -30,6 +30,7 @@ get_header(); ?>
 
 				}
 			endwhile;
+			wp_reset_postdata();
 			echo '</div>';
 		endif; ?>
 
