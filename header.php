@@ -65,7 +65,7 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
 		
 		<button type="button" class="search-toggle">
-			<img src="<?php echo get_template_directory_uri() . '/img/search.svg'; ?>" alt="">
+			<img src="<?php echo esc_url( get_template_directory_uri() . '/img/search.svg' ); ?>" alt="">
 			<span class="screen-reader-text"><?php esc_html_e( 'Search', 'halle' ); ?></span>
 		</button>
 	</nav>
