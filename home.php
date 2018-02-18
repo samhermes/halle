@@ -21,12 +21,12 @@ get_header(); ?>
 			while ( $intro_query->have_posts() ) : $intro_query->the_post();
 				if ( ! false == $first ) {
 
-					get_template_part( 'template-parts/content-featured' );
+					get_template_part( 'template-parts/content', 'featured' );
 					$first = false;
 
 				} else {
 
-					get_template_part( 'template-parts/content-home' );
+					get_template_part( 'template-parts/content', 'home' );
 
 				}
 			endwhile;
