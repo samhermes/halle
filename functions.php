@@ -181,9 +181,10 @@ add_filter( 'excerpt_length', 'halle_custom_excerpt_length', 999 );
  * Filter the "read more" excerpt string to link to the post.
  */
 function halle_excerpt_more( $more ) {
-  return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
+  return sprintf( '... <a class="read-more" href="%1$s">%2$s %3$s</a>',
     get_permalink( get_the_ID() ),
-    __( 'Read more', 'halle' )
+    __( 'Read more', 'halle' ),
+    '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>'
   );
 }
 add_filter( 'excerpt_more', 'halle_excerpt_more' );
