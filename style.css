@@ -927,7 +927,7 @@ a:active {
         border-color: #333; }
     .pagination .page-numbers:hover, .pagination .page-numbers.current {
       color: #404040;
-      border-color: #808080; }
+      border-color: #595959; }
 
 /*--------------------------------------------------------------
 # Site Content
@@ -983,9 +983,9 @@ a:active {
   font-family: 'Work Sans', sans-serif;
   font-size: 0.9em;
   font-weight: 400;
-  color: #808080; }
+  color: #595959; }
   .entry-meta a {
-    color: #808080;
+    color: #595959;
     text-decoration: none; }
     .entry-meta a:hover {
       text-decoration: underline; }
@@ -1335,7 +1335,7 @@ object {
 
 .comment-metadata a {
   text-decoration: none;
-  color: #808080;
+  color: #595959;
   font-size: 0.9rem;
   line-height: 1.5rem; }
 
@@ -1361,7 +1361,7 @@ object {
   text-decoration: none;
   border: 1px solid #c5c5c5;
   padding: 0.25em 0.75em;
-  color: #7e7e7e;
+  color: #595959;
   text-transform: uppercase;
   font-size: 0.8rem;
   transition: all 0.1s; }
