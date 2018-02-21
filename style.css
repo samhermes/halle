@@ -359,7 +359,10 @@ input[type="submit"]:hover {
 button:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
-input[type="submit"]:focus,
+input[type="submit"]:focus {
+  border-color: #808080;
+  outline: thin dotted; }
+
 button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
@@ -428,6 +431,9 @@ a:hover,
 a:focus,
 a:active {
   color: #ff3653; }
+
+a:focus {
+  outline: thin dotted; }
 
 a:hover,
 a:active {
