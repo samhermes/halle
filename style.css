@@ -430,7 +430,7 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  color: #ff3653; }
+  text-decoration: underline; }
 
 a:focus {
   outline: thin dotted; }
@@ -618,36 +618,19 @@ a:active {
   text-decoration: none;
   text-transform: uppercase;
   line-height: 1;
-  padding: 8px 20px 7px;
+  padding: 8px 0 2px;
+  margin: 0 20px 3px;
   font-size: 0.95em;
   color: #333;
   font-weight: 500; }
-
-.main-navigation a:hover {
-  color: #ff3653; }
-
-.main-navigation ul ul {
-  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-  float: left;
-  position: absolute;
-  top: 1.5em;
-  left: -999em;
-  z-index: 99999; }
-
-.main-navigation ul ul ul {
-  left: -999em;
-  top: 0; }
-
-.main-navigation ul ul a {
-  width: 200px; }
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-  left: auto; }
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-  left: 100%; }
+  .main-navigation a:hover {
+    text-decoration: underline; }
+  @media screen and (min-width: 37.5em) {
+    .main-navigation a {
+      border-bottom: 2px solid transparent; }
+      .main-navigation a:hover {
+        text-decoration: none;
+        border-bottom-color: #333; } }
 
 .menu-toggle {
   /* Remove default button styles */
@@ -670,15 +653,12 @@ a:active {
 .main-navigation.toggled ul {
   display: block; }
 
-.main-navigation.toggled ul {
-  border-bottom: 1px solid #eee;
-  margin-top: -1px; }
-
 @media screen and (min-width: 37.5em) {
   .menu-toggle {
     display: none; }
   .main-navigation ul {
-    display: block; } }
+    display: block;
+    height: 2.75rem; } }
 
 .site-main .comment-navigation,
 .site-main .posts-navigation,
@@ -701,15 +681,13 @@ a:active {
 
 .search-toggle {
   position: absolute;
-  top: 50%;
+  top: 0;
   right: 0.5rem;
   width: 2.75rem;
   height: 2.75rem;
   padding: 0;
   border: none;
-  background: none;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%); }
+  background: none; }
 
 .search-toggle img {
   width: 1.25rem;
@@ -1100,7 +1078,6 @@ a:active {
   .intro-posts a {
     text-decoration: none; }
     .intro-posts a:hover {
-      color: #404040;
       text-decoration: underline; }
   .intro-posts .entry-title,
   .intro-posts .entry-meta,
@@ -1439,8 +1416,7 @@ object {
   text-decoration: none; }
 
 .latest-posts a:hover {
-  text-decoration: underline;
-  color: #404040; }
+  text-decoration: underline; }
 
 .latest-posts h3 {
   font-family: 'Poly', serif;
