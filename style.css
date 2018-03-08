@@ -430,30 +430,33 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-  text-decoration: underline; }
+  text-decoration: none; }
 
 a:focus {
   outline: thin dotted; }
-
-a:hover,
-a:active {
-  outline: 0; }
 
 /*--------------------------------------------------------------
 # Accessibility
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
+  border: 0;
   clip: rect(1px, 1px, 1px, 1px);
-  position: absolute !important;
+  clip-path: inset(50%);
   height: 1px;
   width: 1px;
-  overflow: hidden; }
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  word-wrap: normal !important;
+  /* Many screen reader and browser combinations announce broken words as they would appear visually. */ }
 
 .screen-reader-text:focus {
   background-color: #f1f1f1;
   box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
   clip: auto !important;
+  clip-path: none;
   color: #21759b;
   display: block;
   font-size: 14px;
@@ -1315,6 +1318,8 @@ object {
   color: #595959;
   font-size: 0.9rem;
   line-height: 1.5rem; }
+  .comment-metadata a:hover, .comment-metadata a:active {
+    text-decoration: underline; }
 
 @media screen and (min-width: 37.5em) {
   .comment-author {
@@ -1345,7 +1350,8 @@ object {
 
 .comment-reply-link:hover {
   color: #404040;
-  border-color: #808080; }
+  border-color: #808080;
+  text-decoration: none; }
 
 .bypostauthor {
   display: block; }

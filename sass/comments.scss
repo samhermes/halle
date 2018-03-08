@@ -49,6 +49,11 @@
 	color: #595959;
 	font-size: 0.9rem;
 	line-height: 1.5rem;
+
+	&:hover,
+	&:active {
+		text-decoration: underline;
+	}
 }
 
 @media screen and (min-width: $break-37) {
@@ -89,6 +94,7 @@
 .comment-reply-link:hover {
 	color: #404040;
 	border-color: #808080;
+	text-decoration: none;
 }
 
 .bypostauthor {
