@@ -1080,7 +1080,8 @@ a:focus {
     .intro-posts {
       padding: 0 2.3em 2.2em; } }
   .intro-posts a {
-    text-decoration: none; }
+    text-decoration: none;
+    display: inline-block; }
     .intro-posts a:hover {
       text-decoration: underline; }
   .intro-posts .entry-title,
