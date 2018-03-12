@@ -1421,7 +1421,8 @@ object {
   margin-bottom: 0.6em; }
 
 .latest-posts a {
-  text-decoration: none; }
+  text-decoration: none;
+  display: inline-block; }
 
 .latest-posts a:hover {
   text-decoration: underline; }
