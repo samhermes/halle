@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: halle 1.0.3\n"
+"Project-Id-Version: halle 1.0.4\n"
 "Report-Msgid-Bugs-To: https://github.com/samhermes/halle/issues\n"
 "POT-Creation-Date: 2018-01-21 10:47:00+00:00\n"
 "MIME-Version: 1.0\n"
