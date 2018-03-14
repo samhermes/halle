@@ -24,7 +24,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php halle_posted_on(); ?>
-			<?php halle_byline(); ?>
+			<?php halle_posted_by(); ?>
 		</div>
 		<?php
 		endif; ?>
