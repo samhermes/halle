@@ -188,7 +188,7 @@ function halle_excerpt_more( $more ) {
 		return $more;
 	}
 	return sprintf( '... <a class="read-more" href="%1$s">%2$s %3$s</a>',
-		get_permalink( get_the_ID() ),
+		esc_url( get_permalink( get_the_ID() ) ),
 		__( 'Read more', 'halle' ),
 		'<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>'
 	);
