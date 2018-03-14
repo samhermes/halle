@@ -27,7 +27,7 @@
 	$header_style = '';
 	if ( get_header_image() ) :
 		$header_background = get_header_image();
-		$header_style = ' style="background-image:url(' . $header_background . ');"';
+		$header_style = ' style="background-image:url(' . esc_url( $header_background ) . ');"';
 	endif; ?>
 
 	<header id="masthead" class="site-header" role="banner"<?php echo $header_style; ?>>
