@@ -96,13 +96,13 @@ endif;
 function halle_pagination() {
 	global $wp_query;
 
-	$paginate_links = paginate_links( array(
+	$posts_pagination = get_the_posts_pagination( array(
 		'prev_text' => __('&larr;<span class="screen-reader-text"> Previous</span>', 'halle'),
 		'next_text' => __('<span class="screen-reader-text">Next </span>&rarr;', 'halle'),
 	) );
 
-	if ( $paginate_links ) {
-		echo '<nav class="pagination">' . $paginate_links . '</nav>';
+	if ( $posts_pagination ) {
+		echo '<nav class="pagination">' . $posts_pagination . '</nav>';
 	}
 }
 
