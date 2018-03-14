@@ -247,6 +247,8 @@ function halle_get_featured_stories() {
         $featured_stories[] = $post->ID;
     endwhile;
 
+    wp_reset_postdata();
+
     return $featured_stories;
 }
 
