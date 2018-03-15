@@ -25,8 +25,7 @@ function halle_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		/* translators: %s: post date. */
-		esc_html_x( '%s', 'post date', 'halle' ),
+		esc_html( '%s' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
