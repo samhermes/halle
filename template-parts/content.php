@@ -21,14 +21,14 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php halle_posted_on(); ?>
-			<?php halle_byline(); ?>
+			<?php halle_posted_by(); ?>
 		</div>
 		<?php
 		endif; ?>
 	</header>
 
 	<?php
-		if ( get_the_post_thumbnail() ) {
+		if ( has_post_thumbnail() ) {
 			echo '<div class="featured-image">';
 			the_post_thumbnail( 'full' );
 			echo '</div>';

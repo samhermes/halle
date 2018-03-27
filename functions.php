@@ -45,8 +45,8 @@ function halle_setup() {
 	/*
 	 * Add custom image size for posts on homepage and archive pages.
 	 */
-	add_image_size( 'post-3x2', 1500, 1000, true );
-	add_image_size( 'post-3x2-small', 750, 500, true );
+	add_image_size( 'halle-post-3x2', 1500, 1000, true );
+	add_image_size( 'halle-post-3x2-small', 750, 500, true );
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
@@ -105,11 +105,18 @@ function halle_scripts() {
 	wp_enqueue_style( 'halle-work-sans', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,600|Poly:400,400i' );
 	wp_enqueue_style( 'halle-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array(), '20160908', true );
+	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'halle-stickyfill' ), '20160908', true );
+
+	wp_localize_script( 'halle-scripts', 'halleL10n', array(
+		'menu'  => esc_html__( 'Menu', 'halle' ),
+		'close' => esc_html__( 'Close', 'halle' ),
+		'comments_show' => esc_html__( 'Show Comments', 'halle' ),
+		'comments_hide' => esc_html__( 'Hide Comments', 'halle' ),
+	) );
 
 	wp_enqueue_script( 'halle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'halle-stickyfill', get_template_directory_uri() . '/js/stickyfill.min.js', array( 'jquery' ), '1.1.4', true );
+	wp_enqueue_script( 'halle-stickyfill', get_template_directory_uri() . '/js/stickyfill.js', array( 'jquery' ), '1.1.4', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -126,6 +133,16 @@ function halle_editor_styles() {
     add_editor_style();
 }
 add_action( 'after_setup_theme', 'halle_editor_styles' );
+
+/**
+ * Add a pingback url auto-discovery header for singularly identifiable articles.
+ */
+function halle_pingback_header() {
+	if ( is_singular() && pings_open() ) {
+		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+	}
+}
+add_action( 'wp_head', 'halle_pingback_header' );
 
 /**
  * Implement the Custom Header feature.
@@ -156,7 +173,10 @@ require get_template_directory() . '/inc/jetpack.php';
  * Filter the except length.
  */
 function halle_custom_excerpt_length( $length ) {
-  return 35;
+	if ( is_admin() ) {
+		return $length;
+	}
+	return 35;
 }
 add_filter( 'excerpt_length', 'halle_custom_excerpt_length', 999 );
 
@@ -164,10 +184,14 @@ add_filter( 'excerpt_length', 'halle_custom_excerpt_length', 999 );
  * Filter the "read more" excerpt string to link to the post.
  */
 function halle_excerpt_more( $more ) {
-  return sprintf( '... <a class="read-more" href="%1$s">%2$s</a>',
-    get_permalink( get_the_ID() ),
-    __( 'Read more', 'halle' )
-  );
+	if ( is_admin() ) {
+		return $more;
+	}
+	return sprintf( '... <a class="read-more" href="%1$s">%2$s %3$s</a>',
+		esc_url( get_permalink( get_the_ID() ) ),
+		__( 'Read more', 'halle' ),
+		'<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>'
+	);
 }
 add_filter( 'excerpt_more', 'halle_excerpt_more' );
 
@@ -183,9 +207,9 @@ add_action( 'the_excerpt', 'halle_excerpt_class' );
  * Set up arguments for featured stories.
  */
 function halle_get_featured_args() {
-	$featured_category_id = get_cat_ID('Featured');
+	$featured_category_id = get_cat_ID( 'Featured' );
 
-	if ( get_category( $featured_category_id )->category_count > 3 ) {
+	if ( $featured_category_id && get_category( $featured_category_id )->category_count > 3 ) {
 		$args = array(
 			'posts_per_page' => 4,
 			'meta_query' => array(
@@ -216,11 +240,14 @@ function halle_get_featured_args() {
  */
 function halle_get_featured_stories() {
 	global $post;
+	$featured_stories = array();
 
 	$featured_query = new WP_Query( halle_get_featured_args() );
 	while ( $featured_query->have_posts() ) : $featured_query->the_post();
         $featured_stories[] = $post->ID;
     endwhile;
+
+    wp_reset_postdata();
 
     return $featured_stories;
 }

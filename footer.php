@@ -22,13 +22,5 @@
 
 <?php wp_footer(); ?>
 
-<script>
-var stickyElements = document.getElementsByClassName('stick');
-
-for (var i = stickyElements.length - 1; i >= 0; i--) {
-	Stickyfill.add(stickyElements[i]);
-}
-</script>
-
 </body>
 </html>

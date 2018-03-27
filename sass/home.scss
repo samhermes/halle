@@ -28,9 +28,9 @@
 
 	a {
 		text-decoration: none;
+		display: inline-block;
 
 		&:hover {
-			color: #404040;
 			text-decoration: underline;
 		}
 	}

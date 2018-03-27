@@ -21,21 +21,22 @@ get_header(); ?>
 			while ( $intro_query->have_posts() ) : $intro_query->the_post();
 				if ( ! false == $first ) {
 
-					get_template_part( 'template-parts/content-featured' );
+					get_template_part( 'template-parts/content', 'featured' );
 					$first = false;
 
 				} else {
 
-					get_template_part( 'template-parts/content-home' );
+					get_template_part( 'template-parts/content', 'home' );
 
 				}
 			endwhile;
+			wp_reset_postdata();
 			echo '</div>';
 		endif; ?>
 
 		<?php if ( have_posts() ) : ?>
 		<div class="latest-feed archive">
-			<h3 class="latest-heading">Latest</h3>
+			<h2 class="latest-heading"><?php esc_html_e( 'Latest', 'halle' ); ?></h2>
 			<?php
 			
 				while ( have_posts() ) : the_post();

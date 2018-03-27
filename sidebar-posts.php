@@ -24,7 +24,7 @@
 
 			if ( $the_query->have_posts() ) {
 				
-				echo '<h2>Latest Posts</h2>';
+				echo '<h2>' . esc_html__( 'Latest Posts', 'halle' ) . '</h2>';
 
 				echo '<ul>';
 
@@ -33,11 +33,11 @@
 
 					echo '<li>';
 					
-					if ( get_the_post_thumbnail() ) {
-						echo '<a href="' . get_the_permalink() . '">';
-						the_post_thumbnail( 'post-3x2-small' );
+					if ( has_post_thumbnail() ) {
+						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
+						the_post_thumbnail( 'halle-post-3x2-small' );
 					} else {
-						echo '<a href="' . get_the_permalink() . '">';
+						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 					}
 
 					echo '<h3>' . get_the_title() . '</h3></a>';

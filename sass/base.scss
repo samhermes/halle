@@ -175,23 +175,23 @@ input[type="submit"] {
 	border-radius: 3px;
 }
 
-button:hover,
-input[type="button"]:hover,
-input[type="reset"]:hover,
-input[type="submit"]:hover {
-	color: #404040;
-	border-color: #808080;
-}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	&:hover {
+		color: #404040;
+		border-color: #808080;
+	}
 
-button:focus,
-input[type="button"]:focus,
-input[type="reset"]:focus,
-input[type="submit"]:focus,
-button:active,
-input[type="button"]:active,
-input[type="reset"]:active,
-input[type="submit"]:active {
-	border-color: #808080;
+	&:focus {
+		border-color: #808080;
+		outline: thin dotted;
+	}
+
+	&:active {
+		border-color: #808080;
+	}
 }
 
 input[type="text"],
@@ -262,12 +262,11 @@ a:visited {
 a:hover,
 a:focus,
 a:active {
-	color: rgb(255, 54, 83);
+	text-decoration: none;
 }
 
-a:hover,
-a:active {
-	outline: 0;
+a:focus {
+	outline: thin dotted;
 }
 
 /*--------------------------------------------------------------
@@ -275,17 +274,23 @@ a:active {
 --------------------------------------------------------------*/
 /* Text meant only for screen readers. */
 .screen-reader-text {
+	border: 0;
 	clip: rect(1px, 1px, 1px, 1px);
-	position: absolute !important;
+	clip-path: inset(50%);
 	height: 1px;
 	width: 1px;
+	margin: -1px;
 	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
 }
 
 .screen-reader-text:focus {
 	background-color: #f1f1f1;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
+	clip-path: none;
 	color: #21759b;
 	display: block;
 	font-size: 14px;

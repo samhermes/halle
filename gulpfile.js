@@ -9,13 +9,13 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
   var styleSass = gulp.src('./sass/style.scss')
   	.pipe(sourcemaps.init())
-    .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
   var editorSass = gulp.src('./sass/editor-style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass({outputStyle:'compressed'}).on('error', sass.logError))
+    .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());

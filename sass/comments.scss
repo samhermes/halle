@@ -23,7 +23,6 @@
 .comment-toggle:focus {
 	border: 1px solid #808080;
 	box-shadow: none;
-	outline: none;
 }
 
 .comments-hidden ol {
@@ -47,9 +46,14 @@
 
 .comment-metadata a {
 	text-decoration: none;
-	color: #808080;
+	color: #595959;
 	font-size: 0.9rem;
 	line-height: 1.5rem;
+
+	&:hover,
+	&:active {
+		text-decoration: underline;
+	}
 }
 
 @media screen and (min-width: $break-37) {
@@ -81,7 +85,7 @@
 	text-decoration: none;
 	border: 1px solid #c5c5c5;
 	padding: 0.25em 0.75em;
-	color: #7e7e7e;
+	color: #595959;
 	text-transform: uppercase;
 	font-size: 0.8rem;
 	transition: all 0.1s;
@@ -90,6 +94,7 @@
 .comment-reply-link:hover {
 	color: #404040;
 	border-color: #808080;
+	text-decoration: none;
 }
 
 .bypostauthor {
@@ -125,4 +130,3 @@
 		}
 	}
 }
-

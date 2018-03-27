@@ -14,8 +14,6 @@ function halle_customize_register( $wp_customize ) {
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
-	$wp_customize->remove_control( 'display_header_text' );
 }
 add_action( 'customize_register', 'halle_customize_register' );
 
