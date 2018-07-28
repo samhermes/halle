@@ -527,8 +527,13 @@ a:focus {
   display: table;
   table-layout: fixed; }
 
-.clear:after, .site-footer .widget-area:after, .archive .hentry:after,
-.search .hentry:after, .intro-posts:after, .home-featured:after,
+
+.clear:after,
+.site-footer .widget-area:after,
+.archive .hentry:after,
+.search .hentry:after,
+.intro-posts:after,
+.home-featured:after,
 .entry-content:after,
 .comment-content:after,
 .site-header:after,

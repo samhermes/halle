@@ -1,0 +1,22 @@
+/*
+ * Block editor stylesheet
+*/
+body.gutenberg-editor-page .edit-post-visual-editor {
+  font-family: 'Poly', serif; }
+  body.gutenberg-editor-page .edit-post-visual-editor p {
+    font-family: 'Poly', serif;
+    font-size: 1.4rem;
+    line-height: 1.5; }
+
+body.gutenberg-editor-page .editor-post-title__input {
+  font-family: 'Poly', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 1.1; }
+
+body.gutenberg-editor-page .editor-post-title__block,
+body.gutenberg-editor-page .editor-default-block-appender,
+body.gutenberg-editor-page .editor-block-list__block {
+  max-width: 46.125rem; }
+
+/*# sourceMappingURL=block-editor-style.css.map */

@@ -135,6 +135,20 @@ function halle_editor_styles() {
 add_action( 'after_setup_theme', 'halle_editor_styles' );
 
 /**
+ * Enqueue block editor styles for Gutenberg.
+ */
+function halle_block_editor_styles() {
+	$this_theme = wp_get_theme();
+	$this_version = $this_theme->get( 'Version' );
+
+	wp_enqueue_style( 'halle-block-editor-styles', get_theme_file_uri( '/block-editor-style.css' ), false, $this_version );
+
+	// Add Google fonts to editor
+	wp_enqueue_style( 'halle-editor-fonts', 'https://fonts.googleapis.com/css?family=Work+Sans:400,500,700|Poly:400,400i' );
+}
+add_action( 'enqueue_block_editor_assets', 'halle_block_editor_styles' );
+
+/**
  * Add a pingback url auto-discovery header for singularly identifiable articles.
  */
 function halle_pingback_header() {
