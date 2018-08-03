@@ -1063,6 +1063,9 @@ a:focus {
     background-size: 1.4rem;
     border: none; }
 
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 8rem; }
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
