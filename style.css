@@ -1066,6 +1066,28 @@ a:focus {
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 8rem; }
 
+.wp-block-button .wp-block-button__link {
+  border-radius: 0.43rem;
+  padding: 0.56rem 1.3rem; }
+
+.wp-block-quote {
+  margin: 0 0 1.5rem;
+  border-left: 4px solid #404040;
+  padding: 0 0 0 1em; }
+  .wp-block-quote p {
+    margin-bottom: 1rem; }
+  .wp-block-quote cite {
+    font-size: 1.125rem; }
+  .wp-block-quote.is-style-large {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1em; }
+    .wp-block-quote.is-style-large p {
+      font-size: 2rem; }
+    .wp-block-quote.is-style-large cite {
+      font-size: 1.2rem;
+      text-align: right;
+      display: block; }
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/

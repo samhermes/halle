@@ -19,4 +19,29 @@ body.gutenberg-editor-page .editor-default-block-appender,
 body.gutenberg-editor-page .editor-block-list__block {
   max-width: 46.125rem; }
 
+body.gutenberg-editor-page .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 8rem; }
+
+body.gutenberg-editor-page .wp-block-button .wp-block-button__link {
+  border-radius: 0.43rem;
+  padding: 0.56rem 1.3rem; }
+
+body.gutenberg-editor-page .wp-block-quote {
+  margin: 0 0 1.5rem;
+  border-left: 4px solid #404040;
+  padding: 0 0 0 1em; }
+  body.gutenberg-editor-page .wp-block-quote p {
+    margin-bottom: 1rem; }
+  body.gutenberg-editor-page .wp-block-quote cite {
+    font-size: 1.125rem; }
+  body.gutenberg-editor-page .wp-block-quote.is-style-large {
+    margin: 2.5rem 0;
+    padding: 0 0 0 1em; }
+    body.gutenberg-editor-page .wp-block-quote.is-style-large p {
+      font-size: 2rem; }
+    body.gutenberg-editor-page .wp-block-quote.is-style-large cite {
+      font-size: 1.2rem;
+      text-align: right;
+      display: block; }
+
 /*# sourceMappingURL=block-editor-style.css.map */

@@ -25,4 +25,6 @@ body.gutenberg-editor-page {
     .editor-block-list__block {
         max-width: 46.125rem;
     }
+
+    @import 'core-blocks';
 }

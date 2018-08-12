@@ -1,3 +1,37 @@
 .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
     max-width: 8rem;
 }
+
+.wp-block-button .wp-block-button__link {
+    border-radius: 0.43rem;
+    padding: 0.56rem 1.3rem;
+}
+
+.wp-block-quote {
+    margin: 0 0 1.5rem;
+    border-left: 4px solid #404040;
+    padding: 0 0 0 1em;
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    cite {
+        font-size: 1.125rem;
+    }
+
+    &.is-style-large {
+        margin: 2.5rem 0;
+        padding: 0 0 0 1em;
+
+        p {
+            font-size: 2rem;
+        }
+
+        cite {
+            font-size: 1.2rem;
+            text-align: right;
+            display: block;
+        }
+    }
+}
