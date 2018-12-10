@@ -9,19 +9,19 @@ var gulp = require('gulp'),
 gulp.task('sass', function () {
   var styleSass = gulp.src('./sass/style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
   var editorSass = gulp.src('./sass/editor-style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
   var blockEditorSass = gulp.src('./sass/block-editor-style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
