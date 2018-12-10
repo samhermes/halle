@@ -1,14 +1,14 @@
 'use strict';
 
 var gulp = require('gulp'),
-	sass = require('gulp-sass'),
-	sourcemaps = require('gulp-sourcemaps'),
-	livereload = require('gulp-livereload'),
+  sass = require('gulp-sass'),
+  sourcemaps = require('gulp-sourcemaps'),
+  livereload = require('gulp-livereload'),
   merge = require('merge-stream');
 
 gulp.task('sass', function () {
   var styleSass = gulp.src('./sass/style.scss')
-  	.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
@@ -25,11 +25,11 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
-  return merge(styleSass, editorSass);
+  return merge(styleSass, editorSass, blockEditorSass);
 });
 
 gulp.task('watch', function () {
-	livereload.listen();
+  livereload.listen();
   gulp.watch('./sass/**/*.scss', ['sass']);
   gulp.watch('**/*.php', livereload.reload);
 });
