@@ -1,45 +1,61 @@
 /*
  * Block editor stylesheet
 */
-body.gutenberg-editor-page .edit-post-visual-editor {
+body.block-editor-page .edit-post-visual-editor {
   font-family: 'Poly', serif; }
-  body.gutenberg-editor-page .edit-post-visual-editor p {
-    font-family: 'Poly', serif;
-    font-size: 1.4rem;
+  body.block-editor-page .edit-post-visual-editor .wp-block-paragraph,
+  body.block-editor-page .edit-post-visual-editor .wp-block-quote p,
+  body.block-editor-page .edit-post-visual-editor .wp-block-pullquote p {
+    font-size: 1.1rem;
     line-height: 1.5; }
+    @media screen and (min-width: 37.5em) {
+      body.block-editor-page .edit-post-visual-editor .wp-block-paragraph,
+      body.block-editor-page .edit-post-visual-editor .wp-block-quote p,
+      body.block-editor-page .edit-post-visual-editor .wp-block-pullquote p {
+        font-size: 1.4rem; } }
+  body.block-editor-page .edit-post-visual-editor ul,
+  body.block-editor-page .edit-post-visual-editor ol {
+    font-size: 1.1rem; }
+    @media screen and (min-width: 37.5em) {
+      body.block-editor-page .edit-post-visual-editor ul,
+      body.block-editor-page .edit-post-visual-editor ol {
+        font-size: 1.4rem; } }
 
-body.gutenberg-editor-page .editor-post-title__input {
+body.block-editor-page .editor-post-title__input {
   font-family: 'Poly', serif;
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.1; }
+  @media screen and (min-width: 37.5em) {
+    body.block-editor-page .editor-post-title__input {
+      font-size: 3rem; } }
 
-body.gutenberg-editor-page .editor-post-title__block,
-body.gutenberg-editor-page .editor-default-block-appender,
-body.gutenberg-editor-page .editor-block-list__block {
+body.block-editor-page .editor-post-title__block,
+body.block-editor-page .editor-default-block-appender,
+body.block-editor-page .editor-block-list__block {
   max-width: 46.125rem; }
 
-body.gutenberg-editor-page .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+body.block-editor-page .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 8rem; }
 
-body.gutenberg-editor-page .wp-block-button .wp-block-button__link {
+body.block-editor-page .wp-block-button .wp-block-button__link {
   border-radius: 0.43rem;
   padding: 0.56rem 1.3rem; }
 
-body.gutenberg-editor-page .wp-block-quote {
+body.block-editor-page .wp-block-quote {
   margin: 0 0 1.5rem;
   border-left: 4px solid #404040;
   padding: 0 0 0 1em; }
-  body.gutenberg-editor-page .wp-block-quote p {
+  body.block-editor-page .wp-block-quote p {
     margin-bottom: 1rem; }
-  body.gutenberg-editor-page .wp-block-quote cite {
+  body.block-editor-page .wp-block-quote cite {
     font-size: 1.125rem; }
-  body.gutenberg-editor-page .wp-block-quote.is-style-large {
+  body.block-editor-page .wp-block-quote.is-style-large {
     margin: 2.5rem 0;
     padding: 0 0 0 1em; }
-    body.gutenberg-editor-page .wp-block-quote.is-style-large p {
+    body.block-editor-page .wp-block-quote.is-style-large p {
       font-size: 2rem; }
-    body.gutenberg-editor-page .wp-block-quote.is-style-large cite {
+    body.block-editor-page .wp-block-quote.is-style-large cite {
       font-size: 1.2rem;
       text-align: right;
       display: block; }

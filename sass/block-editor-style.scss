@@ -2,22 +2,42 @@
  * Block editor stylesheet
 */
 
-body.gutenberg-editor-page {
+@import 'variables';
+
+body.block-editor-page {
     .edit-post-visual-editor {
         font-family: 'Poly', serif;
 
-        p {
-            font-family: 'Poly', serif;
-            font-size: 1.4rem;
+        .wp-block-paragraph,
+        .wp-block-quote p,
+        .wp-block-pullquote p {
+            font-size: 1.1rem;
             line-height: 1.5;
+
+            @media screen and (min-width: $break-37) {
+                font-size: 1.4rem;
+            }
+        }
+
+        ul,
+        ol {
+            font-size: 1.1rem;
+
+            @media screen and (min-width: $break-37) {
+                font-size: 1.4rem;
+            }
         }
     }
 
     .editor-post-title__input {
         font-family: 'Poly', serif;
-        font-size: 3rem;
+        font-size: 1.8rem;
         font-weight: 400;
         line-height: 1.1;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 3rem;
+        }
     }
 
     .editor-post-title__block,
