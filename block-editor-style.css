@@ -89,4 +89,8 @@ body.block-editor-page .wp-block-quote.is-style-large cite {
   display: block;
 }
 
+body.block-editor-page .wp-block-button__link:visited {
+  color: inherit;
+}
+
 /*# sourceMappingURL=block-editor-style.css.map */
