@@ -749,7 +749,7 @@ a:focus {
 
 @media screen and (min-width: 37.5em) {
   .main-navigation a {
-    border-bottom: 2px solid transparent;
+    border-bottom: 1px solid transparent;
   }
   .main-navigation a:hover {
     text-decoration: none;
