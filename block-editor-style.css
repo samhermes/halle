@@ -79,17 +79,10 @@ body.block-editor-page .editor-block-list__block {
 
 .wp-block-quote.is-style-large {
   margin: 2.5rem 0;
-  padding: 0 0 0 1em;
 }
 
 .wp-block-quote.is-style-large p {
   font-size: 2rem;
-}
-
-.wp-block-quote.is-style-large cite {
-  font-size: 1.2rem;
-  text-align: right;
-  display: block;
 }
 
 /*# sourceMappingURL=block-editor-style.css.map */
