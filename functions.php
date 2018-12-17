@@ -64,6 +64,36 @@ function halle_setup() {
 		'gallery',
 		'caption',
 	) );
+
+	add_theme_support(
+		'editor-font-sizes',
+		array(
+			array(
+				'name'      => __( 'Small', 'twentynineteen' ),
+				'shortName' => __( 'S', 'twentynineteen' ),
+				'size'      => 18,
+				'slug'      => 'small',
+			),
+			array(
+				'name'      => __( 'Normal', 'twentynineteen' ),
+				'shortName' => __( 'M', 'twentynineteen' ),
+				'size'      => 20,
+				'slug'      => 'normal',
+			),
+			array(
+				'name'      => __( 'Large', 'twentynineteen' ),
+				'shortName' => __( 'L', 'twentynineteen' ),
+				'size'      => 30,
+				'slug'      => 'large',
+			),
+			array(
+				'name'      => __( 'Huge', 'twentynineteen' ),
+				'shortName' => __( 'XL', 'twentynineteen' ),
+				'size'      => 40,
+				'slug'      => 'huge',
+			),
+		)
+	);
 }
 endif;
 add_action( 'after_setup_theme', 'halle_setup' );

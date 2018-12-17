@@ -1345,6 +1345,22 @@ a:focus {
   font-size: 2rem;
 }
 
+.has-small-font-size {
+  font-size: 1.125rem;
+}
+
+.has-normal-font-size {
+  font-size: 1.2rem;
+}
+
+.has-large-font-size {
+  font-size: 1.875rem;
+}
+
+.has-huge-font-size {
+  font-size: 2.5rem;
+}
+
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
