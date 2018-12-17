@@ -1,0 +1,48 @@
+/*
+ * Block editor stylesheet
+*/
+
+@import 'variables';
+
+body.block-editor-page {
+    .edit-post-visual-editor {
+        font-family: 'Poly', serif;
+
+        .wp-block-paragraph {
+            font-size: 1.1rem;
+            line-height: 1.5;
+
+            @media screen and (min-width: $break-37) {
+                font-size: 1.4rem;
+            }
+        }
+
+        ul,
+        ol {
+            font-size: 1.1rem;
+
+            @media screen and (min-width: $break-37) {
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .editor-post-title__input {
+        font-family: 'Poly', serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.1;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 3rem;
+        }
+    }
+
+    .editor-post-title__block,
+    .editor-default-block-appender,
+    .editor-block-list__block {
+        max-width: 46.125rem;
+    }
+}
+
+@import 'core-blocks';

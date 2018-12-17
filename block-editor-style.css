@@ -1,0 +1,104 @@
+/*
+ * Block editor stylesheet
+*/
+body.block-editor-page .edit-post-visual-editor {
+  font-family: 'Poly', serif;
+}
+
+body.block-editor-page .edit-post-visual-editor .wp-block-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 37.5em) {
+  body.block-editor-page .edit-post-visual-editor .wp-block-paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+body.block-editor-page .edit-post-visual-editor ul,
+body.block-editor-page .edit-post-visual-editor ol {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  body.block-editor-page .edit-post-visual-editor ul,
+  body.block-editor-page .edit-post-visual-editor ol {
+    font-size: 1.4rem;
+  }
+}
+
+body.block-editor-page .editor-post-title__input {
+  font-family: 'Poly', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 37.5em) {
+  body.block-editor-page .editor-post-title__input {
+    font-size: 3rem;
+  }
+}
+
+body.block-editor-page .editor-post-title__block,
+body.block-editor-page .editor-default-block-appender,
+body.block-editor-page .editor-block-list__block {
+  max-width: 46.125rem;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 8rem;
+}
+
+.wp-block-button__link {
+  border-radius: 0.43rem;
+  padding: 0.56rem 1.3rem;
+}
+
+.wp-block-quote {
+  margin: 0 0 1.5rem;
+  border-left: 4px solid #404040;
+  padding: 0 0 0 1em;
+}
+
+.wp-block-quote p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .wp-block-quote p {
+    font-size: 1.4rem;
+  }
+}
+
+.wp-block-quote cite {
+  font-size: 1.125rem;
+}
+
+.wp-block-quote.is-style-large {
+  margin: 2.5rem 0;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 2rem;
+}
+
+.has-small-font-size {
+  font-size: 1.125rem;
+}
+
+.has-normal-font-size {
+  font-size: 1.2rem;
+}
+
+.has-large-font-size {
+  font-size: 1.875rem;
+}
+
+.has-huge-font-size {
+  font-size: 2.5rem;
+}
+
+/*# sourceMappingURL=block-editor-style.css.map */

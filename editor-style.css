@@ -5,29 +5,38 @@ body {
   color: #404040;
   max-width: 46.125rem;
   margin: 1.1em 1.2em;
-  -webkit-font-smoothing: subpixel-antialiased !important; }
+  -webkit-font-smoothing: subpixel-antialiased !important;
+}
 
 a {
-  color: #404040; }
+  color: #404040;
+}
 
 a:visited {
-  color: #404040; }
+  color: #404040;
+}
 
 a:hover,
 a:focus,
 a:active {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
 a:focus {
-  outline: thin dotted; }
+  outline: thin dotted;
+}
 
 a:hover,
 a:active {
-  outline: 0; }
+  outline: 0;
+}
 
 p {
-  margin-bottom: 1.5em; }
-  p:first-child {
-    margin-top: 0; }
+  margin-bottom: 1.5em;
+}
+
+p:first-child {
+  margin-top: 0;
+}
 
 /*# sourceMappingURL=editor-style.css.map */

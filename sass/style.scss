@@ -5,7 +5,7 @@ Author: Sam Hermes
 Author URI: https://samhermes.com
 Description: Halle is a stylish way to share your story with the world.
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
-Version: 1.0.6
+Version: 1.0.7
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: halle
@@ -20,17 +20,14 @@ Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
 
-// Define common breakpoints
-$break-28: 28.125em;
-$break-37: 37.5em;
-$break-50: 50em;
-
+@import 'variables';
 @import 'normalize';
 @import 'base';
 @import 'header';
 @import 'footer';
 @import 'layout';
 @import 'content';
+@import 'core-blocks';
 @import 'home';
 @import 'media';
 @import 'comments';
