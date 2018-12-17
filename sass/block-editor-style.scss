@@ -8,9 +8,7 @@ body.block-editor-page {
     .edit-post-visual-editor {
         font-family: 'Poly', serif;
 
-        .wp-block-paragraph,
-        .wp-block-quote p,
-        .wp-block-pullquote p {
+        .wp-block-paragraph {
             font-size: 1.1rem;
             line-height: 1.5;
 
@@ -45,6 +43,6 @@ body.block-editor-page {
     .editor-block-list__block {
         max-width: 46.125rem;
     }
-
-    @import 'core-blocks';
 }
+
+@import 'core-blocks';

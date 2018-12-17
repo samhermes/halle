@@ -2,7 +2,7 @@
     max-width: 8rem;
 }
 
-.wp-block-button .wp-block-button__link {
+.wp-block-button__link {
     border-radius: 0.43rem;
     padding: 0.56rem 1.3rem;
 }
@@ -14,6 +14,11 @@
 
     p {
         margin-bottom: 1rem;
+        font-size: 1.1rem;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 1.4rem;
+        }
     }
 
     cite {
@@ -33,11 +38,5 @@
             text-align: right;
             display: block;
         }
-    }
-}
-
-.wp-block-button__link {
-    &:visited {
-        color: inherit;
     }
 }

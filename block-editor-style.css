@@ -5,17 +5,13 @@ body.block-editor-page .edit-post-visual-editor {
   font-family: 'Poly', serif;
 }
 
-body.block-editor-page .edit-post-visual-editor .wp-block-paragraph,
-body.block-editor-page .edit-post-visual-editor .wp-block-quote p,
-body.block-editor-page .edit-post-visual-editor .wp-block-pullquote p {
+body.block-editor-page .edit-post-visual-editor .wp-block-paragraph {
   font-size: 1.1rem;
   line-height: 1.5;
 }
 
 @media screen and (min-width: 37.5em) {
-  body.block-editor-page .edit-post-visual-editor .wp-block-paragraph,
-  body.block-editor-page .edit-post-visual-editor .wp-block-quote p,
-  body.block-editor-page .edit-post-visual-editor .wp-block-pullquote p {
+  body.block-editor-page .edit-post-visual-editor .wp-block-paragraph {
     font-size: 1.4rem;
   }
 }
@@ -51,46 +47,49 @@ body.block-editor-page .editor-block-list__block {
   max-width: 46.125rem;
 }
 
-body.block-editor-page .wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
   max-width: 8rem;
 }
 
-body.block-editor-page .wp-block-button .wp-block-button__link {
+.wp-block-button__link {
   border-radius: 0.43rem;
   padding: 0.56rem 1.3rem;
 }
 
-body.block-editor-page .wp-block-quote {
+.wp-block-quote {
   margin: 0 0 1.5rem;
   border-left: 4px solid #404040;
   padding: 0 0 0 1em;
 }
 
-body.block-editor-page .wp-block-quote p {
+.wp-block-quote p {
   margin-bottom: 1rem;
+  font-size: 1.1rem;
 }
 
-body.block-editor-page .wp-block-quote cite {
+@media screen and (min-width: 37.5em) {
+  .wp-block-quote p {
+    font-size: 1.4rem;
+  }
+}
+
+.wp-block-quote cite {
   font-size: 1.125rem;
 }
 
-body.block-editor-page .wp-block-quote.is-style-large {
+.wp-block-quote.is-style-large {
   margin: 2.5rem 0;
   padding: 0 0 0 1em;
 }
 
-body.block-editor-page .wp-block-quote.is-style-large p {
+.wp-block-quote.is-style-large p {
   font-size: 2rem;
 }
 
-body.block-editor-page .wp-block-quote.is-style-large cite {
+.wp-block-quote.is-style-large cite {
   font-size: 1.2rem;
   text-align: right;
   display: block;
-}
-
-body.block-editor-page .wp-block-button__link:visited {
-  color: inherit;
 }
 
 /*# sourceMappingURL=block-editor-style.css.map */

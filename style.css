@@ -1311,7 +1311,7 @@ a:focus {
   max-width: 8rem;
 }
 
-.wp-block-button .wp-block-button__link {
+.wp-block-button__link {
   border-radius: 0.43rem;
   padding: 0.56rem 1.3rem;
 }
@@ -1324,6 +1324,13 @@ a:focus {
 
 .wp-block-quote p {
   margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .wp-block-quote p {
+    font-size: 1.4rem;
+  }
 }
 
 .wp-block-quote cite {
@@ -1343,10 +1350,6 @@ a:focus {
   font-size: 1.2rem;
   text-align: right;
   display: block;
-}
-
-.wp-block-button__link:visited {
-  color: inherit;
 }
 
 /*--------------------------------------------------------------
