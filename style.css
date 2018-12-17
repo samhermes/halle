@@ -498,10 +498,6 @@ a {
   color: #404040;
 }
 
-a:visited {
-  color: #404040;
-}
-
 a:hover,
 a:focus,
 a:active {
@@ -664,6 +660,7 @@ a:focus {
   font-weight: 600;
   color: inherit;
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 @media screen and (min-width: 37.5em) {
