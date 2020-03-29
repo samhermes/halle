@@ -1,40 +1,93 @@
+/*
+ * Block editor stylesheet
+*/
+
+@import 'variables';
+
 body {
 	font-family: 'Poly', serif;
 	font-weight: 400;
-	font-size: 1.4em;
 	color: #404040;
+
+    .wp-block-paragraph {
+        font-size: 1.1rem;
+        line-height: 1.5;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 1.4rem;
+        }
+    }
+
+    ul,
+    ol {
+        font-size: 1.1rem;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 1.4rem;
+        }
+	}
+	
+	a {
+		color: #404040;
+	}
+	
+	a:visited {
+		color: #404040;
+	}
+	
+	a:hover,
+	a:focus,
+	a:active {
+		text-decoration: underline;
+	}
+	
+	a:focus {
+		outline: thin dotted;
+	}
+	
+	a:hover,
+	a:active {
+		outline: 0;
+	}
+
+    .editor-post-title__input {
+        font-family: 'Poly', serif;
+        font-size: 1.8rem;
+        font-weight: 400;
+        line-height: 1.1;
+
+        @media screen and (min-width: $break-37) {
+            font-size: 3rem;
+        }
+    }
+
+    .wp-block {
+        max-width: 46.125rem;
+    }
+}
+
+@import 'core-blocks';
+
+
+/*
+ * Compatibility with classic editor
+*/
+
+#tinymce {
+	font-size: 1.4em;
 	max-width: 46.125rem;
 	margin: 1.1em 1.2em;
 	-webkit-font-smoothing: subpixel-antialiased !important;
-}
 
-a {
-	color: #404040;
-}
+	figure {
+		margin: 0;
+	}
 
-a:visited {
-	color: #404040;
-}
-
-a:hover,
-a:focus,
-a:active {
-	text-decoration: underline;
-}
-
-a:focus {
-	outline: thin dotted;
-}
-
-a:hover,
-a:active {
-	outline: 0;
-}
-
-p {
-	margin-bottom: 1.5em;
-
-	&:first-child {
-		margin-top: 0;
+	p {
+		margin-bottom: 1.5em;
+		
+		&:first-child {
+			margin-top: 0;
+		}
 	}
 }

@@ -126,10 +126,12 @@
 		font-size: 1.125em;
 	}
 
-	p:first-child,
-	p:first-child,
 	p:first-child {
 		margin-top: 0;
+	}
+
+	p:last-child {
+		margin-bottom: 0;
 	}
 }
 
@@ -143,6 +145,7 @@
 
 .entry-footer {
 	font-family: 'Work Sans', sans-serif;
+	margin-top: 2rem;
 }
 
 .page-links {

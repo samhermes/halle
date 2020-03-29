@@ -1,41 +1,148 @@
+/*
+ * Block editor stylesheet
+*/
 body {
   font-family: 'Poly', serif;
   font-weight: 400;
-  font-size: 1.4em;
   color: #404040;
+}
+
+body .wp-block-paragraph {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+@media screen and (min-width: 37.5em) {
+  body .wp-block-paragraph {
+    font-size: 1.4rem;
+  }
+}
+
+body ul,
+body ol {
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  body ul,
+  body ol {
+    font-size: 1.4rem;
+  }
+}
+
+body a {
+  color: #404040;
+}
+
+body a:visited {
+  color: #404040;
+}
+
+body a:hover,
+body a:focus,
+body a:active {
+  text-decoration: underline;
+}
+
+body a:focus {
+  outline: thin dotted;
+}
+
+body a:hover,
+body a:active {
+  outline: 0;
+}
+
+body .editor-post-title__input {
+  font-family: 'Poly', serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+@media screen and (min-width: 37.5em) {
+  body .editor-post-title__input {
+    font-size: 3rem;
+  }
+}
+
+body .wp-block {
+  max-width: 46.125rem;
+}
+
+.wp-block-separator:not(.is-style-wide):not(.is-style-dots) {
+  max-width: 8rem;
+}
+
+.wp-block-button__link {
+  border-radius: 0.43rem;
+  padding: 0.56rem 1.3rem;
+}
+
+.wp-block-quote {
+  margin: 0 0 1.5rem;
+  border-left: 4px solid #404040;
+  padding: 0 0 0 1em;
+}
+
+.wp-block-quote p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+@media screen and (min-width: 37.5em) {
+  .wp-block-quote p {
+    font-size: 1.4rem;
+  }
+}
+
+.wp-block-quote cite {
+  font-size: 1.125rem;
+}
+
+.wp-block-quote.is-style-large {
+  margin: 2.5rem 0;
+}
+
+.wp-block-quote.is-style-large p {
+  font-size: 2rem;
+}
+
+.has-small-font-size {
+  font-size: 1.125rem;
+}
+
+.has-normal-font-size {
+  font-size: 1.2rem;
+}
+
+.has-large-font-size {
+  font-size: 1.875rem;
+}
+
+.has-huge-font-size {
+  font-size: 2.5rem;
+}
+
+/*
+ * Compatibility with classic editor
+*/
+#tinymce {
+  font-size: 1.4em;
   max-width: 46.125rem;
   margin: 1.1em 1.2em;
   -webkit-font-smoothing: subpixel-antialiased !important;
 }
 
-a {
-  color: #404040;
+#tinymce figure {
+  margin: 0;
 }
 
-a:visited {
-  color: #404040;
-}
-
-a:hover,
-a:focus,
-a:active {
-  text-decoration: underline;
-}
-
-a:focus {
-  outline: thin dotted;
-}
-
-a:hover,
-a:active {
-  outline: 0;
-}
-
-p {
+#tinymce p {
   margin-bottom: 1.5em;
 }
 
-p:first-child {
+#tinymce p:first-child {
   margin-top: 0;
 }
 
