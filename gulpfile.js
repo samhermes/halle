@@ -15,7 +15,7 @@ gulp.task('sass', function () {
     .pipe(livereload());
   var editorSass = gulp.src('./sass/editor-style.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('./'))
     .pipe(livereload());
@@ -23,9 +23,9 @@ gulp.task('sass', function () {
 });
  
 gulp.task('watch', function () {
-	livereload.listen();
-  gulp.watch('./sass/**/*.scss', ['sass']);
+  livereload.listen();
+  gulp.watch('./sass/**/*.scss', gulp.series('sass'));
   gulp.watch('**/*.php', livereload.reload);
 });
 
-gulp.task('default', ['sass', 'watch']);
+gulp.task('default', gulp.parallel('sass', 'watch'));
