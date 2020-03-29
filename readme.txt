@@ -58,8 +58,7 @@ Source: https://github.com/wilddeer/stickyfill
 == Screenshot Images ==
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://pixabay.com/en/city-night-light-bokeh-urban-593145/
-* https://pixabay.com/en/saxophone-sax-player-musician-918904/
-* https://pixabay.com/en/hip-hop-dancer-silhouette-man-male-1209499/
-* https://pixabay.com/en/people-girl-woman-sunglasses-city-2560747/
-* https://pixabay.com/en/people-man-guy-travel-city-black-2583444/
+* https://stocksnap.io/photo/K10ZUWQ33N
+* https://stocksnap.io/photo/89KAK10OJI
+* https://stocksnap.io/photo/TUJE5XIJT3
+* https://stocksnap.io/photo/NU5JLD5RMX
