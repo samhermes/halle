@@ -50,14 +50,13 @@ GNU General Public License for more details.
 
 ## Third-Party Resources
 
-Stickyfill v2.0.3, Copyright 2017 Oleg Korsunsky\
-Licenses: MIT\
+Stickyfill v2.0.3, Copyright 2017 Oleg Korsunsky  
+Licenses: MIT  
 Source: https://github.com/wilddeer/stickyfill
 
 ## Screenshot Images
 
-License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-
+License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)  
 * https://stocksnap.io/photo/K10ZUWQ33N
 * https://stocksnap.io/photo/89KAK10OJI
 * https://stocksnap.io/photo/TUJE5XIJT3
