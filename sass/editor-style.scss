@@ -9,7 +9,7 @@ body {
 	font-weight: 400;
 	color: #404040;
 
-    .wp-block-paragraph {
+    p {
         font-size: 1.1rem;
         line-height: 1.5;
 
@@ -60,10 +60,10 @@ body {
             font-size: 3rem;
         }
     }
+}
 
-    .wp-block {
-        max-width: 46.125rem;
-    }
+.wp-block {
+	max-width: 46.125rem;
 }
 
 @import 'core-blocks';
