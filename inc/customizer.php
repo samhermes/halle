@@ -11,10 +11,6 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function halle_customize_register( $wp_customize ) {
-	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
-	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
-	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
-
 	$wp_customize->add_setting( 'header_bgcolor', array(
 		'default' => null,
 		'type' => 'option', 
@@ -27,6 +23,9 @@ function halle_customize_register( $wp_customize ) {
 		'settings' => 'header_bgcolor',
 	) ) );
 
+	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
+	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
+	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
 	$wp_customize->get_setting( 'header_bgcolor' )->transport   = 'postMessage';
 }
 add_action( 'customize_register', 'halle_customize_register' );
