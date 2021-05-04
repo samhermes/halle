@@ -647,8 +647,8 @@ a:focus {
   color: #404040;
 }
 
-.site-header[style] .site-branding {
-  color: #fff;
+.has-custom-logo .site-branding {
+  padding: 1.5em 0;
 }
 
 .site-title {
@@ -669,6 +669,9 @@ a:focus {
   .site-branding {
     padding: 2.75em 0;
   }
+  .has-custom-logo .site-branding {
+    padding: 1.75em 0;
+  }
   .site-title a {
     font-size: 3em;
   }
@@ -679,19 +682,19 @@ a:focus {
 }
 
 .custom-logo-link img {
-  max-height: 2.5em;
+  max-height: 4rem;
   width: auto;
 }
 
 @media screen and (min-width: 25em) {
   .custom-logo-link img {
-    max-height: 3em;
+    max-height: 5rem;
   }
 }
 
 @media screen and (min-width: 37.5em) {
   .custom-logo-link img {
-    max-height: 3.8em;
+    max-height: 6rem;
   }
 }
 

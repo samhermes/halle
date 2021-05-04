@@ -26,12 +26,16 @@
 
 	<?php
 	$header_style = '';
-	if ( get_header_image() ) :
+	$logo_class = '';
+	if ( get_header_image() ) {
 		$header_background = get_header_image();
 		$header_style = ' style="background-image:url(' . esc_url( $header_background ) . ');"';
-	endif; ?>
+	}
+	if ( has_custom_logo() ) {
+		$logo_class = ' has-custom-logo';
+	} ?>
 
-	<header id="masthead" class="site-header" role="banner"<?php echo $header_style; ?>>
+	<header id="masthead" class="site-header<?php echo $logo_class; ?>" role="banner"<?php echo $header_style; ?>>
 		<div class="site-branding">
 			<?php
 			if ( has_custom_logo() ) :

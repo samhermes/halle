@@ -21,6 +21,7 @@
     "gulp-livereload": "^4.0.2",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.0",
-    "merge-stream": "^1.0.1"
+    "merge-stream": "^1.0.1",
+    "node-sass": "^5.0.0"
   }
 }
