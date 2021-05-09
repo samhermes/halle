@@ -10,7 +10,17 @@ Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, 
 
 ## Description
 
-Halle is a stylish way to share your story with the world.
+Halle was made for your story. A clean, refined design gives your words and photos center stage. Built for the new WordPress block editor, the possibilities are endless. Designed to take full advantage of any size screen, all you have to do is hit publish.
+
+### Halle is Accessible
+
+Halle is officially "Accessibility Ready," meaning that you're off to a great start to keep your content accessible to anyone who wants to consume it. Ensure that you add informative alternative text to each image you upload, and maintain a proper heading structure in every post and page. To learn more about how to create accessible content, [check out this article on make.wordpress.org](https://make.wordpress.org/accessibility/handbook/content/).
+
+### Halle is Customizable
+
+Halle includes support for custom logos, custom header background images, and custom header colors, so you can create a header that fits with your style perfectly.
+
+*Note: The custom header colors should always maintain enough color contrast to remain readable to any user. Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure you are still in the green.*
 
 ## Installation
 
