@@ -14,7 +14,8 @@ function halle_customize_register( $wp_customize ) {
 	$wp_customize->add_setting( 'header_bgcolor', array(
 		'default' => null,
 		'type' => 'option', 
-		'capability' =>  'edit_theme_options'
+		'capability' => 'edit_theme_options',
+		'sanitize_callback' => 'sanitize_hex_color',
 	) );
 
 	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bgcolor', array(
