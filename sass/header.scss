@@ -98,7 +98,7 @@
 	background: #fff;
 }
 
-@media screen and (min-width: $break-37) {
+@media screen and (min-width: $break-50) {
 	.main-navigation li {
 		display: inline-block;
 		position: relative;
@@ -120,7 +120,7 @@
 		text-decoration: underline;
 	}
 
-	@media screen and (min-width: $break-37) {
+	@media screen and (min-width: $break-50) {
 		border-bottom: 1px solid transparent;
 
 		&:hover {
@@ -155,7 +155,7 @@
 	display: block;
 }
 
-@media screen and (min-width: $break-37) {
+@media screen and (min-width: $break-50) {
 	.menu-toggle {
 		display: none;
 	}
