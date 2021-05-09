@@ -40,6 +40,7 @@ if ( ! function_exists( 'halle_header_style' ) ) :
  */
 function halle_header_style() {
 	$header_text_color = get_header_textcolor();
+	$header_background_color = get_option('header_bgcolor');
 
 	/*
 	 * If no custom options for text are set, let's bail.
@@ -70,6 +71,12 @@ function halle_header_style() {
 			color: #<?php echo esc_attr( $header_text_color ); ?>;
 		}
 	<?php endif; ?>
+	<?php if ( $header_background_color ) { ?>
+		.site-header {
+			background-color: <?php echo esc_attr( $header_background_color ); ?>;
+			border-bottom: none;
+		}
+	<?php } ?>
 	</style>
 	<?php
 }

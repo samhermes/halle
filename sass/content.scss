@@ -28,9 +28,13 @@
 }
 
 .hentry {
-	margin: 0 0 1.5em;
+	margin: 0 0 2em;
 	font-family: 'Poly', serif;
 	font-weight: 400;
+
+	@media screen and (min-width: $break-50) {
+		margin-bottom: 1.5em;
+	}
 }
 
 .single .entry-header {

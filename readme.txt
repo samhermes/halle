@@ -4,14 +4,24 @@ Contributors: samhermes
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 
 Requires at least: 4.5
-Tested up to: 5.5.0
-Stable tag: 1.0.9
+Tested up to: 5.7.1
+Stable tag: 1.0.10
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Halle is a stylish way to share your story with the world.
+Halle was made for your story. A clean, refined design gives your words and photos center stage. Built for the new WordPress block editor, the possibilities are endless. Designed to take full advantage of any size screen, all you have to do is hit publish.
+
+## Halle is Accessible
+
+Halle is officially "Accessibility Ready," meaning that you're off to a great start to keep your content accessible to anyone who wants to consume it. Ensure that you add informative alternative text to each image you upload, and maintain a proper heading structure in every post and page. To learn more about how to create accessible content, [check out this article on make.wordpress.org](https://make.wordpress.org/accessibility/handbook/content/).
+
+## Halle is Customizable
+
+Halle includes support for custom logos, custom header background images, and custom header colors, so you can create a header that fits with your style perfectly.
+
+*Note: The custom header colors should always maintain enough color contrast to remain readable to any user. Use the [WebAIM Contrast Checker](https://webaim.org/resources/contrastchecker/) to make sure you are still in the green.*
 
 == Installation ==
 
@@ -58,7 +68,7 @@ Source: https://github.com/wilddeer/stickyfill
 == Screenshot Images ==
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://stocksnap.io/photo/K10ZUWQ33N
-* https://stocksnap.io/photo/89KAK10OJI
-* https://stocksnap.io/photo/TUJE5XIJT3
-* https://stocksnap.io/photo/NU5JLD5RMX
+* https://stocksnap.io/photo/woman-smelling-VEGK4HBUVG
+* https://stocksnap.io/photo/female-fitness-GD0FUEKA8C
+* https://stocksnap.io/photo/hipster-man-Y7VURRDV8Q
+* https://stocksnap.io/photo/people-ball-UV7AA5B6HQ
