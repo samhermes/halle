@@ -149,9 +149,20 @@ img {
 	max-width: 100%; /* Adhere to container width. */
 }
 
+figcaption {
+	font-size: 1.125rem;
+}
+
 table {
-	margin: 0 0 1.5em;
 	width: 100%;
+
+	tr {
+		border-bottom: 1px solid #ccc;
+	}
+
+	td {
+		padding: 0.2em 1em 0.2em 0;
+	}
 }
 
 /*--------------------------------------------------------------
