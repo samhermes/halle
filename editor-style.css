@@ -127,12 +127,17 @@ body .editor-post-title__input {
   line-height: 1.4;
 }
 
+.wp-block-image figcaption {
+  margin-bottom: 2rem;
+}
+
 .wp-block-gallery {
   margin-bottom: 0.5em;
 }
 
 .wp-block-table figcaption {
   margin-top: 0.8em;
+  margin-bottom: 1rem;
 }
 
 .has-small-font-size {
