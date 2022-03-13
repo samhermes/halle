@@ -21,6 +21,51 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+/* poly-regular - latin */
+@font-face {
+  font-family: 'Poly';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/poly-v14-latin-regular.woff2") format("woff2"), url("./fonts/poly-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poly-italic - latin */
+@font-face {
+  font-family: 'Poly';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("./fonts/poly-v14-latin-italic.woff2") format("woff2"), url("./fonts/poly-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-regular - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/work-sans-v16-latin-regular.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-500 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("./fonts/work-sans-v16-latin-500.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-600 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("./fonts/work-sans-v16-latin-600.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
