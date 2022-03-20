@@ -68,6 +68,13 @@ body {
 
 @import 'core-blocks';
 
+/*
+ * Editor-specific fixes
+*/
+
+.wp-block-quote {
+	margin: 0 auto 1.5em;
+}
 
 /*
  * Compatibility with classic editor

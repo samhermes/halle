@@ -5,8 +5,8 @@ Author: Sam Hermes
 Author URI: https://samhermes.com
 Description: Halle was made for your story. A clean, refined design gives your words and photos center stage.
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
-Version: 1.0.10
-Tested up to: 5.7.1
+Version: 1.1.1
+Tested up to: 5.9.0
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -21,6 +21,51 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 Normalizing styles have been helped along thanks to the fine work of
 Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 */
+/* poly-regular - latin */
+@font-face {
+  font-family: 'Poly';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/poly-v14-latin-regular.woff2") format("woff2"), url("./fonts/poly-v14-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* poly-italic - latin */
+@font-face {
+  font-family: 'Poly';
+  font-style: italic;
+  font-weight: 400;
+  src: local(""), url("./fonts/poly-v14-latin-italic.woff2") format("woff2"), url("./fonts/poly-v14-latin-italic.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-regular - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local(""), url("./fonts/work-sans-v16-latin-regular.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-regular.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-500 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: local(""), url("./fonts/work-sans-v16-latin-500.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-500.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* work-sans-600 - latin */
+@font-face {
+  font-family: 'Work Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local(""), url("./fonts/work-sans-v16-latin-600.woff2") format("woff2"), url("./fonts/work-sans-v16-latin-600.woff") format("woff");
+  /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
@@ -390,9 +435,20 @@ img {
   /* Adhere to container width. */
 }
 
+figcaption {
+  font-size: 1.125rem;
+}
+
 table {
-  margin: 0 0 1.5em;
   width: 100%;
+}
+
+table tr {
+  border-bottom: 1px solid #ccc;
+}
+
+table td {
+  padding: 0.2em 1em 0.2em 0;
 }
 
 /*--------------------------------------------------------------
@@ -713,6 +769,7 @@ a:focus {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+  z-index: 10;
 }
 
 .main-navigation ul {
@@ -837,7 +894,7 @@ a:focus {
   left: 0;
   right: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 11;
   height: 0;
   overflow: hidden;
   opacity: 0;
@@ -1215,7 +1272,7 @@ a:focus {
 }
 
 .featured-image {
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 .featured-image img {
@@ -1323,13 +1380,28 @@ a:focus {
   max-width: 8rem;
 }
 
+.wp-block-buttons,
+.wp-block-cover,
+.wp-block-media-text,
+.wp-block-group {
+  margin-bottom: 1.5em;
+}
+
+.wp-block-buttons:last-child,
+.wp-block-cover:last-child,
+.wp-block-media-text:last-child,
+.wp-block-group:last-child {
+  margin-bottom: 0;
+}
+
 .wp-block-button__link {
+  font-size: 1.125rem;
   border-radius: 0.43rem;
   padding: 0.56rem 1.3rem;
 }
 
 .wp-block-quote {
-  margin: 0 0 1.5rem;
+  margin: 0 0 1.5em;
   border-left: 4px solid #404040;
   padding: 0 0 0 1em;
 }
@@ -1355,6 +1427,23 @@ a:focus {
 
 .wp-block-quote.is-style-large p {
   font-size: 2rem;
+}
+
+.wp-block-pullquote p {
+  line-height: 1.4;
+}
+
+.wp-block-image figcaption {
+  margin-bottom: 2rem;
+}
+
+.wp-block-gallery {
+  margin-bottom: 0.5em;
+}
+
+.wp-block-table figcaption {
+  margin-top: 0.8em;
+  margin-bottom: 1rem;
 }
 
 .has-small-font-size {
