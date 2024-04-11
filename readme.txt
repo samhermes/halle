@@ -4,7 +4,7 @@ Contributors: samhermes
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 
 Requires at least: 4.5
-Tested up to: 5.9.0
+Tested up to: 5.9
 Stable tag: 1.1.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
