@@ -6,53 +6,54 @@
  *
  * @package Halle
  */
+
 ?>
 
 <aside id="secondary" class="widget-area" role="complementary">
 	<div class="latest-posts">
 		<?php
-			if ( is_single() ) {
-				$exclude = array( get_the_ID() );
-			}
+		if ( is_single() ) {
+			$exclude = array( get_the_ID() );
+		}
 
-			$args = array(
-				'posts_per_page' => 4,
-				'post__not_in' => $exclude,
-				'ignore_sticky_posts' => 1,
-			);
-			$the_query = new WP_Query( $args );
+		$args      = array(
+			'posts_per_page'      => 4,
+			'post__not_in'        => $exclude,
+			'ignore_sticky_posts' => 1,
+		);
+		$the_query = new WP_Query( $args );
 
-			if ( $the_query->have_posts() ) {
-				
-				echo '<h2>' . esc_html__( 'Latest Posts', 'halle' ) . '</h2>';
+		if ( $the_query->have_posts() ) {
 
-				echo '<ul>';
+			echo '<h2>' . esc_html__( 'Latest Posts', 'halle' ) . '</h2>';
 
-				while ( $the_query->have_posts() ) {
-					$the_query->the_post();
+			echo '<ul>';
 
-					echo '<li>';
-					
-					if ( has_post_thumbnail() ) {
-						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
-						the_post_thumbnail( 'halle-post-3x2-small' );
-					} else {
-						echo '<a href="' . esc_url( get_the_permalink() ) . '">';
-					}
+			while ( $the_query->have_posts() ) {
+				$the_query->the_post();
 
-					echo '<h3>' . get_the_title() . '</h3></a>';
+				echo '<li>';
 
-					echo '<div class="entry-meta">';
-						halle_posted_on();
-					echo '</div>';
-					
-					echo '</li>';
+				if ( has_post_thumbnail() ) {
+					echo '<a href="' . esc_url( get_the_permalink() ) . '">';
+					the_post_thumbnail( 'halle-post-3x2-small' );
+				} else {
+					echo '<a href="' . esc_url( get_the_permalink() ) . '">';
 				}
 
-				echo '</ul>';
+				echo '<h3>' . esc_html( get_the_title() ) . '</h3></a>';
 
-				wp_reset_postdata();
+				echo '<div class="entry-meta">';
+					halle_posted_on();
+				echo '</div>';
+
+				echo '</li>';
 			}
+
+			echo '</ul>';
+
+			wp_reset_postdata();
+		}
 		?>
 	</div>
 </aside>

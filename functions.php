@@ -8,111 +8,118 @@
  */
 
 if ( ! function_exists( 'halle_setup' ) ) :
-/**
- * Sets up theme defaults and registers support for various WordPress features.
- *
- * Note that this function is hooked into the after_setup_theme hook, which
- * runs before the init hook. The init hook is too late for some features, such
- * as indicating support for post thumbnails.
- */
-function halle_setup() {
-	/*
-	 * Make theme available for translation.
-	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Halle, use a find and replace
-	 * to change 'halle' to the name of your theme in all the template files.
-	 */
-	load_theme_textdomain( 'halle', get_template_directory() . '/languages' );
-
-	// Add default posts and comments RSS feed links to head.
-	add_theme_support( 'automatic-feed-links' );
-
-	/*
-	 * Let WordPress manage the document title.
-	 * By adding theme support, we declare that this theme does not use a
-	 * hard-coded <title> tag in the document head, and expect WordPress to
-	 * provide it for us.
-	 */
-	add_theme_support( 'title-tag' );
-
-	/*
-	 * Enable support for Post Thumbnails on posts and pages.
+	/**
+	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
-	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+	 * Note that this function is hooked into the after_setup_theme hook, which
+	 * runs before the init hook. The init hook is too late for some features, such
+	 * as indicating support for post thumbnails.
 	 */
-	add_theme_support( 'post-thumbnails' );
+	function halle_setup() {
+		/*
+		* Make theme available for translation.
+		* Translations can be filed in the /languages/ directory.
+		* If you're building a theme based on Halle, use a find and replace
+		* to change 'halle' to the name of your theme in all the template files.
+		*/
+		load_theme_textdomain( 'halle', get_template_directory() . '/languages' );
 
-	/*
-	 * Add custom image size for posts on homepage and archive pages.
-	 */
-	add_image_size( 'halle-post-3x2', 1500, 1000, true );
-	add_image_size( 'halle-post-3x2-small', 750, 500, true );
+		// Add default posts and comments RSS feed links to head.
+		add_theme_support( 'automatic-feed-links' );
 
-	// This theme uses wp_nav_menu() in one location.
-	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'halle' ),
-	) );
+		/*
+		* Let WordPress manage the document title.
+		* By adding theme support, we declare that this theme does not use a
+		* hard-coded <title> tag in the document head, and expect WordPress to
+		* provide it for us.
+		*/
+		add_theme_support( 'title-tag' );
 
-	/*
-	 * Switch default core markup for search form, comment form, and comments
-	 * to output valid HTML5.
-	 */
-	add_theme_support( 'html5', array(
-		'search-form',
-		'comment-form',
-		'comment-list',
-		'gallery',
-		'caption',
-	) );
+		/*
+		* Enable support for Post Thumbnails on posts and pages.
+		*
+		* @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
+		*/
+		add_theme_support( 'post-thumbnails' );
 
-	add_theme_support(
-		'editor-font-sizes',
-		array(
+		/*
+		* Add custom image size for posts on homepage and archive pages.
+		*/
+		add_image_size( 'halle-post-3x2', 1500, 1000, true );
+		add_image_size( 'halle-post-3x2-small', 750, 500, true );
+
+		// This theme uses wp_nav_menu() in one location.
+		register_nav_menus(
 			array(
-				'name' => __( 'Small', 'halle' ),
-				'shortName' => __( 'S', 'halle' ),
-				'size' => 18,
-				'slug' => 'small',
-			),
-			array(
-				'name' => __( 'Normal', 'halle' ),
-				'shortName' => __( 'M', 'halle' ),
-				'size' => 20,
-				'slug' => 'normal',
-			),
-			array(
-				'name' => __( 'Large', 'halle' ),
-				'shortName' => __( 'L', 'halle' ),
-				'size' => 30,
-				'slug' => 'large',
-			),
-			array(
-				'name' => __( 'Huge', 'halle' ),
-				'shortName' => __( 'XL', 'halle' ),
-				'size' => 40,
-				'slug' => 'huge',
-			),
-		)
-	);
+				'primary' => esc_html__( 'Primary', 'halle' ),
+			)
+		);
 
-	add_theme_support( 'editor-styles' );
-}
+		/*
+		* Switch default core markup for search form, comment form, and comments
+		* to output valid HTML5.
+		*/
+		add_theme_support(
+			'html5',
+			array(
+				'search-form',
+				'comment-form',
+				'comment-list',
+				'gallery',
+				'caption',
+			)
+		);
+
+		add_theme_support(
+			'editor-font-sizes',
+			array(
+				array(
+					'name'      => __( 'Small', 'halle' ),
+					'shortName' => __( 'S', 'halle' ),
+					'size'      => 18,
+					'slug'      => 'small',
+				),
+				array(
+					'name'      => __( 'Normal', 'halle' ),
+					'shortName' => __( 'M', 'halle' ),
+					'size'      => 20,
+					'slug'      => 'normal',
+				),
+				array(
+					'name'      => __( 'Large', 'halle' ),
+					'shortName' => __( 'L', 'halle' ),
+					'size'      => 30,
+					'slug'      => 'large',
+				),
+				array(
+					'name'      => __( 'Huge', 'halle' ),
+					'shortName' => __( 'XL', 'halle' ),
+					'size'      => 40,
+					'slug'      => 'huge',
+				),
+			)
+		);
+
+		add_theme_support( 'editor-styles' );
+	}
 endif;
 add_action( 'after_setup_theme', 'halle_setup' );
 
-/*
+/**
  * Register sidebar for the site footer.
  */
 function halle_footer_widget_area() {
-	register_sidebar( array(
-		'name' => __( 'Footer', 'halle' ),
-		'id' => 'footer',
-		'description' => __( 'Widgets in this area will be shown in the site footer.', 'halle' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h4 class="widget-title">',
-		'after_title'   => '</h4>',
-	) );
+	register_sidebar(
+		array(
+			'name'          => __( 'Footer', 'halle' ),
+			'id'            => 'footer',
+			'description'   => __( 'Widgets in this area will be shown in the site footer.', 'halle' ),
+			'before_widget' => '<div id="%1$s" class="widget %2$s">',
+			'after_widget'  => '</div>',
+			'before_title'  => '<h4 class="widget-title">',
+			'after_title'   => '</h4>',
+		)
+	);
 }
 add_action( 'widgets_init', 'halle_footer_widget_area' );
 
@@ -138,12 +145,16 @@ function halle_scripts() {
 
 	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'halle-stickyfill' ), '20160908', true );
 
-	wp_localize_script( 'halle-scripts', 'halleL10n', array(
-		'menu'  => esc_html__( 'Menu', 'halle' ),
-		'close' => esc_html__( 'Close', 'halle' ),
-		'comments_show' => esc_html__( 'Show Comments', 'halle' ),
-		'comments_hide' => esc_html__( 'Hide Comments', 'halle' ),
-	) );
+	wp_localize_script(
+		'halle-scripts',
+		'halleL10n',
+		array(
+			'menu'          => esc_html__( 'Menu', 'halle' ),
+			'close'         => esc_html__( 'Close', 'halle' ),
+			'comments_show' => esc_html__( 'Show Comments', 'halle' ),
+			'comments_hide' => esc_html__( 'Hide Comments', 'halle' ),
+		)
+	);
 
 	wp_enqueue_script( 'halle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -169,7 +180,7 @@ add_action( 'after_setup_theme', 'halle_editor_styles' );
  */
 function halle_pingback_header() {
 	if ( is_singular() && pings_open() ) {
-		printf( '<link rel="pingback" href="%s">' . "\n", get_bloginfo( 'pingback_url' ) );
+		printf( '<link rel="pingback" href="%s">' . "\n", esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
 add_action( 'wp_head', 'halle_pingback_header' );
@@ -201,6 +212,8 @@ require get_template_directory() . '/inc/jetpack.php';
 
 /**
  * Filter the except length.
+ *
+ * @param integer $length Excerpt length.
  */
 function halle_custom_excerpt_length( $length ) {
 	if ( is_admin() ) {
@@ -212,12 +225,15 @@ add_filter( 'excerpt_length', 'halle_custom_excerpt_length', 999 );
 
 /**
  * Filter the "read more" excerpt string to link to the post.
+ *
+ * @param string $more Read more anchor tag.
  */
 function halle_excerpt_more( $more ) {
 	if ( is_admin() ) {
 		return $more;
 	}
-	return sprintf( '... <a class="read-more" href="%1$s">%2$s %3$s</a>',
+	return sprintf(
+		'... <a class="read-more" href="%1$s">%2$s %3$s</a>',
 		esc_url( get_permalink( get_the_ID() ) ),
 		__( 'Read more', 'halle' ),
 		'<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>'
@@ -227,6 +243,8 @@ add_filter( 'excerpt_more', 'halle_excerpt_more' );
 
 /**
  * Add class to the_excerpt.
+ *
+ * @param string $excerpt Excerpt tag.
  */
 function halle_excerpt_class( $excerpt ) {
 	return str_replace( '<p', '<p class="entry-excerpt"', $excerpt );
@@ -241,22 +259,22 @@ function halle_get_featured_args() {
 
 	if ( $featured_category_id && get_category( $featured_category_id )->category_count > 3 ) {
 		$args = array(
-			'posts_per_page' => 4,
-			'meta_query' => array(
+			'posts_per_page'      => 4,
+			'meta_query'          => array(
 				array(
-					'key' => '_thumbnail_id'
-				)
+					'key' => '_thumbnail_id',
+				),
 			),
 			'ignore_sticky_posts' => 1,
-			'cat' => $featured_category_id,
+			'cat'                 => $featured_category_id,
 		);
 	} else {
 		$args = array(
-			'posts_per_page' => 4,
-			'meta_query' => array(
+			'posts_per_page'      => 4,
+			'meta_query'          => array(
 				array(
-					'key' => '_thumbnail_id'
-				)
+					'key' => '_thumbnail_id',
+				),
 			),
 			'ignore_sticky_posts' => 1,
 		);
@@ -271,15 +289,17 @@ function halle_get_featured_args() {
 function halle_get_featured_stories() {
 	global $post;
 	$featured_stories = array();
+	$featured_query   = new WP_Query( halle_get_featured_args() );
 
-	$featured_query = new WP_Query( halle_get_featured_args() );
-	while ( $featured_query->have_posts() ) : $featured_query->the_post();
-        $featured_stories[] = $post->ID;
-    endwhile;
+	while ( $featured_query->have_posts() ) :
+		$featured_query->the_post();
 
-    wp_reset_postdata();
+		$featured_stories[] = $post->ID;
+	endwhile;
 
-    return $featured_stories;
+	wp_reset_postdata();
+
+	return $featured_stories;
 }
 
 /**
@@ -290,6 +310,8 @@ $halle_featured_ids = halle_get_featured_stories();
 
 /**
  * Remove featured stories from homepage query.
+ *
+ * @param WP_Query $query Query object.
  */
 function halle_remove_featured_from_query( $query ) {
 	global $halle_featured_ids;
@@ -297,4 +319,4 @@ function halle_remove_featured_from_query( $query ) {
 		$query->set( 'post__not_in', $halle_featured_ids );
 	}
 }
-add_action('pre_get_posts', 'halle_remove_featured_from_query');
+add_action( 'pre_get_posts', 'halle_remove_featured_from_query' );
