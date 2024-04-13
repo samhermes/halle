@@ -37,8 +37,9 @@ function halle_customize_register( $wp_customize ) {
 	$wp_customize->add_setting(
 		'post_layout',
 		array(
-			'default'   => 'default',
-			'transport' => 'refresh',
+			'default'           => 'default',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'sanitize_text_field',
 		)
 	);
 
