@@ -30,6 +30,7 @@ if ( ! function_exists( 'halle_posted_on' ) ) :
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 		);
 
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
 	}
 endif;
@@ -45,6 +46,7 @@ if ( ! function_exists( 'halle_posted_by' ) ) :
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 	}
 endif;
@@ -59,15 +61,38 @@ if ( ! function_exists( 'halle_entry_footer' ) ) :
 			/* translators: used between list items, there is a space after the comma */
 			$categories_list = get_the_category_list( esc_html__( ', ', 'halle' ) );
 			if ( $categories_list && halle_categorized_blog() ) {
-				/* translators: list of post categories */
-				printf( '<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'halle' ) . '</div>', $categories_list ); // WPCS: XSS OK.
+
+				printf(
+					/* translators: list of post categories */
+					'<div class="cat-links">' . esc_html__( 'Posted in %1$s', 'halle' ) . '</div>',
+					wp_kses(
+						$categories_list,
+						array(
+							'a' => array(
+								'href' => true,
+								'rel'  => true,
+							),
+						)
+					)
+				);
 			}
 
 			/* translators: used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html__( ', ', 'halle' ) );
 			if ( $tags_list ) {
-				/* translators: list of post tags */
-				printf( '<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'halle' ) . '</div>', $tags_list ); // WPCS: XSS OK.
+				printf(
+					/* translators: list of post tags */
+					'<div class="tags-links">' . esc_html__( 'Tagged %1$s', 'halle' ) . '</div>',
+					wp_kses(
+						$tags_list,
+						array(
+							'a' => array(
+								'href' => true,
+								'rel'  => true,
+							),
+						)
+					)
+				);
 			}
 		}
 
@@ -104,6 +129,7 @@ function halle_pagination() {
 	);
 
 	if ( $posts_pagination ) {
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<nav class="pagination">' . $posts_pagination . '</nav>';
 	}
 }
@@ -114,7 +140,9 @@ function halle_pagination() {
  * @return bool
  */
 function halle_categorized_blog() {
-	if ( false === ( $all_the_cool_cats = get_transient( 'halle_categories' ) ) ) {
+	$all_the_cool_cats = get_transient( 'halle_categories' );
+
+	if ( false === $all_the_cool_cats ) {
 		// Create an array of all the categories that are attached to posts.
 		$all_the_cool_cats = get_categories(
 			array(

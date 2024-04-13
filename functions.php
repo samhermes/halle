@@ -260,7 +260,7 @@ function halle_get_featured_args() {
 	if ( $featured_category_id && get_category( $featured_category_id )->category_count > 3 ) {
 		$args = array(
 			'posts_per_page'      => 4,
-			'meta_query'          => array(
+			'meta_query'          => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 				array(
 					'key' => '_thumbnail_id',
 				),
@@ -271,7 +271,7 @@ function halle_get_featured_args() {
 	} else {
 		$args = array(
 			'posts_per_page'      => 4,
-			'meta_query'          => array(
+			'meta_query'          => array( // phpcs:ignore WordPress.DB.SlowDBQuery.slow_db_query_meta_query
 				array(
 					'key' => '_thumbnail_id',
 				),
