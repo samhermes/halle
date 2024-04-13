@@ -33,6 +33,39 @@ function halle_customize_register( $wp_customize ) {
 		)
 	);
 
+	// Add article layout setting.
+	$wp_customize->add_setting(
+		'article_layout',
+		array(
+			'default'   => 'default',
+			'transport' => 'refresh',
+		)
+	);
+
+	// Add layout section.
+	$wp_customize->add_section(
+		'halle_layout',
+		array(
+			'title'    => __( 'Layout', 'halle' ),
+			'priority' => 115,
+		)
+	);
+
+	// Add article layout control.
+	$wp_customize->add_control(
+		'article_layout',
+		array(
+			'type'     => 'radio',
+			'label'    => __( 'Article Layout', 'halle' ),
+			'section'  => 'halle_layout',
+			'settings' => 'article_layout',
+			'choices'  => array(
+				'default'    => __( 'Default', 'halle' ),
+				'full_width' => __( 'Full Width', 'halle' ),
+			),
+		),
+	);
+
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
 	$wp_customize->get_setting( 'header_textcolor' )->transport = 'postMessage';
