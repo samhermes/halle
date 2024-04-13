@@ -148,7 +148,7 @@ function halle_scripts() {
 
 	wp_enqueue_style( 'halle-style', get_stylesheet_uri(), array(), $theme_version );
 
-	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array( 'halle-stickyfill' ), '20160908', true );
+	wp_enqueue_script( 'halle-scripts', get_template_directory_uri() . '/js/scripts.js', array(), $theme_version, true );
 
 	wp_localize_script(
 		'halle-scripts',
@@ -160,10 +160,6 @@ function halle_scripts() {
 			'comments_hide' => esc_html__( 'Hide Comments', 'halle' ),
 		)
 	);
-
-	wp_enqueue_script( 'halle-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'halle-stickyfill', get_template_directory_uri() . '/js/stickyfill.js', array( 'jquery' ), '1.1.4', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );

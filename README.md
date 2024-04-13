@@ -62,12 +62,6 @@ GNU General Public License for more details.
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
-## Third-Party Resources
-
-Stickyfill v2.0.3, Copyright 2017 Oleg Korsunsky
-Licenses: MIT
-Source: https://github.com/wilddeer/stickyfill
-
 ## Screenshot Images
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
