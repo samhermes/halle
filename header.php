@@ -29,7 +29,7 @@
 	$logo_class   = '';
 	if ( get_header_image() ) {
 		$header_background = get_header_image();
-		$header_style      = ' style="background-image:url(' . esc_url( $header_background ) . ');"';
+		$header_style      = ' style=background-image:url(' . esc_url( $header_background ) . ');';
 	}
 	if ( has_custom_logo() ) {
 		$logo_class = ' has-custom-logo';
