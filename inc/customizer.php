@@ -33,9 +33,9 @@ function halle_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add article layout setting.
+	// Add post layout setting.
 	$wp_customize->add_setting(
-		'article_layout',
+		'post_layout',
 		array(
 			'default'   => 'default',
 			'transport' => 'refresh',
@@ -51,17 +51,18 @@ function halle_customize_register( $wp_customize ) {
 		)
 	);
 
-	// Add article layout control.
+	// Add post layout control.
 	$wp_customize->add_control(
-		'article_layout',
+		'post_layout',
 		array(
-			'type'     => 'radio',
-			'label'    => __( 'Article Layout', 'halle' ),
-			'section'  => 'halle_layout',
-			'settings' => 'article_layout',
-			'choices'  => array(
+			'type'        => 'radio',
+			'label'       => __( 'Post Layout', 'halle' ),
+			'description' => __( 'Open a post to preview.', 'halle' ),
+			'section'     => 'halle_layout',
+			'settings'    => 'post_layout',
+			'choices'     => array(
 				'default'    => __( 'Default', 'halle' ),
-				'full_width' => __( 'Full Width', 'halle' ),
+				'full-width' => __( 'Full Width', 'halle' ),
 			),
 		),
 	);

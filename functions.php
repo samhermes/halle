@@ -101,6 +101,11 @@ if ( ! function_exists( 'halle_setup' ) ) :
 		);
 
 		add_theme_support( 'editor-styles' );
+
+		/**
+		 * Add support for wide and full block alignments.
+		 */
+		add_theme_support( 'align-wide' );
 	}
 endif;
 add_action( 'after_setup_theme', 'halle_setup' );

@@ -7,8 +7,12 @@
  * @package Halle
  */
 
+$post_layout  = get_theme_mod( 'post_layout' );
+$layout_class = 'full-width' === $post_layout ? ' is-full-width' : '';
+
 get_header(); ?>
 
+<div id="content" class="site-content<?php echo esc_attr( $layout_class ); ?>">
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
@@ -28,6 +32,7 @@ get_header(); ?>
 		</main>
 	</div>
 
+	<?php get_sidebar( 'posts' ); ?>
+</div>
 <?php
-get_sidebar( 'posts' );
 get_footer();

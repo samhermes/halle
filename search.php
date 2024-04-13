@@ -9,7 +9,8 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+<div id="content" class="site-content">
+	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -36,7 +37,8 @@ get_header(); ?>
 		?>
 
 		</main>
-	</section>
+	</div>
+</div>
 
 <?php
 get_footer();

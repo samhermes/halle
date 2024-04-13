@@ -1121,6 +1121,16 @@ a:focus {
 .page .site-content, .error404 .site-content {
   max-width: 60em;
 }
+.site-content.is-full-width {
+  max-width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+.site-content.is-full-width .content-area {
+  width: 100%;
+  float: none;
+}
 
 /*--------------------------------------------------------------
 # Content
@@ -1265,6 +1275,53 @@ a:focus {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.is-full-width .entry-header,
+.is-full-width .featured-image,
+.is-full-width .entry-footer {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 2.4rem);
+}
+@media screen and (min-width: 37.5em) {
+  .is-full-width .entry-header,
+  .is-full-width .featured-image,
+  .is-full-width .entry-footer {
+    width: calc(100% - 4rem);
+  }
+}
+.is-full-width .entry-content > * {
+  max-width: 50rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 2.4rem);
+}
+@media screen and (min-width: 37.5em) {
+  .is-full-width .entry-content > * {
+    width: calc(100% - 4rem);
+  }
+}
+.is-full-width .entry-content > *.alignwide {
+  max-width: 80rem;
+}
+.is-full-width .entry-content > *.alignfull {
+  max-width: 100%;
+  width: 100%;
+}
+
+.single .is-full-width .widget-area {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: calc(100% - 2.4rem);
+  float: none;
+}
+@media screen and (min-width: 37.5em) {
+  .single .is-full-width .widget-area {
+    width: calc(100% - 4rem);
+  }
 }
 
 .search .page-content {
@@ -1836,6 +1893,24 @@ figure {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+@media screen and (min-width: 37.5em) {
+  .is-full-width .latest-posts ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+  .is-full-width .latest-posts ul li {
+    flex-basis: calc(50% - 0.75rem);
+  }
+}
+@media screen and (min-width: 62.5em) {
+  .is-full-width .latest-posts ul {
+    flex-wrap: nowrap;
+  }
+  .is-full-width .latest-posts ul li {
+    width: auto;
+  }
 }
 
 .latest-posts li {

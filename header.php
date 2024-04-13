@@ -89,5 +89,3 @@
 			<span class="screen-reader-text"><?php esc_html_e( 'Close search', 'halle' ); ?></span>
 		</button>
 	</div>
-
-	<div id="content" class="site-content">

@@ -14,6 +14,18 @@
 	.error404 & {
 		max-width: 60em;
 	}
+
+	&.is-full-width {
+		max-width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		margin: 0;
+
+		.content-area {
+			width: 100%;
+			float: none;
+		}
+	}
 }
 
 
@@ -155,6 +167,55 @@
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
+}
+
+.is-full-width {
+	.entry-header,
+	.featured-image,
+	.entry-footer {
+		max-width: 50rem;
+		margin-left: auto;
+		margin-right: auto;
+		width: calc(100% - (1.2rem * 2));
+
+		@media screen and (min-width: $break-37) {
+			width: calc(100% - (2rem * 2));
+		}
+	}
+
+	.entry-content {
+		> * {
+			max-width: 50rem;
+			margin-left: auto;
+			margin-right: auto;
+			width: calc(100% - (1.2rem * 2));
+
+			@media screen and (min-width: $break-37) {
+				width: calc(100% - (2rem * 2));
+			}
+
+			&.alignwide {
+				max-width: 80rem;
+			}
+
+			&.alignfull {
+				max-width: 100%;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.single .is-full-width .widget-area {
+	max-width: 80rem;
+	margin-left: auto;
+	margin-right: auto;
+	width: calc(100% - (1.2rem * 2));
+	float: none;
+
+	@media screen and (min-width: $break-37) {
+		width: calc(100% - (2rem * 2));
+	}
 }
 
 .search .page-content {
