@@ -25,10 +25,7 @@ if ( ! function_exists( 'halle_posted_on' ) ) :
 			esc_html( get_the_modified_date() )
 		);
 
-		$posted_on = sprintf(
-			esc_html( '%s' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
+		$posted_on = sprintf( esc_html( '%s' ), $time_string );
 
 		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
