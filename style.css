@@ -6,7 +6,7 @@ Author URI: https://samhermes.com
 Description: Halle was made for your story. A clean, refined design gives your words and photos center stage.
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 Version: 1.1.1
-Tested up to: 5.9
+Tested up to: 6.5
 Requires PHP: 5.6
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -1348,7 +1348,7 @@ a:focus {
 }
 
 .wp-block-gallery {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .wp-block-table figcaption {
@@ -1395,7 +1395,7 @@ a:focus {
 }
 @media screen and (min-width: 62.5em) {
   .intro-posts {
-    padding: 0 0 2.2rem;
+    padding: 2rem 3% 2.2rem;
   }
 }
 .intro-posts a {
@@ -1488,7 +1488,7 @@ a:focus {
 
 @media screen and (min-width: 50em) {
   .home-featured {
-    padding-bottom: 2rem;
+    padding: 0 0 1rem;
   }
   .home-small {
     width: 30.6666%;
@@ -1512,21 +1512,18 @@ a:focus {
     float: left;
     width: 37%;
     max-width: 25em;
-    margin-top: auto;
     padding: 0 2rem 1.75rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
   }
   .home-featured .entry-title {
     padding-top: 8%;
   }
   .home-small {
-    width: 30%;
-    margin: 0 1%;
-  }
-  .home-small:nth-child(2) {
-    margin-left: 3%;
-  }
-  .home-small:last-child {
-    margin-right: 3%;
+    width: 32%;
+    float: left;
+    margin: 0 2% 0 0;
   }
 }
 .latest-feed {
@@ -1821,6 +1818,11 @@ figure {
 --------------------------------------------------------------*/
 .latest-posts {
   padding-top: 2em;
+}
+@media screen and (min-width: 56.25em) {
+  .latest-posts {
+    padding-top: 4em;
+  }
 }
 
 .latest-posts h2 {
