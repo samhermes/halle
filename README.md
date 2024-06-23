@@ -65,7 +65,7 @@ GNU General Public License for more details.
 ## Screenshot Images
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://stocksnap.io/photo/K10ZUWQ33N
-* https://stocksnap.io/photo/89KAK10OJI
-* https://stocksnap.io/photo/TUJE5XIJT3
-* https://stocksnap.io/photo/NU5JLD5RMX
+* https://stocksnap.io/photo/woman-hiking-FFUL85ACC0
+* https://stocksnap.io/photo/city-bridge-NKZOS5SNK6
+* https://stocksnap.io/photo/makeup-brush-PZ0Z7K0JRR
+* https://stocksnap.io/photo/blue-denim-UMLWILXWPK
