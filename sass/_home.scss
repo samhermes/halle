@@ -19,7 +19,7 @@
 	}
 
 	@media screen and (min-width: $break-62) {
-		padding: 0 0 2.2rem;
+		padding: 2rem 3% 2.2rem;
 	}
 
 	a {
@@ -95,7 +95,7 @@
 	}
 
 	.read-more {
-		text-transform: uppercase; 
+		text-transform: uppercase;
 		font-family: 'Work Sans', sans-serif;
 		font-weight: 400;
 		font-size: 0.9em;
@@ -120,9 +120,9 @@
 
 @media screen and (min-width: $break-50) {
 	.home-featured {
-		padding-bottom: 2rem;
+		padding: 0 0 1rem;
 	}
-	
+
 	.home-small {
 		width: 30.6666%;
 		float: left;
@@ -150,8 +150,10 @@
 			float: left;
 			width: 37%;
 			max-width: 25em;
-			margin-top: auto;
 			padding: 0 2rem 1.75rem 0;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 		}
 
 		.entry-title {
@@ -160,16 +162,9 @@
 	}
 
 	.home-small {
-		width: 30%;
-		margin: 0 1%;
-
-		&:nth-child(2) {
-			margin-left: 3%;
-		}
-
-		&:last-child {
-			margin-right: 3%;
-		}
+		width: 32%;
+		float: left;
+		margin: 0 2% 0 0;
 	}
 }
 

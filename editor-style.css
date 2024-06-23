@@ -2,64 +2,54 @@
  * Block editor stylesheet
 */
 body {
-  font-family: 'Poly', serif;
+  background-color: #fff;
+  font-family: "Poly", serif;
   font-weight: 400;
   color: #404040;
 }
-
 body p {
   font-size: 1.1rem;
   line-height: 1.5;
 }
-
 @media screen and (min-width: 37.5em) {
   body p {
     font-size: 1.4rem;
   }
 }
-
 body ul,
 body ol {
   font-size: 1.1rem;
 }
-
 @media screen and (min-width: 37.5em) {
   body ul,
   body ol {
     font-size: 1.4rem;
   }
 }
-
 body a {
   color: #404040;
 }
-
 body a:visited {
   color: #404040;
 }
-
 body a:hover,
 body a:focus,
 body a:active {
   text-decoration: underline;
 }
-
 body a:focus {
   outline: thin dotted;
 }
-
 body a:hover,
 body a:active {
   outline: 0;
 }
-
 body .editor-post-title__input {
-  font-family: 'Poly', serif;
+  font-family: "Poly", serif;
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.1;
 }
-
 @media screen and (min-width: 37.5em) {
   body .editor-post-title__input {
     font-size: 3rem;
@@ -76,13 +66,14 @@ body .editor-post-title__input {
 
 .wp-block-buttons,
 .wp-block-cover,
+.wp-block-embed,
 .wp-block-media-text,
 .wp-block-group {
   margin-bottom: 1.5em;
 }
-
 .wp-block-buttons:last-child,
 .wp-block-cover:last-child,
+.wp-block-embed:last-child,
 .wp-block-media-text:last-child,
 .wp-block-group:last-child {
   margin-bottom: 0;
@@ -99,26 +90,21 @@ body .editor-post-title__input {
   border-left: 4px solid #404040;
   padding: 0 0 0 1em;
 }
-
 .wp-block-quote p {
   margin-bottom: 1rem;
   font-size: 1.1rem;
 }
-
 @media screen and (min-width: 37.5em) {
   .wp-block-quote p {
     font-size: 1.4rem;
   }
 }
-
 .wp-block-quote cite {
   font-size: 1.125rem;
 }
-
 .wp-block-quote.is-style-large {
   margin: 2.5rem 0;
 }
-
 .wp-block-quote.is-style-large p {
   font-size: 2rem;
 }
@@ -132,7 +118,7 @@ body .editor-post-title__input {
 }
 
 .wp-block-gallery {
-  margin-bottom: 0.5em;
+  margin-bottom: 1.5em;
 }
 
 .wp-block-table figcaption {
@@ -172,15 +158,12 @@ body .editor-post-title__input {
   margin: 1.1em 1.2em;
   -webkit-font-smoothing: subpixel-antialiased !important;
 }
-
 #tinymce figure {
   margin: 0;
 }
-
 #tinymce p {
   margin-bottom: 1.5em;
 }
-
 #tinymce p:first-child {
   margin-top: 0;
 }

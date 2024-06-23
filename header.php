@@ -26,49 +26,57 @@
 
 	<?php
 	$header_style = '';
-	$logo_class = '';
+	$logo_class   = '';
 	if ( get_header_image() ) {
 		$header_background = get_header_image();
-		$header_style = ' style="background-image:url(' . esc_url( $header_background ) . ');"';
+		$header_style      = ' style=background-image:url(' . esc_url( $header_background ) . ');';
 	}
 	if ( has_custom_logo() ) {
 		$logo_class = ' has-custom-logo';
-	} ?>
+	}
+	?>
 
-	<header id="masthead" class="site-header<?php echo $logo_class; ?>" role="banner"<?php echo $header_style; ?>>
+	<header id="masthead" class="site-header<?php echo esc_attr( $logo_class ); ?>" role="banner"<?php echo esc_attr( $header_style ); ?>>
 		<div class="site-branding">
 			<?php
 			if ( has_custom_logo() ) :
 				the_custom_logo();
-			else :
-				if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			elseif ( is_front_page() && is_home() ) :
+				?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
 				<?php
-				endif;
 			endif;
 
 			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; ?></p>
-			<?php
-			endif; ?>
+			if ( $description || is_customize_preview() ) :
+				?>
+				<p class="site-description"><?php echo esc_html( $description ); ?></p>
+			<?php endif; ?>
 		</div>
 	</header>
 
 	<?php
-		$sticky_header_class = '';
-		if ( ! is_admin_bar_showing() ) {
-			$sticky_header_class = ' stick';
-		}
+	$sticky_header_class = '';
+	if ( ! is_admin_bar_showing() ) {
+		$sticky_header_class = ' stick';
+	}
 	?>
 
-	<nav id="site-navigation" class="main-navigation<?php echo $sticky_header_class; ?>" role="navigation">
+	<nav id="site-navigation" class="main-navigation<?php echo esc_attr( $sticky_header_class ); ?>" role="navigation">
 		<button type="button" class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Menu', 'halle' ); ?></button>
-		
-		<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'depth' => 1 ) ); ?>
-		
+
+		<?php
+		wp_nav_menu(
+			array(
+				'theme_location' => 'primary',
+				'menu_id'        => 'primary-menu',
+				'depth'          => 1,
+			)
+		);
+		?>
+
 		<button type="button" class="search-toggle">
 			<img src="<?php echo esc_url( get_template_directory_uri() . '/img/search.svg' ); ?>" alt="">
 			<span class="screen-reader-text"><?php esc_html_e( 'Search', 'halle' ); ?></span>
@@ -81,5 +89,3 @@
 			<span class="screen-reader-text"><?php esc_html_e( 'Close search', 'halle' ); ?></span>
 		</button>
 	</div>
-
-	<div id="content" class="site-content">

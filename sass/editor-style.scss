@@ -5,6 +5,7 @@
 @import 'variables';
 
 body {
+	background-color: #fff;
 	font-family: 'Poly', serif;
 	font-weight: 400;
 	color: #404040;
@@ -26,25 +27,25 @@ body {
             font-size: 1.4rem;
         }
 	}
-	
+
 	a {
 		color: #404040;
 	}
-	
+
 	a:visited {
 		color: #404040;
 	}
-	
+
 	a:hover,
 	a:focus,
 	a:active {
 		text-decoration: underline;
 	}
-	
+
 	a:focus {
 		outline: thin dotted;
 	}
-	
+
 	a:hover,
 	a:active {
 		outline: 0;
@@ -92,7 +93,7 @@ body {
 
 	p {
 		margin-bottom: 1.5em;
-		
+
 		&:first-child {
 			margin-top: 0;
 		}

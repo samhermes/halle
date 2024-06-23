@@ -4,14 +4,14 @@ Contributors: samhermes
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 
 Requires at least: 4.5
-Tested up to: 5.9
-Stable tag: 1.1.1
+Tested up to: 6.5.4
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Halle was made for your story. A clean, refined design gives your words and photos center stage. Built for the new WordPress block editor, the possibilities are endless. Designed to take full advantage of any size screen, all you have to do is hit publish.
+Halle was made for your story. A clean, refined design gives your words and photos center stage. Built for the new WordPress block editor, and designed to take full advantage of any size screen, all you have to do is publish.
 
 ## Halle is Accessible
 
@@ -35,13 +35,17 @@ Halle includes support for custom logos, custom header background images, and cu
 
 Halle displays four featured posts on the homepage. The four most recent posts are used automatically, or you can apply a category named "Featured" to add posts manually. In either case, the posts will not display until there are at least four posts with featured images.
 
+= Customize the post page layout =
+
+Halle offers two layout options for posts. The default layout includes a sidebar that displays alongside the post content. The second option, a full width layout, centers the post content, and allows you to take advantage of the "Wide width" and "Full width" block alignment options.
+
 = Setting a main menu =
 
 Halle only supports one level in the main menu, so any child menu items will not display.
 
 == Copyright ==
 
-Halle WordPress Theme, Copyright 2018 Sam Hermes
+Halle WordPress Theme, Copyright 2018–2024 Sam Hermes
 Halle is distributed under the terms of the GNU GPL
 
 This program is free software: you can redistribute it and/or modify
@@ -59,16 +63,10 @@ GNU General Public License for more details.
 * Based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc., [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html)
 * normalize.css http://necolas.github.io/normalize.css/, (C) 2012-2016 Nicolas Gallagher and Jonathan Neal, [MIT](http://opensource.org/licenses/MIT)
 
-== Third-Party Resources ==
-
-Stickyfill v2.0.3, Copyright 2017 Oleg Korsunsky
-Licenses: MIT
-Source: https://github.com/wilddeer/stickyfill
-
 == Screenshot Images ==
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://stocksnap.io/photo/woman-smelling-VEGK4HBUVG
-* https://stocksnap.io/photo/female-fitness-GD0FUEKA8C
-* https://stocksnap.io/photo/hipster-man-Y7VURRDV8Q
-* https://stocksnap.io/photo/people-ball-UV7AA5B6HQ
+* https://stocksnap.io/photo/woman-hiking-FFUL85ACC0
+* https://stocksnap.io/photo/city-bridge-NKZOS5SNK6
+* https://stocksnap.io/photo/makeup-brush-PZ0Z7K0JRR
+* https://stocksnap.io/photo/blue-denim-UMLWILXWPK

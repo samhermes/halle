@@ -16,12 +16,14 @@
 
 	<div class="entry-content">
 		<?php
-			the_content();
+		the_content();
 
-			wp_link_pages( array(
+		wp_link_pages(
+			array(
 				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'halle' ),
 				'after'  => '</div>',
-			) );
+			)
+		);
 		?>
 	</div>
 

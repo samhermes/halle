@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<ruleset name="Halle">
+    <rule ref="WordPress"/>
+	<arg name="extensions" value="php"/>
+	<arg value="s"/>
+	<file>.</file>
+	<!-- Exclude Vendor directory -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<!-- Exclude node_modules directory -->
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<!-- Check text domain -->
+	<rule ref="WordPress.WP.I18n">
+		<properties>
+			<property name="text_domain" type="array">
+				<element value="halle"/>
+			</property>
+		</properties>
+	</rule>
+</ruleset>

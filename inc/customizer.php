@@ -11,18 +11,62 @@
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  */
 function halle_customize_register( $wp_customize ) {
-	$wp_customize->add_setting( 'header_bgcolor', array(
-		'default' => null,
-		'type' => 'option', 
-		'capability' => 'edit_theme_options',
-		'sanitize_callback' => 'sanitize_hex_color',
-	) );
+	$wp_customize->add_setting(
+		'header_bgcolor',
+		array(
+			'default'           => null,
+			'type'              => 'option',
+			'capability'        => 'edit_theme_options',
+			'sanitize_callback' => 'sanitize_hex_color',
+		)
+	);
 
-	$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'header_bgcolor', array(
-		'label' => __( 'Header Background Color', 'halle' ),
-		'section' => 'colors',
-		'settings' => 'header_bgcolor',
-	) ) );
+	$wp_customize->add_control(
+		new WP_Customize_Color_Control(
+			$wp_customize,
+			'header_bgcolor',
+			array(
+				'label'    => __( 'Header Background Color', 'halle' ),
+				'section'  => 'colors',
+				'settings' => 'header_bgcolor',
+			)
+		)
+	);
+
+	// Add post layout setting.
+	$wp_customize->add_setting(
+		'post_layout',
+		array(
+			'default'           => 'default',
+			'transport'         => 'refresh',
+			'sanitize_callback' => 'sanitize_text_field',
+		)
+	);
+
+	// Add layout section.
+	$wp_customize->add_section(
+		'halle_layout',
+		array(
+			'title'    => __( 'Layout', 'halle' ),
+			'priority' => 115,
+		)
+	);
+
+	// Add post layout control.
+	$wp_customize->add_control(
+		'post_layout',
+		array(
+			'type'        => 'radio',
+			'label'       => __( 'Post Layout', 'halle' ),
+			'description' => __( 'Open a post to preview.', 'halle' ),
+			'section'     => 'halle_layout',
+			'settings'    => 'post_layout',
+			'choices'     => array(
+				'default'    => __( 'Default', 'halle' ),
+				'full-width' => __( 'Full Width', 'halle' ),
+			),
+		),
+	);
 
 	$wp_customize->get_setting( 'blogname' )->transport         = 'postMessage';
 	$wp_customize->get_setting( 'blogdescription' )->transport  = 'postMessage';
