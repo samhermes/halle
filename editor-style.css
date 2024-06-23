@@ -66,12 +66,14 @@ body .editor-post-title__input {
 
 .wp-block-buttons,
 .wp-block-cover,
+.wp-block-embed,
 .wp-block-media-text,
 .wp-block-group {
   margin-bottom: 1.5em;
 }
 .wp-block-buttons:last-child,
 .wp-block-cover:last-child,
+.wp-block-embed:last-child,
 .wp-block-media-text:last-child,
 .wp-block-group:last-child {
   margin-bottom: 0;

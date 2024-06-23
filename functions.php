@@ -106,6 +106,11 @@ if ( ! function_exists( 'halle_setup' ) ) :
 		 * Add support for wide and full block alignments.
 		 */
 		add_theme_support( 'align-wide' );
+
+		/**
+		 * Add support for responsive embeds.
+		 */
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'halle_setup' );

@@ -4,8 +4,8 @@ Contributors: samhermes
 Tags: one-column, accessibility-ready, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets
 
 Requires at least: 4.5
-Tested up to: 6.5
-Stable tag: 1.1.1
+Tested up to: 6.5.4
+Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -66,7 +66,8 @@ GNU General Public License for more details.
 == Screenshot Images ==
 
 License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
-* https://stocksnap.io/photo/woman-smelling-VEGK4HBUVG
-* https://stocksnap.io/photo/female-fitness-GD0FUEKA8C
-* https://stocksnap.io/photo/hipster-man-Y7VURRDV8Q
-* https://stocksnap.io/photo/people-ball-UV7AA5B6HQ
+* https://stocksnap.io/photo/woman-hiking-FFUL85ACC0
+* https://stocksnap.io/photo/city-bridge-NKZOS5SNK6
+* https://stocksnap.io/photo/makeup-brush-PZ0Z7K0JRR
+* https://stocksnap.io/photo/blue-denim-UMLWILXWPK
+* https://stocksnap.io/photo/car-city-MW1RYXIZMR
