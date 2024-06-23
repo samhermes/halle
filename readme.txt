@@ -70,4 +70,3 @@ License: [CC0](https://creativecommons.org/publicdomain/zero/1.0/deed.en)
 * https://stocksnap.io/photo/city-bridge-NKZOS5SNK6
 * https://stocksnap.io/photo/makeup-brush-PZ0Z7K0JRR
 * https://stocksnap.io/photo/blue-denim-UMLWILXWPK
-* https://stocksnap.io/photo/car-city-MW1RYXIZMR
